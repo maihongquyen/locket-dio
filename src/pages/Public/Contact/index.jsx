@@ -1,6 +1,13 @@
 import React from "react";
 import "./styles.css";
-import { Github, LifeBuoy, MapPin } from "lucide-react";
+import { Globe2, LifeBuoy, MapPin } from "lucide-react";
+import {
+  FaDiscord,
+  FaFacebook,
+  FaGithub,
+  FaTelegramPlane,
+  FaYoutube,
+} from "react-icons/fa";
 import { CONFIG, CONTACT_CONFIG } from "@/config";
 
 export default function Contact() {
@@ -9,10 +16,46 @@ export default function Contact() {
 
   const contactLinks = [
     {
-      name: "GitHub",
+      name: "Website",
       description: "Trang cá nhân của Quyền",
-      icon: <Github className="w-8 h-8" aria-hidden="true" />,
+      icon: <Globe2 className="w-8 h-8" aria-hidden="true" />,
+      url: CONTACT_CONFIG.website,
+    },
+    {
+      name: "GitHub",
+      description: "@maihongquyen",
+      icon: <FaGithub className="w-8 h-8" aria-hidden="true" />,
       url: CONTACT_CONFIG.github,
+    },
+    {
+      name: "Facebook",
+      description: "quyen.2867",
+      icon: <FaFacebook className="w-8 h-8 text-blue-600" aria-hidden="true" />,
+      url: CONTACT_CONFIG.facebook,
+    },
+    {
+      name: "YouTube",
+      description: "@CôngMai-k6d",
+      icon: <FaYoutube className="w-8 h-8 text-red-600" aria-hidden="true" />,
+      url: CONTACT_CONFIG.youtube,
+    },
+    {
+      name: "Telegram",
+      description: "@mquyen",
+      icon: <FaTelegramPlane className="w-8 h-8 text-sky-500" aria-hidden="true" />,
+      url: CONTACT_CONFIG.telegram,
+    },
+    {
+      name: "Kênh Telegram",
+      description: "Mquyen",
+      icon: <FaTelegramPlane className="w-8 h-8 text-sky-600" aria-hidden="true" />,
+      url: CONTACT_CONFIG.telegramChannel,
+    },
+    {
+      name: "Discord",
+      description: "Cộng đồng Mquyen",
+      icon: <FaDiscord className="w-8 h-8 text-indigo-500" aria-hidden="true" />,
+      url: CONTACT_CONFIG.discord,
     },
     {
       name: "Báo lỗi & góp ý",
@@ -38,7 +81,7 @@ export default function Contact() {
 
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Profile */}
-          <div className="bg-base-100 w-full flex flex-col items-center justify-start p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 animate-slideUp">
+          <div className="bg-base-100 w-full self-start flex flex-col items-center justify-start p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 animate-slideUp">
             <img
               src={avatarUrl}
               alt={fullName}
@@ -51,7 +94,7 @@ export default function Contact() {
           </div>
 
           {/* Contact Info & Social */}
-          <div className="space-y-6">
+          <div className="space-y-6 lg:col-span-2">
             {/* Community Links */}
             <div className="bg-base-100 p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 animate-slideUp delay-200">
               <h3 className="text-lg font-semibold mb-4">Kênh liên hệ chính thức</h3>
@@ -80,8 +123,9 @@ export default function Contact() {
                 <MapPin size={18} /> Thông tin hỗ trợ
               </h3>
               <ul className="text-sm text-base-content/70 space-y-1">
-                <li>• Hỗ trợ qua GitHub Issues</li>
-                <li>• Không có email, Discord hoặc Messenger chính thức</li>
+                <li>• Liên hệ Quyền qua các kênh chính thức ở trên</li>
+                <li>• Báo lỗi và góp ý qua GitHub Issues</li>
+                <li>• Hiện chưa công khai email hoặc số điện thoại hỗ trợ</li>
                 <li>• Ngôn ngữ: Tiếng Việt</li>
               </ul>
             </div>

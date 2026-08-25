@@ -1,6 +1,14 @@
 import React from "react";
-import { Code2 } from "lucide-react";
-import { FaGithub, FaNodeJs, FaReact } from "react-icons/fa";
+import { Code2, Globe2 } from "lucide-react";
+import {
+  FaDiscord,
+  FaFacebook,
+  FaGithub,
+  FaNodeJs,
+  FaReact,
+  FaTelegramPlane,
+  FaYoutube,
+} from "react-icons/fa";
 import { RiTailwindCssFill, RiVercelFill } from "react-icons/ri";
 import { SiRailway } from "react-icons/si";
 import { CONFIG } from "@/config";
@@ -8,6 +16,19 @@ import { CONFIG } from "@/config";
 const AboutMe = () => {
   const avatarUrl = CONFIG.app.myInfo.avatarUrl;
   const fullName = CONFIG.app.myInfo.fullName;
+  const socialLinks = [
+    { label: "Website", url: CONFIG.app.myInfo.website, icon: Globe2 },
+    { label: "GitHub", url: CONFIG.app.myInfo.github, icon: FaGithub },
+    { label: "Facebook", url: CONFIG.app.myInfo.facebook, icon: FaFacebook },
+    { label: "YouTube", url: CONFIG.app.myInfo.youtube, icon: FaYoutube },
+    { label: "Telegram", url: CONFIG.app.myInfo.telegram, icon: FaTelegramPlane },
+    {
+      label: "Kênh Telegram",
+      url: CONFIG.app.myInfo.telegramChannel,
+      icon: FaTelegramPlane,
+    },
+    { label: "Discord", url: CONFIG.app.myInfo.discord, icon: FaDiscord },
+  ].filter((item) => Boolean(item.url));
 
   return (
     <div className="min-h-screen flex flex-col items-center py-4">
@@ -24,6 +45,23 @@ const AboutMe = () => {
         <p className="text-lg md:text-xl mt-2">
           Web Developer | Thích sáng tạo và học hỏi
         </p>
+        <div className="mt-5 flex flex-wrap justify-center gap-2">
+          {socialLinks.map(({ label, url, icon: Icon }) => (
+            <a
+              key={label}
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-sm btn-outline gap-2 rounded-full"
+            >
+              {React.createElement(Icon, {
+                className: "h-4 w-4",
+                "aria-hidden": true,
+              })}
+              {label}
+            </a>
+          ))}
+        </div>
       </div>
 
       <div className="max-w-3xl text-left mb-12 px-4">

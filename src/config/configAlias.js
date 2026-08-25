@@ -26,16 +26,26 @@ export const CAMERA_CONFIG = {
 };
 
 export const COMMUNITY_CONFIG = {
+  website: CONFIG.app.community.website,
   discord: CONFIG.app.community.discord,
   messenger: CONFIG.app.community.messenger,
   telegram: CONFIG.app.community.telegram,
+  telegramChannel: CONFIG.app.community.telegramChannel,
   github: CONFIG.app.community.github,
+  facebook: CONFIG.app.community.facebook,
+  youtube: CONFIG.app.community.youtube,
   issues: CONFIG.app.community.issues,
 };
 
 export const CONTACT_CONFIG = {
   supportEmail: CONFIG.app.contact.supportEmail,
+  website: CONFIG.app.contact.website,
   github: CONFIG.app.contact.github,
+  facebook: CONFIG.app.contact.facebook,
+  youtube: CONFIG.app.contact.youtube,
+  telegram: CONFIG.app.contact.telegram,
+  telegramChannel: CONFIG.app.contact.telegramChannel,
+  discord: CONFIG.app.contact.discord,
   issues: CONFIG.app.contact.issues,
 };
 
