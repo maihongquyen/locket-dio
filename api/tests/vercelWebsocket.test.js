@@ -17,11 +17,20 @@ test("Vercel exposes a dedicated Socket.IO HTTP server function", () => {
   assert.match(appEntry, /module\.exports = \{ app, server, vercelHandler \}/);
 });
 
-test("production client uses Vercel's websocket-only Socket.IO path", () => {
+test("production client uses the self-hosted same-origin Socket.IO proxy", () => {
   const configSource = read("src/config/apiConfig.js");
   const clientSource = read("src/socket/socketClient.js");
+  const webServerSource = read("server.mjs");
+  const viteSource = read("vite.config.js");
 
-  assert.match(configSource, /huy-locket-api-huy-locket\.vercel\.app\/api\/socket-io/);
+  assert.match(configSource, /configuredSocketHost \|\| BASE_SERVER_HOST/);
+  assert.doesNotMatch(configSource, /huy-locket-api-huy-locket\.vercel\.app/);
+  assert.match(webServerSource, /server\.on\("upgrade", proxyWebSocketUpgrade\)/);
+  assert.match(viteSource, /ws:\s*prefix === "\/dio-api"/);
   assert.match(clientSource, /transports:\s*\["websocket"\]/);
   assert.doesNotMatch(clientSource, /transports:\s*\["websocket",\s*"polling"\]/);
+});
+
+test("production authentication stays on the self-hosted API", () => {
+  assert.match(read(".env.production"), /^VITE_AUTH_API_URL=\/dio-api$/m);
 });

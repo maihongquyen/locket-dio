@@ -154,7 +154,7 @@ export default function GoogleDriveBackup() {
     status?.oauthCallbackUrl ||
     (typeof window !== "undefined"
       ? `${window.location.origin}/api/drive-oauth-callback`
-      : "https://huy-locket-production.up.railway.app/api/drive-oauth-callback");
+      : "/api/drive-oauth-callback");
   const adminHeaders = {
     "Content-Type": "application/json",
     "X-Local-Id": localId || "",

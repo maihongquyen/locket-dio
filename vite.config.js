@@ -105,7 +105,7 @@ const publicDir = brand ? `public-${brand}` : "public";
 // (production uses server.mjs; this only affects the dev server)
 const DEV_API_UPSTREAM =
   process.env.LOCKET_API_UPSTREAM ||
-  "https://huy-locket-api-production.up.railway.app";
+  "http://127.0.0.1:5004";
 
 const devProxyTargets = {
   "/dio-api": DEV_API_UPSTREAM,
@@ -129,6 +129,7 @@ const devProxy = Object.fromEntries(
       target,
       changeOrigin: true,
       secure: true,
+      ws: prefix === "/dio-api",
       rewrite: (p) => p.slice(prefix.length) || "/",
       headers: {
         // server.mjs spoofs Origin so upstream Dio APIs accept requests

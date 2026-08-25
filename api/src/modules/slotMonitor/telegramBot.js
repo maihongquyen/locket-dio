@@ -27,17 +27,22 @@ function getBotUsername() {
 }
 
 function getWebUrls() {
-  const vercel = clean(
-    process.env.VERCEL_PUBLIC_WEB_URL ||
-      process.env.PUBLIC_WEB_URL ||
+  const primary = clean(
+    process.env.PUBLIC_WEB_URL ||
       process.env.APP_PUBLIC_URL ||
-      "https://duchi.vercel.app",
+      process.env.RAILWAY_PUBLIC_WEB_URL ||
+      process.env.VERCEL_PUBLIC_WEB_URL ||
+      "http://localhost:5173",
+    500,
+  ).replace(/\/+$/, "");
+
+  const vercel = clean(
+    process.env.VERCEL_PUBLIC_WEB_URL || primary,
     500,
   ).replace(/\/+$/, "");
 
   const railway = clean(
-    process.env.RAILWAY_PUBLIC_WEB_URL ||
-      "https://huy-locket-production.up.railway.app",
+    process.env.RAILWAY_PUBLIC_WEB_URL || primary,
     500,
   ).replace(/\/+$/, "");
 

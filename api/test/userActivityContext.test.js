@@ -3,15 +3,16 @@ const test = require("node:test");
 const {
   getLoginRequestContext,
   getRequestContext,
-  normalizePublicIp,
+  extractBestPublicIp,
   parseUserAgent,
 } = require("../src/services/userActivityContext");
 
 test("normalizes public Railway client IP and rejects private addresses", () => {
-  assert.equal(normalizePublicIp("203.0.113.9:443"), "203.0.113.9");
-  assert.equal(normalizePublicIp("::ffff:8.8.8.8"), "8.8.8.8");
-  assert.equal(normalizePublicIp("192.168.1.20"), null);
-  assert.equal(normalizePublicIp("127.0.0.1"), null);
+  const fromIp = (ip) => extractBestPublicIp({ headers: {}, ip });
+  assert.equal(fromIp("203.0.113.9:443"), "203.0.113.9");
+  assert.equal(fromIp("::ffff:8.8.8.8"), "8.8.8.8");
+  assert.equal(fromIp("192.168.1.20"), null);
+  assert.equal(fromIp("127.0.0.1"), null);
 });
 
 test("uses Vercel geo headers only when the request was handled by Vercel", () => {
@@ -39,7 +40,7 @@ test("does not mistake a Railway edge for the user location", () => {
   const context = getRequestContext({
     ip: "8.8.8.8",
     headers: {
-      origin: "https://huy-locket-production.up.railway.app",
+      origin: "https://huy-locket-web.up.railway.app",
       "x-real-ip": "8.8.8.8",
       "x-railway-edge": "us-west2",
       "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) Version/17.5 Mobile Safari/604.1",
@@ -77,7 +78,7 @@ test("looks up an approximate location for a Railway login without geo headers",
   const context = await getLoginRequestContext({
     ip: "10.0.0.1",
     headers: {
-      origin: "https://huy-locket-production.up.railway.app",
+      origin: "https://huy-locket-web.up.railway.app",
       "x-real-ip": "8.8.8.8",
       "user-agent": "Mozilla/5.0 (Windows NT 10.0) Chrome/126.0.0.0 Safari/537.36",
     },

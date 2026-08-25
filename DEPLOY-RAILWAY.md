@@ -1,48 +1,85 @@
-# Production = Railway (không Render)
+# Deploy Huy Locket riêng trên Railway
 
-## URL
+Repo triển khai: `https://github.com/maihongquyen/locket-dio`
 
-| | |
-|--|--|
-| Web | https://huy-locket-production.up.railway.app |
-| API | https://huy-locket-api-production.up.railway.app |
-| Health proxy | https://huy-locket-production.up.railway.app/dio-api/health |
+Hai domain Railway cũ trong lịch sử project đã bị xóa. Deployment mới phải tạo
+hai service riêng trong cùng một Railway project: API trước, Web sau.
 
-## Tắt Render auto-deploy (bắt buộc 1 lần)
+## 1. Service API
 
-Render spam lỗi *pipeline minutes* mỗi lần `git push`. Tắt:
+- Source: repo trên, branch `main`.
+- Root Directory: `api`.
+- Builder: Dockerfile (`api/Dockerfile`).
+- Health check: `/health`.
 
-1. https://dashboard.render.com → **huy-locket** → Settings  
-2. **Auto-Deploy** → **No** (hoặc Suspend service)  
-3. Làm tương tự **huy-locket-api**
+Biến bắt buộc:
 
-## Deploy web mới (sau khi sửa code)
-
-```bat
-cd C:\Users\DucHuyy\.grok\bin\locket-dio
-npm run build:static
-git add -A
-git commit -m "mô tả"
-git push origin main
+```env
+NODE_ENV=production
+FIREBASE_API_KEY=<khóa Firebase hợp lệ>
+COOKIE_SECRET=<giữ cố định>
+LOCKETDIO_JWT_SECRET=<giữ cố định>
+LOCKETDIO_SIGNATURE_SECRET=<giữ cố định>
+JWT_SECRET=<tối thiểu 32 ký tự, giữ cố định>
+VAPID_PUBLIC_KEY=<khớp VITE_VAPID_PUBLIC_KEY>
+VAPID_PRIVATE_KEY=<giữ kín>
+VAPID_SUBJECT=mailto:buiduchuy2010qn@gmail.com
+LOCKET_APP_CHECK_DEVICE_ID=1:641029076083:ios:cc8eb46290d69b234fa606
+LOCKET_APP_CHECK_DEVICE_TOKEN=
 ```
 
-Railway (GitHub connected) **tự rebuild**.  
-Đợi Deploy Succeeded → hard refresh trình duyệt.
+Sau khi deploy, tạo public domain và kiểm tra:
 
-### Env web (`huy-locket`)
-
-```
-LOCKET_API_UPSTREAM=https://huy-locket-api-production.up.railway.app
+```text
+https://<api-domain>.up.railway.app/health
 ```
 
-(Code cũng auto-detect `RAILWAY_ENVIRONMENT` nếu quên set.)
+Các biến tùy chọn:
 
-### Env API (`huy-locket-api`)
+- `DATABASE_URL`: bật dữ liệu bền cho Admin, Drive, Draft và Canh Slot 24/7.
+- `REDIS_URL`: cần khi chạy nhiều instance Socket.IO/AppCheck.
+- `SPOTIFY_CLIENT_ID`, `SPOTIFY_CLIENT_SECRET`: metadata nhạc chính thức.
+- `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`: membership/draft Supabase.
+- Telegram, Gmail, Zalo, R2: chỉ cần khi bật đúng tích hợp tương ứng.
 
+## 2. Service Web
+
+- Source: cùng repo và branch `main`.
+- Root Directory: để trống.
+- Builder: Dockerfile (`Dockerfile` ở root).
+- Health check: `/`.
+
+Biến bắt buộc:
+
+```env
+NODE_ENV=production
+LOCKET_API_UPSTREAM=https://<api-domain>.up.railway.app
 ```
-CORS_ORIGINS=https://huy-locket-production.up.railway.app
-LOCKETDIO_SIGNATURE_SECRET=<cố định>
-LOCKETDIO_JWT_SECRET=<cố định>
-COOKIE_SECRET=<cố định>
-Root Directory = api
+
+Sau khi deploy, tạo public domain rồi cập nhật service API:
+
+```env
+CORS_ORIGINS=https://<web-domain>.up.railway.app
+PUBLIC_WEB_URL=https://<web-domain>.up.railway.app
 ```
+
+Redeploy API sau khi đổi hai biến này.
+
+## 3. Kiểm tra production
+
+Ba URL sau phải thành công:
+
+```text
+https://<web-domain>.up.railway.app/login
+https://<web-domain>.up.railway.app/dio-api/health
+https://<api-domain>.up.railway.app/health
+```
+
+Sau đó kiểm tra đăng nhập bằng một tài khoản Locket hợp lệ, tải một ảnh thử và
+xác nhận realtime Socket.IO không báo lỗi kết nối.
+
+## 4. Domain riêng
+
+Khi đã có domain, gắn domain vào service Web rồi thêm domain đó vào
+`CORS_ORIGINS` và `PUBLIC_WEB_URL` của API. Không đặt secret trong biến `VITE_*`
+vì mọi biến `VITE_*` đều được đóng gói công khai vào JavaScript frontend.

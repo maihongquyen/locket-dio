@@ -21,10 +21,10 @@ test("signed draft proxy URL never doubles the /dio-api prefix", () => {
 test("absolute signed draft URL bypasses the Axios base URL", () => {
   assert.deepEqual(
     toDraftMediaRequest(
-      "https://huy-locket-api-production.up.railway.app/api/drafts/draft-1/media/thumbnail?exp=1&sig=x",
+      "https://huy-locket-api.up.railway.app/api/drafts/draft-1/media/thumbnail?exp=1&sig=x",
     ),
     {
-      url: "https://huy-locket-api-production.up.railway.app/api/drafts/draft-1/media/thumbnail?exp=1&sig=x",
+      url: "https://huy-locket-api.up.railway.app/api/drafts/draft-1/media/thumbnail?exp=1&sig=x",
       baseURL: "",
       skipAuthRefresh: true,
     },

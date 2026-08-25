@@ -47,8 +47,9 @@ const SESSION_KEY = "huy_user_activity_session_v1";
 const HEARTBEAT_INTERVAL_MS = 120_000;
 const MIN_HEARTBEAT_GAP_MS = 60_000;
 const GPS_REFRESH_INTERVAL_MS = 5 * 60_000; // Cập nhật GPS mỗi 5 phút
-const RAILWAY_ACTIVITY_API = import.meta.env.VITE_ACTIVITY_API_URL
-  || "https://huy-locket-api-production.up.railway.app";
+const ACTIVITY_API_BASE = import.meta.env.VITE_ACTIVITY_API_URL
+  || CONFIG.api.baseUrl
+  || "/dio-api";
 
 let heartbeatTimer = null;
 let visibilityHandler = null;
@@ -56,14 +57,7 @@ let lastHeartbeatAt = 0;
 let lastGpsRefreshAt = 0;
 
 function activityBaseUrl() {
-  if (typeof window !== "undefined") {
-    if (window.location.hostname === "duchi.vercel.app") return "/api/activity";
-    if (window.location.hostname === "huy-locket-production.up.railway.app") {
-      return `${String(RAILWAY_ACTIVITY_API).replace(/\/$/, "")}/api/activity`;
-    }
-  }
-  const configured = String(CONFIG.api.baseUrl || "/dio-api")
-    .replace(/\/$/, "");
+  const configured = String(ACTIVITY_API_BASE).replace(/\/$/, "");
   return `${configured}/api/activity`;
 }
 

@@ -1,6 +1,6 @@
 /**
  * Huy Locket static + API proxy
- * Browser → same origin → this server → api.locket-dio.com / storage.locket-dio.com
+ * Browser → same origin → this server → configured API and media upstreams
  * Shared Google Drive backup (1 Drive for whole site, admin env only)
  */
 import http from "http";
@@ -15,16 +15,21 @@ const PORT = Number(process.env.PORT || 4173);
 const PUBLIC_DIR = path.join(__dirname, "public");
 
 // API backend chính: set LOCKET_API_UPSTREAM=...
-// - Local: http://127.0.0.1:5007
-// - Railway web: https://huy-locket-api-production.up.railway.app
-// - Render: inject từ render.yaml
-// Railway auto-detect nếu quên set env (tránh /dio-api trỏ nhầm api.locket-dio.com → 404 searchMusic)
-const API_UPSTREAM =
+// - Local: http://127.0.0.1:5004
+// - Railway: set this to the generated URL of your API service
+// Production phải khai báo backend của chính deployment. Không fallback sang
+// một Railway URL cũ vì domain đã xóa sẽ chỉ trả "Application not found".
+const configuredApiUpstream = String(
   process.env.LOCKET_API_UPSTREAM ||
-  (process.env.RAILWAY_ENVIRONMENT
-    ? process.env.LOCKET_API_UPSTREAM_RAILWAY ||
-      "https://huy-locket-api-production.up.railway.app"
-    : "https://huy-locket-api-production.up.railway.app");
+    process.env.LOCKET_API_UPSTREAM_RAILWAY ||
+    "",
+).trim();
+if (process.env.NODE_ENV === "production" && !configuredApiUpstream) {
+  throw new Error(
+    "LOCKET_API_UPSTREAM is required in production (for example https://your-api.up.railway.app)",
+  );
+}
+const API_UPSTREAM = configuredApiUpstream || "http://127.0.0.1:5004";
 
 const PROXIES = [
   { prefix: "/dio-api", target: API_UPSTREAM },
@@ -1657,8 +1662,7 @@ async function handleMediaDownload(req, res) {
         {
           method: "GET",
           headers: {
-            "User-Agent":
-              "HuyLocketMediaProxy/1.0 (+https://huy-locket-production.up.railway.app)",
+            "User-Agent": "HuyLocketMediaProxy/1.0",
             Accept: "*/*",
           },
           timeout: 45000,
@@ -2078,6 +2082,75 @@ async function proxyRequest(req, res, proxy) {
   }
 }
 
+/** Proxy WebSocket upgrade để Socket.IO dùng cùng origin /dio-api/socket.io. */
+function proxyWebSocketUpgrade(req, clientSocket, head) {
+  const urlPath = (req.url || "/").split("?")[0];
+  const proxy = matchProxy(urlPath);
+  if (!proxy || proxy.prefix !== "/dio-api") {
+    clientSocket.destroy();
+    return;
+  }
+
+  let targetUrl;
+  try {
+    const search = req.url.includes("?")
+      ? "?" + req.url.split("?").slice(1).join("?")
+      : "";
+    targetUrl = new URL(proxy.rest + search, proxy.target);
+  } catch (error) {
+    console.warn("[proxy-ws] invalid target:", error.message);
+    clientSocket.destroy();
+    return;
+  }
+
+  const isHttps = targetUrl.protocol === "https:";
+  const lib = isHttps ? https : http;
+  const headers = {
+    ...req.headers,
+    host: targetUrl.host,
+    origin: ALLOWED_ORIGIN_SPOOF,
+    referer: ALLOWED_ORIGIN_SPOOF + "/",
+  };
+
+  const upstreamReq = lib.request({
+    protocol: targetUrl.protocol,
+    hostname: targetUrl.hostname,
+    port: targetUrl.port || (isHttps ? 443 : 80),
+    path: targetUrl.pathname + targetUrl.search,
+    method: req.method || "GET",
+    headers,
+  });
+
+  upstreamReq.on("upgrade", (upRes, upstreamSocket, upstreamHead) => {
+    const statusLine = `HTTP/${upRes.httpVersion} ${upRes.statusCode} ${upRes.statusMessage}\r\n`;
+    const responseHeaders = [];
+    for (let index = 0; index < upRes.rawHeaders.length; index += 2) {
+      responseHeaders.push(
+        `${upRes.rawHeaders[index]}: ${upRes.rawHeaders[index + 1]}`,
+      );
+    }
+    clientSocket.write(`${statusLine}${responseHeaders.join("\r\n")}\r\n\r\n`);
+
+    if (upstreamHead?.length) clientSocket.write(upstreamHead);
+    if (head?.length) upstreamSocket.write(head);
+
+    clientSocket.on("error", () => upstreamSocket.destroy());
+    upstreamSocket.on("error", () => clientSocket.destroy());
+    clientSocket.pipe(upstreamSocket).pipe(clientSocket);
+  });
+
+  upstreamReq.on("response", (upRes) => {
+    console.warn("[proxy-ws] upstream refused upgrade:", upRes.statusCode);
+    upRes.resume();
+    clientSocket.destroy();
+  });
+  upstreamReq.on("error", (error) => {
+    console.warn("[proxy-ws]", error.code || error.message);
+    clientSocket.destroy();
+  });
+  upstreamReq.end();
+}
+
 /** Đánh thức API upstream khi web vừa boot (giảm 502 lần đầu sau deploy). */
 function wakeApiUpstream() {
   try {
@@ -2149,6 +2222,8 @@ const server = http.createServer((req, res) => {
     if (!res.headersSent) send(res, 500, "Internal error");
   }
 });
+
+server.on("upgrade", proxyWebSocketUpgrade);
 
 server.listen(PORT, "0.0.0.0", async () => {
   console.log(`[huy-locket] listening on :${PORT}`);

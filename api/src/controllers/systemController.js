@@ -194,8 +194,18 @@ async function checkDrive() {
   const webBase = String(
     process.env.HUY_LOCKET_WEB_URL ||
       process.env.PUBLIC_WEB_URL ||
-      "https://huy-locket-production.up.railway.app",
+      process.env.APP_PUBLIC_URL ||
+      "",
   ).replace(/\/$/, "");
+
+  if (!webBase) {
+    return {
+      status: "degraded",
+      reachable: false,
+      configured: false,
+      code: "PUBLIC_WEB_URL_MISSING",
+    };
+  }
 
   const response = await axios.get(`${webBase}/api/drive-status`, {
     timeout: DEPENDENCY_TIMEOUT_MS,

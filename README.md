@@ -5,7 +5,7 @@
 
 **Ứng dụng web hiện đại dành cho cộng đồng Locket Widget - Chia sẻ ảnh và video ngay lập tức từ trình duyệt**
 
-[![Phiên bản](https://img.shields.io/badge/phiên_bản-1.0.0-blue.svg?cacheSeconds=2592000)](https://github.com/buiduchuy2010qn-prog/duchi-locketgold/releases)
+[![Phiên bản](https://img.shields.io/badge/phiên_bản-1.0.0-blue.svg?cacheSeconds=2592000)](https://github.com/maihongquyen/locket-dio/releases)
 [![Giấy phép: MIT](https://img.shields.io/badge/Giấy_phép-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Demo trực tiếp](https://img.shields.io/badge/demo-trực_tiếp-green.svg)](https://duchi.vercel.app)
 [![PRs được chào đón](https://img.shields.io/badge/PRs-được_chào_đón-brightgreen.svg)](http://makeapullrequest.com)
@@ -15,7 +15,7 @@
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/docs/Web/JavaScript)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0+-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 
-[**🌐 Demo Trực Tiếp**](https://duchi.vercel.app) | [**📱 Repo Frontend**](https://github.com/buiduchuy2010qn-prog/duchi-locketgold) | [**📖 Tài Liệu**](#-tài-liệu)
+[**🚀 Hướng dẫn Deploy**](./DEPLOY-RAILWAY.md) | [**📱 Repo**](https://github.com/maihongquyen/locket-dio) | [**📖 Tài Liệu**](#-tài-liệu)
 
 </div>
 
@@ -110,8 +110,8 @@ Trước khi bắt đầu, hãy đảm bảo bạn đã cài đặt:
 ### ⬇️ Clone Repository
 
 ```bash
-git clone https://github.com/buiduchuy2010qn-prog/duchi-locketgold.git
-cd duchi-locketgold
+git clone https://github.com/maihongquyen/locket-dio.git
+cd locket-dio
 ```
 
 ### 📦 Cài Đặt Dependencies
@@ -329,7 +329,7 @@ Chúng tôi yêu thích những đóng góp! Vui lòng đọc [Hướng Dẫn Đ
 ### 🚀 Bắt Đầu Nhanh cho Contributors
 
 1. **Fork** repository này
-2. **Clone** fork của bạn: `git clone https://github.com/buiduchuy2010qn-prog/duchi-locketgold.git`
+2. **Clone** fork của bạn: `git clone https://github.com/maihongquyen/locket-dio.git`
 3. **Cài đặt** dependencies: `npm install`
 4. **Tạo** branch: `git checkout -b feature/new-feature-babi`
 5. **Thực hiện** thay đổi của bạn
@@ -403,8 +403,8 @@ Khi báo cáo lỗi, vui lòng bao gồm:
 
 ### 💬 Nhận Trợ Giúp
 
-[![GitHub Issues](https://img.shields.io/badge/🐛_Báo_Cáo_Lỗi-GitHub_Issues-red?style=for-the-badge)](https://github.com/buiduchuy2010qn-prog/duchi-locketgold/issues)
-[![GitHub Discussions](https://img.shields.io/badge/💡_Đề_Xuất_Tính_Năng-Discussions-purple?style=for-the-badge)](https://github.com/buiduchuy2010qn-prog/duchi-locketgold/discussions)
+[![GitHub Issues](https://img.shields.io/badge/🐛_Báo_Cáo_Lỗi-GitHub_Issues-red?style=for-the-badge)](https://github.com/maihongquyen/locket-dio/issues)
+[![GitHub Discussions](https://img.shields.io/badge/💡_Đề_Xuất_Tính_Năng-Discussions-purple?style=for-the-badge)](https://github.com/maihongquyen/locket-dio/discussions)
 
 ### 📧 Thông Tin Liên Hệ
 

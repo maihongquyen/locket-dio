@@ -10,7 +10,7 @@ Mục tiêu:
 - Web chạy trên máy tính và điện thoại.
 
 Repository:
-https://github.com/buiduchuy2010qn-prog/locket-dio.git
+https://github.com/maihongquyen/locket-dio.git
 
 Thư mục Windows:
 C:\Users\DucHuyy\.grok\bin\locket-dio
@@ -23,14 +23,14 @@ https://duchi.vercel.app
 https://duchi.vercel.app/locket
 
 Frontend Railway:
-https://huy-locket-production.up.railway.app
-https://huy-locket-production.up.railway.app/locket
+Generated domain của service huy-locket-web
+<web-domain>/locket
 
 Railway API:
-https://huy-locket-api-production.up.railway.app
+Generated domain của service huy-locket-api
 
 Health:
-https://huy-locket-api-production.up.railway.app/health
+<api-domain>/health
 
 Luôn kiểm tra HEAD hiện tại trước khi làm. Không tự đưa repo về commit cũ.
 

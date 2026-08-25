@@ -2,15 +2,11 @@ import { CONFIG } from "./webConfig";
 
 // Chat server host (REST + Socket). Self-host may use relative proxy "/dio-api".
 export const BASE_SERVER_HOST = CONFIG.api.baseUrl;
-// Socket.IO phải đi thẳng tới host hỗ trợ upgrade/polling lâu dài.
-// Vercel rewrite phù hợp REST nhưng không ổn định cho kết nối realtime.
+// Socket.IO dùng cùng cấu hình API. Web production tự proxy WebSocket upgrade
+// tại /dio-api/socket.io, nên không cần hard-code một deployment bên ngoài.
 const configuredSocketHost = import.meta.env.VITE_SOCKET_API_URL;
-const dedicatedVercelSocketHost =
-  "https://huy-locket-api-huy-locket.vercel.app/api/socket-io";
 export const SOCKET_SERVER_HOST =
-  import.meta.env.PROD && (!configuredSocketHost || configuredSocketHost === "/dio-api")
-    ? dedicatedVercelSocketHost
-    : configuredSocketHost || BASE_SERVER_HOST;
+  configuredSocketHost || BASE_SERVER_HOST;
 export const BETA_SERVER_HOST = import.meta.env.VITE_BETA_API_URL;
 // Namespace
 export const API_NAMESPACE = {

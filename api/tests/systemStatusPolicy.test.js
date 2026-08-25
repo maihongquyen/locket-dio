@@ -47,7 +47,7 @@ test("Render worker is OK only when health and worker states are running", () =>
   });
 
   assert.equal(result.status, "OK");
-  assert.match(result.detail, /Render worker đang chạy/);
+  assert.match(result.detail, /media API \+ Canh Slot đang chạy/);
   assert.match(result.detail, /75ms/);
 });
 

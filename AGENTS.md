@@ -28,8 +28,8 @@ User: *“bản này được rồi ngon lắm”* — giữ hành vi này.
 | | |
 |--|--|
 | **Good commit** | `474aa184` — *fix(music): always resolve valid ISRC for Locket app caption* |
-| **Web** | https://huy-locket-production.up.railway.app |
-| **API** | https://huy-locket-api-production.up.railway.app |
+| **Web** | URL của service web trong Railway (`PUBLIC_WEB_URL`) |
+| **API** | URL của service API trong Railway (`LOCKET_API_UPSTREAM`) |
 
 **App Locket cần:** `isrc` (12 ký tự) + `song_title` + `artist` + (`spotify_url` **và/hoặc** `apple_music_url`) + cover icon.
 
@@ -59,10 +59,10 @@ User: *“bản này được rồi ngon lắm”* — giữ hành vi này.
 
 | Service | URL |
 |---------|-----|
-| **Web** | https://huy-locket-production.up.railway.app |
-| **API** | https://huy-locket-api-production.up.railway.app |
+| **Web** | Generated domain của service `huy-locket-web` |
+| **API** | Generated domain của service `huy-locket-api` |
 
-Repo: `https://github.com/buiduchuy2010qn-prog/locket-dio.git` · branch **main**
+Repo: `https://github.com/maihongquyen/locket-dio.git` · branch **main**
 
 After production changes: `npm run build:deploy` → commit `public/` + source → `git push origin main`  
 → Railway auto-deploy (Render: **tắt Auto-Deploy** trên Dashboard để khỏi spam lỗi pipeline minutes).
@@ -77,7 +77,6 @@ Internal API paths/headers (`LocketDioServices`, `X-LocketDio-Member`) stay for 
 
 ### Backend chính (upgrade/fix)
 
-- Path: `C:\Users\DucHuyy\.grok\bin\huy-locket-server` (Server-Locket-Dio)
-- Point frontend proxy: `LOCKET_API_UPSTREAM=http://127.0.0.1:5007` on `locket-dio/server.mjs`
-- Default still `https://api.locket-dio.com` if env unset
-
+- Path local hiện tại: `/Users/mquyen/Desktop/locket-dio/api`
+- Point frontend proxy: `LOCKET_API_UPSTREAM=http://127.0.0.1:5004` on `locket-dio/server.mjs`
+- Production bắt buộc set `LOCKET_API_UPSTREAM`; không fallback sang deployment của người khác

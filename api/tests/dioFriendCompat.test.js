@@ -161,7 +161,7 @@ test("celebrity mutation tries beta only when the main route is missing", async 
       return { status: 404, data: { success: false } };
     }
     if (url.includes("api-beta.locket-dio.com/locket/sendCelebrityRequestV2")) {
-      return { status: 200, data: { success: true, data: { result: { data: { relationship: "follower-waitlist" } } } } };
+      return { status: 200, data: { success: true, data: { result: { data: { relationship: "outgoing-follow-request" } } } } };
     }
     return { status: 200, data: { data: { result: { data: {} } } } };
   });
@@ -177,7 +177,7 @@ test("celebrity mutation tries beta only when the main route is missing", async 
   });
 
   assert.ok(response, "fallback response should be verified");
-  assert.equal(response.data.result.data.relationship, "follower-waitlist");
+  assert.equal(response.data.result.data.relationship, "outgoing-follow-request");
   assert.equal(
     postUrls.filter(u => u.includes("/locket/sendCelebrityRequestV2")).length,
     2,

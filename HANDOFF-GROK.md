@@ -14,8 +14,8 @@
 |--|--|
 | **Known-good commit** | **`474aa184`** `fix(music): always resolve valid ISRC for Locket app caption` |
 | **Branch** | `main` (đã deploy Railway) |
-| **Web** | https://huy-locket-production.up.railway.app |
-| **API** | https://huy-locket-api-production.up.railway.app |
+| **Web** | Generated domain của service `huy-locket-web` |
+| **API** | Generated domain của service `huy-locket-api` |
 
 App Locket hiện pill nhạc khi payload có: **ISRC 12 ký tự** + title + artist + **Spotify hoặc Apple URL** + cover.  
 Server resolve ISRC (Deezer / iTunes / MusicBrainz). Client chặn attach nếu thiếu. Feed inject overlay sau post.
@@ -32,7 +32,7 @@ Chi tiết file + rules: **`AGENTS.md` → section Music / ISRC**.
 | **Tác giả** | Bùi Đức Huy · STK MBBank `0394709137` · email `buiduchuy2010qn@gmail.com` |
 | **Admin Gmail (Drive UI)** | `buiduchuy2010qn@gmail.com` |
 | **Repo folder local** | `C:\Users\DucHuyy\.grok\bin\locket-dio` (tên folder cũ) |
-| **GitHub** | `https://github.com/buiduchuy2010qn-prog/locket-dio.git` |
+| **GitHub** | `https://github.com/maihongquyen/locket-dio.git` |
 | **Branch deploy** | `main` |
 | **Commit HEAD (music OK)** | `474aa184` — *fix(music): always resolve valid ISRC…* |
 
@@ -40,12 +40,12 @@ Chi tiết file + rules: **`AGENTS.md` → section Music / ISRC**.
 
 | Service | URL |
 |---------|-----|
-| **Web** | https://huy-locket-production.up.railway.app |
-| **API** | https://huy-locket-api-production.up.railway.app |
-| Health web proxy | https://huy-locket-production.up.railway.app/dio-api/health |
-| Health API | https://huy-locket-api-production.up.railway.app/health |
-| Login | https://huy-locket-production.up.railway.app/login |
-| Camera | https://huy-locket-production.up.railway.app/locket |
+| **Web** | Generated domain của service `huy-locket-web` |
+| **API** | Generated domain của service `huy-locket-api` |
+| Health web proxy | `<web-domain>/dio-api/health` |
+| Health API | `<api-domain>/health` |
+| Login | `<web-domain>/login` |
+| Camera | `<web-domain>/locket` |
 
 **Render** (legacy, tắt Auto-Deploy nếu hết minutes): `huy-locket.onrender.com` / `huy-locket-api.onrender.com`
 

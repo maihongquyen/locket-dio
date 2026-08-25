@@ -9,7 +9,6 @@ const TRUSTED_ORIGINS = new Map([
   ["https://locket-dio.com", "vercel"],
   ["https://www.locket-dio.com", "vercel"],
   ["https://duchi.vercel.app", "vercel"],
-  ["https://huy-locket-production.up.railway.app", "railway"],
 ]);
 
 function extractBestPublicIp(req) {
@@ -246,4 +245,3 @@ module.exports = {
   extractBestPublicIp,
   parseUserAgent,
 };
-

@@ -4,7 +4,7 @@
 #   Root Directory: . (hoặc trống)
 #   Dockerfile: Dockerfile
 #   Variables BẮT BUỘC:
-#     LOCKET_API_UPSTREAM=https://huy-locket-api-production.up.railway.app
+#     LOCKET_API_UPSTREAM=https://<api-domain>.up.railway.app
 #     DATABASE_URL=<Neon pooled connection string — Drive OAuth bền, KHÔNG commit>
 #     COOKIE_SECRET=<chuỗi dài cố định>
 #
@@ -12,7 +12,7 @@
 #   Root Directory: api
 #   Dockerfile: Dockerfile
 #   Variables:
-#     CORS_ORIGINS=https://huy-locket-production.up.railway.app
+#     CORS_ORIGINS=https://<web-domain>.up.railway.app
 #     DATABASE_URL=<Neon pooled connection string — Celebrity/Admin data, KHÔNG commit>
 #     LOCKETDIO_SIGNATURE_SECRET=<chuỗi dài cố định — đừng Generate mỗi lần>
 #     LOCKETDIO_JWT_SECRET=<cố định>
