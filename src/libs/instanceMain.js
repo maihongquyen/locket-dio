@@ -3,17 +3,12 @@ import { CONFIG } from "@/config";
 import { getToken, saveToken } from "@/utils";
 import axios from "axios";
 import { instanceAuth } from "./instanceAuth";
+import { buildAppMetaHeaders } from "./appMetaHeaders";
 
 const BASE_URL = CONFIG.api.baseUrl;
 
 // meta tĩnh của app
-const APP_META = {
-  "x-app-author": CONFIG.app.author,
-  "x-app-name": CONFIG.app.shortname,
-  "x-app-client": CONFIG.app.clientVersion,
-  "x-app-api": CONFIG.app.apiVersion,
-  "x-app-env": CONFIG.app.env,
-};
+const APP_META = buildAppMetaHeaders(CONFIG.app);
 
 // Chỉ cho phép một lần refresh token chạy tại một thời điểm trong cùng tab.
 // Bên dưới còn có Web Locks + BroadcastChannel để phối hợp giữa nhiều tab.

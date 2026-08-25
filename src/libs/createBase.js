@@ -1,15 +1,10 @@
 import axios from "axios";
 import { CONFIG } from "@/config";
 import { getToken, getMemberToken } from "@/utils";
+import { buildAppMetaHeaders } from "./appMetaHeaders";
 
 // Meta của app gửi lên server
-const APP_META = {
-  "x-app-author": CONFIG.app.author,
-  "x-app-name": CONFIG.app.shortname,
-  "x-app-client": CONFIG.app.clientVersion,
-  "x-app-api": CONFIG.app.apiVersion,
-  "x-app-env": CONFIG.app.env,
-};
+const APP_META = buildAppMetaHeaders(CONFIG.app);
 
 // Hàm gắn headers chung
 const attachHeaders = (config) => {
