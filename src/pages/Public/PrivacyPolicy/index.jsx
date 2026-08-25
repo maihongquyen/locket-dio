@@ -112,11 +112,11 @@ const PrivacyPolicy = () => {
           <p>
             <strong>Website</strong> refers to Quyền Locket, accessible from{" "}
             <a
-              href="https://huy-locket-web-production.up.railway.app/"
+              href="https://quyen267.up.railway.app/"
               rel="external nofollow noopener"
               target="_blank"
             >
-              https://huy-locket-web-production.up.railway.app/
+              https://quyen267.up.railway.app/
             </a>
           </p>
         </li>
@@ -545,11 +545,11 @@ const PrivacyPolicy = () => {
           <p>
             By visiting this page on our website:{" "}
             <a
-              href="https://huy-locket-web-production.up.railway.app/contact"
+              href="https://quyen267.up.railway.app/contact"
               rel="external nofollow noopener"
               target="_blank"
             >
-              https://huy-locket-web-production.up.railway.app/contact
+              https://quyen267.up.railway.app/contact
             </a>
           </p>
         </li>

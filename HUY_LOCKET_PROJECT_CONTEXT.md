@@ -19,8 +19,8 @@ Branch chính:
 main
 
 Frontend Vercel:
-https://huy-locket-web-production.up.railway.app
-https://huy-locket-web-production.up.railway.app/locket
+https://quyen267.up.railway.app
+https://quyen267.up.railway.app/locket
 
 Frontend Railway:
 Generated domain của service huy-locket-web
@@ -305,7 +305,7 @@ Hướng ưu tiên:
 - Trusted Web Activity + Bubblewrap.
 - Không dùng Capacitor/WebView/native camera trong giai đoạn đầu.
 - APK mở:
-  https://huy-locket-web-production.up.railway.app/locket
+  https://quyen267.up.railway.app/locket
 - Railway vẫn là API/backend.
 - Railway web vẫn hoạt động độc lập.
 

@@ -13,7 +13,7 @@ const PUBLIC_URL = String(
   process.env.PUBLIC_URL
     || process.env.PUBLIC_WEB_URL
     || process.env.APP_PUBLIC_URL
-    || "https://huy-locket-web-production.up.railway.app",
+    || "https://quyen267.up.railway.app",
 ).replace(/\/$/, "");
 
 function clean(value, max = 1000) {

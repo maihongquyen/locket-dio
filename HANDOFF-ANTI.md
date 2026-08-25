@@ -16,7 +16,7 @@
   - `chore: retrigger Vercel deploy`
 - Frontend/web chính: **Vercel project `huy-locket`**.
 - Backend/API chính cho web: **Vercel project `huy-locket-api`**.
-- Domain web chính: **`https://huy-locket-web-production.up.railway.app`**.
+- Domain web chính: **`https://quyen267.up.railway.app`**.
 - Render **không phải web chính**.
 - Render hiện dùng làm **backend helper + media API + long-lived Slot Monitor worker**.
 - Render service cần giữ: **`huy-locket-media-api`**.
@@ -88,7 +88,7 @@ Browser / PWA
     v
 Vercel project: huy-locket
 React + Vite frontend
-https://huy-locket-web-production.up.railway.app
+https://quyen267.up.railway.app
 ```
 
 Web chính **phải tiếp tục ở Vercel**.
@@ -825,7 +825,7 @@ project id: prj_IYydzPJ3EAbY0n2khx7K8y7bfaLA
 Domain chính:
 
 ```text
-https://huy-locket-web-production.up.railway.app
+https://quyen267.up.railway.app
 ```
 
 Build:
@@ -919,7 +919,7 @@ Không push refactor lớn không liên quan bug hiện tại.
 [ ] Check Vercel huy-locket-api
 [ ] Check Render huy-locket-media-api
 [ ] Không tạo lại huy-locket-slot-worker
-[ ] Web chính vẫn là huy-locket-web-production.up.railway.app
+[ ] Web chính vẫn là quyen267.up.railway.app
 [ ] Check Vercel build-rate-limit trước khi spam commit
 [ ] Nếu media post lỗi: kiểm tra R2 upload/direct-read/signature/delete
 [ ] Nếu Slot lỗi: kiểm tra merged worker + DATABASE_URL + encryption key + Firebase key
@@ -939,7 +939,7 @@ Không push refactor lớn không liên quan bug hiện tại.
 
 ```text
 WEB CHÍNH:
-Railway -> huy-locket-web-production.up.railway.app
+Railway -> quyen267.up.railway.app
 
 API CHÍNH:
 Vercel -> huy-locket-api

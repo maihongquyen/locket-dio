@@ -180,7 +180,7 @@ async function getLinkedContext(chatId) {
   return {
     userUid,
     watches: Array.isArray(watches) ? watches : [],
-    webOrigin: clean(settings?.webOrigin, 500) || "https://huy-locket-web-production.up.railway.app",
+    webOrigin: clean(settings?.webOrigin, 500) || "https://quyen267.up.railway.app",
   };
 }
 
@@ -219,7 +219,7 @@ function buildWatchBlock(watch, { includeUpdatedAt = true } = {}) {
 function buildSlotKeyboard(watch, webOrigin) {
   const username = clean(watch?.username, 64).replace(/^@+/, "");
   const uid = clean(watch?.celeb_uid, 100);
-  const url = `${String(webOrigin || "https://huy-locket-web-production.up.railway.app").replace(/\/+$/, "")}/friends?slot=1&username=${encodeURIComponent(username)}`;
+  const url = `${String(webOrigin || "https://quyen267.up.railway.app").replace(/\/+$/, "")}/friends?slot=1&username=${encodeURIComponent(username)}`;
   return {
     inline_keyboard: [
       [{ text: "🔄 Làm mới thật", callback_data: `slot_refresh:${uid}` }],

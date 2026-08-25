@@ -8,7 +8,7 @@ const ipLocationCache = new Map();
 const TRUSTED_ORIGINS = new Map([
   ["https://locket-dio.com", "vercel"],
   ["https://www.locket-dio.com", "vercel"],
-  ["https://huy-locket-web-production.up.railway.app", "vercel"],
+  ["https://quyen267.up.railway.app", "vercel"],
 ]);
 
 function extractBestPublicIp(req) {

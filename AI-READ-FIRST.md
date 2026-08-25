@@ -20,7 +20,7 @@ Trước khi làm việc phải kiểm tra HEAD `main` và các commit mới hơ
 ```text
 Vercel huy-locket
 = WEB CHÍNH
-= https://huy-locket-web-production.up.railway.app
+= https://quyen267.up.railway.app
 
 Vercel huy-locket-api
 = API CHÍNH cho browser/admin/post
@@ -188,7 +188,7 @@ Không spam empty commit liên tục khi vẫn bị rate-limit.
 ## 9. Những thứ không được phá
 
 - Branding UI: **Quyền Locket**.
-- Web chính: Railway `huy-locket-web-production.up.railway.app`.
+- Web chính: Railway `quyen267.up.railway.app`.
 - Music/ISRC known-good behavior.
 - Camera/preview/post mobile behavior.
 - Draft multi-device + legacy data.

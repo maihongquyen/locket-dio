@@ -4,7 +4,7 @@ const path = require("path");
 
 const router = express.Router();
 const DRIVE_SCOPE = "https://www.googleapis.com/auth/drive.file";
-const PUBLIC_URL = (process.env.PUBLIC_URL || "https://huy-locket-web-production.up.railway.app").replace(/\/$/, "");
+const PUBLIC_URL = (process.env.PUBLIC_URL || "https://quyen267.up.railway.app").replace(/\/$/, "");
 const STATE_SECRET = process.env.OAUTH_STATE_SECRET || process.env.COOKIE_SECRET || process.env.LOCKETDIO_SIGNATURE_SECRET || crypto.createHash("sha256").update("huy-locket-vercel-drive").digest("hex");
 const ADMIN_EMAILS = new Set(String(process.env.ADMIN_EMAILS || process.env.VITE_ADMIN_EMAILS || "").split(/[,;\s]+/).map((v) => v.trim().toLowerCase()).filter(Boolean));
 const ADMIN_IDS = new Set(String(process.env.ADMIN_LOCAL_IDS || process.env.VITE_ADMIN_LOCAL_IDS || "").split(/[,;\s]+/).map((v) => v.trim()).filter(Boolean));

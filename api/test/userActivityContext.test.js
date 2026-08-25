@@ -19,7 +19,7 @@ test("uses Vercel geo headers only when the request was handled by Vercel", () =
   const context = getRequestContext({
     ip: "10.0.0.1",
     headers: {
-      origin: "https://huy-locket-web-production.up.railway.app",
+      origin: "https://quyen267.up.railway.app",
       "x-vercel-id": "sin1::abc",
       "x-vercel-forwarded-for": "8.8.4.4",
       "x-vercel-ip-country": "VN",

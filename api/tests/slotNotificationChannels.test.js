@@ -71,7 +71,7 @@ test("Gmail provider is configured only with Apps Script URL and secret", () => 
 
 test("slot message shows available slots and new capacity", () => {
   const previousWeb = process.env.PUBLIC_WEB_URL;
-  process.env.PUBLIC_WEB_URL = "https://huy-locket-web-production.up.railway.app";
+  process.env.PUBLIC_WEB_URL = "https://quyen267.up.railway.app";
   try {
     const message = buildSlotMessage({
       title: "🔥 Slot vừa mở!",
@@ -86,7 +86,7 @@ test("slot message shows available slots and new capacity", () => {
 
     assert.match(message.text, /10[.\s]?000 slot trống/);
     assert.match(message.text, /20[.\s]?000 \/ 30[.\s]?000/);
-    assert.match(message.url, /huy-locket-web-production\.up\.railway\.app/);
+    assert.match(message.url, /quyen267\.up\.railway\.app/);
   } finally {
     if (previousWeb === undefined) delete process.env.PUBLIC_WEB_URL;
     else process.env.PUBLIC_WEB_URL = previousWeb;
@@ -95,7 +95,7 @@ test("slot message shows available slots and new capacity", () => {
 
 test("Gmail subject and template are clean and branded", () => {
   const previousWeb = process.env.PUBLIC_WEB_URL;
-  process.env.PUBLIC_WEB_URL = "https://huy-locket-web-production.up.railway.app";
+  process.env.PUBLIC_WEB_URL = "https://quyen267.up.railway.app";
   try {
     const payload = {
       type: "slot-open",

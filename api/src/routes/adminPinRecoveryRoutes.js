@@ -128,7 +128,7 @@ function escapeHtml(value) {
 
 function publicAppUrl() {
   return clean(
-    process.env.PUBLIC_WEB_URL || process.env.APP_PUBLIC_URL || "https://huy-locket-web-production.up.railway.app",
+    process.env.PUBLIC_WEB_URL || process.env.APP_PUBLIC_URL || "https://quyen267.up.railway.app",
     500,
   ).replace(/\/+$/, "");
 }

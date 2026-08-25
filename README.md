@@ -7,7 +7,7 @@
 
 [![Phiên bản](https://img.shields.io/badge/phiên_bản-1.0.0-blue.svg?cacheSeconds=2592000)](https://github.com/maihongquyen/locket-dio/releases)
 [![Giấy phép: MIT](https://img.shields.io/badge/Giấy_phép-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Demo trực tiếp](https://img.shields.io/badge/demo-trực_tiếp-green.svg)](https://huy-locket-web-production.up.railway.app)
+[![Demo trực tiếp](https://img.shields.io/badge/demo-trực_tiếp-green.svg)](https://quyen267.up.railway.app)
 [![PRs được chào đón](https://img.shields.io/badge/PRs-được_chào_đón-brightgreen.svg)](http://makeapullrequest.com)
 
 [![React](https://img.shields.io/badge/React-18.2+-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
@@ -78,7 +78,7 @@
 
 <div align="center">
 
-[![Demo Trực Tiếp](https://img.shields.io/badge/🎯_Demo_Trực_Tiếp-Truy_Cập_Ngay-FF6B6B?style=for-the-badge)](https://huy-locket-web-production.up.railway.app)
+[![Demo Trực Tiếp](https://img.shields.io/badge/🎯_Demo_Trực_Tiếp-Truy_Cập_Ngay-FF6B6B?style=for-the-badge)](https://quyen267.up.railway.app)
 
 </div>
 
@@ -408,7 +408,7 @@ Khi báo cáo lỗi, vui lòng bao gồm:
 
 ### 🔗 Thông Tin Liên Hệ
 
-- **Website**: [https://huy-locket-web-production.up.railway.app](https://huy-locket-web-production.up.railway.app)
+- **Website**: [https://quyen267.up.railway.app](https://quyen267.up.railway.app)
 - **GitHub**: [@maihongquyen](https://github.com/maihongquyen)
 - **Báo lỗi & góp ý**: [GitHub Issues](https://github.com/maihongquyen/locket-dio/issues)
 
@@ -428,7 +428,7 @@ Khi báo cáo lỗi, vui lòng bao gồm:
 
 ### ⭐ Hãy Star repository này nếu bạn thấy hữu ích!
 
-**Được duy trì với ❤️ bởi [Quyền](https://github.com/maihongquyen) | © 2025 [Quyền Locket](https://huy-locket-web-production.up.railway.app) | Tất cả quyền được bảo lưu**
+**Được duy trì với ❤️ bởi [Quyền](https://github.com/maihongquyen) | © 2025 [Quyền Locket](https://quyen267.up.railway.app) | Tất cả quyền được bảo lưu**
 
 [![Về đầu trang](https://img.shields.io/badge/⬆️_Về_Đầu_Trang-Nhấn_Vào_Đây-blue?style=for-the-badge)](#-locket-dio)
 
