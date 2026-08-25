@@ -57,7 +57,7 @@ const AddToHomeScreenGuide = () => {
         <div className="text-center mb-8">
           <div className="flex justify-center mb-4">
             <div className="w-20 h-20 bounce-y shadow-lg flex items-center rounded-2xl justify-center">
-              <img src="/apple-touch-icon.png" alt="Huy Locket Icon" />
+              <img src="/apple-touch-icon.png" alt="Quyền Locket Icon" />
             </div>
           </div>
           <h1 className="text-3xl font-bold text-base-content mb-2">
@@ -361,7 +361,7 @@ const AddToHomeScreenGuide = () => {
               </h3>
               <p className="text-yellow-700 text-sm">
                 Kiểm tra các trang màn hình chính khác hoặc tìm kiếm trên thiết
-                bị "Huy Locket"
+                bị "Quyền Locket"
               </p>
             </div>
           </div>
@@ -369,7 +369,9 @@ const AddToHomeScreenGuide = () => {
 
         {/* Footer */}
         <div className="text-center mt-8 text-gray-500">
-          <p className="text-sm">Cần hỗ trợ? Liên hệ: buiduchuy2010qn@gmail.com</p>
+          <p className="text-sm">
+            Cần hỗ trợ? Truy cập trang Liên hệ hoặc GitHub Issues của Quyền Locket.
+          </p>
         </div>
       </div>
     </div>

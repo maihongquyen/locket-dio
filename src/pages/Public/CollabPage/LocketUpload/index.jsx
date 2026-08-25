@@ -3,11 +3,11 @@ export default function LocketUpload() {
     <div className="p-4 mx-auto min-h-screen max-w-3xl text-base-content space-y-4">
       {/* Tiêu đề chính */}
       <h1 className="text-3xl md:text-4xl font-bold">
-        Huy Locket x Locket Upload
+        Quyền Locket x Locket Upload
       </h1>
 
       <p className="text-base text-base-content/80">
-        Huy Locket hân hạnh hợp tác cùng{" "}
+        Quyền Locket hân hạnh hợp tác cùng{" "}
         <span className="font-semibold">Locket Upload </span>
         nhằm mang đến trải nghiệm chia sẻ ảnh nhanh chóng, ổn định và tiện lợi
         hơn cho người dùng.
@@ -15,10 +15,10 @@ export default function LocketUpload() {
 
       {/* Giới thiệu */}
       <h2 className="text-xl font-semibold mt-6 text-secondary">
-        Giới thiệu về Huy Locket
+        Giới thiệu về Quyền Locket
       </h2>
       <p>
-        Huy Locket là một web app được cài đặt bằng cách thêm vào màn hình chính
+        Quyền Locket là một web app được cài đặt bằng cách thêm vào màn hình chính
         (PWA). Ứng dụng mang đến nhiều tính năng nâng cao giúp việc đăng ảnh lên
         Locket trở nên dễ dàng hơn.
       </p>
@@ -30,7 +30,7 @@ export default function LocketUpload() {
       <p>
         Trên Android, theo ước tính có tới{" "}
         <span className="font-semibold">70% thiết bị </span>
-        gặp lỗi không thể sử dụng camera trực tiếp trong Huy Locket.
+        gặp lỗi không thể sử dụng camera trực tiếp trong Quyền Locket.
       </p>
       <p>
         Nguyên nhân đến từ việc hệ điều hành Android quản lý quyền camera rất
@@ -44,7 +44,7 @@ export default function LocketUpload() {
       </h2>
       <p>
         Trên <span className="font-semibold">iOS</span>, việc sử dụng camera
-        trong Huy Locket nhìn chung{" "}
+        trong Quyền Locket nhìn chung{" "}
         <span className="font-semibold">ổn định và mượt mà</span>, không gặp
         nhiều vấn đề nghiêm trọng như Android.
       </p>
@@ -61,7 +61,7 @@ export default function LocketUpload() {
         Với Locket Upload, bạn chỉ cần mở ứng dụng, chụp ảnh một cách dễ dàng,
         sau đó ảnh sẽ được{" "}
         <span className="font-semibold">tự động đồng bộ </span>
-        với Huy Locket hoặc Locket Widget của bạn.
+        với Quyền Locket hoặc Locket Widget của bạn.
       </p>
 
       {/* Link */}

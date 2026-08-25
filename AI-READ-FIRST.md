@@ -1,4 +1,4 @@
-# AI READ FIRST — Huy Locket
+# AI READ FIRST — Quyền Locket
 
 > Cập nhật: **2026-08-19 21:25 ICT**
 >
@@ -6,7 +6,7 @@
 
 ## 1. Quy tắc source of truth
 
-1. Repo: `buiduchuy2010qn-prog/duchi-locketgold`
+1. Repo: `maihongquyen/locket-dio`
 2. Branch production: `main`
 3. Code trên `main` mới nhất là source of truth cao nhất.
 4. `AI-READ-FIRST.md` là điểm bắt đầu nhanh.
@@ -20,7 +20,7 @@ Trước khi làm việc phải kiểm tra HEAD `main` và các commit mới hơ
 ```text
 Vercel huy-locket
 = WEB CHÍNH
-= https://duchi.vercel.app
+= https://huy-locket-web-production.up.railway.app
 
 Vercel huy-locket-api
 = API CHÍNH cho browser/admin/post
@@ -187,8 +187,8 @@ Không spam empty commit liên tục khi vẫn bị rate-limit.
 
 ## 9. Những thứ không được phá
 
-- Branding UI: **Huy Locket**.
-- Web chính: Vercel `duchi.vercel.app`.
+- Branding UI: **Quyền Locket**.
+- Web chính: Railway `huy-locket-web-production.up.railway.app`.
 - Music/ISRC known-good behavior.
 - Camera/preview/post mobile behavior.
 - Draft multi-device + legacy data.

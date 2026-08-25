@@ -173,7 +173,7 @@ async function getSystemStatus() {
 
   const vercelUrl = cleanUrl(
     process.env.PUBLIC_WEB_URL,
-    "https://duchi.vercel.app",
+    "https://huy-locket-web-production.up.railway.app",
   );
   const slotWorkerUrl = cleanUrl(
     process.env.SLOT_WORKER_PUBLIC_URL || process.env.RENDER_SLOT_WORKER_URL,

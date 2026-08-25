@@ -1,4 +1,4 @@
-﻿# Huy Locket monorepo
+﻿# Quyền Locket monorepo
 
 | Path | Role |
 |------|------|

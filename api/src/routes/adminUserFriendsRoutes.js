@@ -162,7 +162,7 @@ router.get(
         return res.status(404).json({
           success: false,
           code: "USER_NOT_FOUND",
-          error: "Không tìm thấy user trong Huy Locket.",
+          error: "Không tìm thấy user trong Quyền Locket.",
         });
       }
 

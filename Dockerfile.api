@@ -1,4 +1,4 @@
-# Huy Locket API — build từ root repo (Railway Root Directory = .)
+# Quyền Locket API — build từ root repo (Railway Root Directory = .)
 # Settings service huy-locket-api:
 #   Root Directory: .   (hoặc để trống)
 #   Dockerfile path: Dockerfile.api

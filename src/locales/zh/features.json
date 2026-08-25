@@ -110,7 +110,7 @@
   "friends": {
     "accepting_request": "正在接受好友请求...",
     "accept_success": "已接受 {{name}}",
-    "notif_title": "来自 Huy Locket 的通知",
+    "notif_title": "来自 Quyền Locket 的通知",
     "request_not_found": "未找到好友请求。",
     "accept_failed": "❌ 接受好友请求失败！",
     "friends_count": "{{count}} 位好友",

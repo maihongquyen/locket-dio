@@ -1,7 +1,7 @@
 @echo off
 cd /d "%~dp0"
 echo ========================================
-echo   HUY LOCKET API  (port 5007)
+echo   QUYEN LOCKET API  (port 5007)
 echo ========================================
 if not exist node_modules (
   echo Installing dependencies...

@@ -1,4 +1,4 @@
-# Huy Locket — Runbook sửa lỗi Kết bạn / Celeb
+# Quyền Locket — Runbook sửa lỗi Kết bạn / Celeb
 
 > Trạng thái tham chiếu: production đã xác nhận gửi kết bạn thành công ngày 2026-08-09.
 > Mục tiêu của tài liệu này là giúp khôi phục đúng kiến trúc đang hoạt động nếu về sau nút Kết bạn hoặc Auto Slot Celeb bị lỗi.
@@ -10,7 +10,7 @@ Các lỗi đã từng xuất hiện:
 - Bấm **Kết bạn** → hiện `Gửi thất bại`.
 - Railway nhận `POST /locket/sendFriendRequestV2` nhưng upstream Locket trả `401/403`.
 - App Check trên backend tự host không có token hợp lệ nên request trực tiếp tới Locket có thể bị từ chối.
-- Lỗi `401` từ upstream từng bị frontend hiểu nhầm là phiên Huy Locket hết hạn → tự refresh rồi **đăng xuất tài khoản**.
+- Lỗi `401` từ upstream từng bị frontend hiểu nhầm là phiên Quyền Locket hết hạn → tự refresh rồi **đăng xuất tài khoản**.
 - Canh Slot có thể phát hiện slot nhưng phần tự gửi Celeb cũng chịu cùng vấn đề upstream auth nếu không dùng chung cơ chế fallback.
 
 ## 2. Kiến trúc ĐÚNG đang hoạt động
@@ -20,7 +20,7 @@ Không gửi trực tiếp từ browser tới Dio.
 Luồng chuẩn:
 
 ```text
-Frontend Huy Locket
+Frontend Quyền Locket
     ↓
 Railway API /locket/sendFriendRequestV2 hoặc /locket/sendCelebrityRequestV2
     ↓
@@ -37,7 +37,7 @@ api.locket-dio.com/api/cn lấy member session
 api-beta.locket-dio.com/locket/sendFriendRequestV2
 hoặc /locket/sendCelebrityRequestV2
     ↓
-Trả kết quả về Huy Locket
+Trả kết quả về Quyền Locket
 ```
 
 **Không fallback cho 400, 404, 409, 429, 5xx hoặc endpoint khác.**
@@ -47,8 +47,8 @@ Trả kết quả về Huy Locket
 ### Frontend
 
 - `src/services/LocketDioServices/RequestServices.js`
-  - Kết bạn thường phải gọi backend Huy Locket: `locket/sendFriendRequestV2`.
-  - Celeb phải gọi backend Huy Locket: `locket/sendCelebrityRequestV2`.
+  - Kết bạn thường phải gọi backend Quyền Locket: `locket/sendFriendRequestV2`.
+  - Celeb phải gọi backend Quyền Locket: `locket/sendCelebrityRequestV2`.
   - Không đổi thành gọi thẳng `api-beta.locket-dio.com` từ browser.
 
 - `src/libs/auth401Policy.js`
@@ -257,8 +257,8 @@ Các mốc quan trọng:
 Ngoài GitHub, snapshot source `main` tại mốc bảo vệ đã được backup trên Google Drive trong thư mục:
 
 ```text
-Huy Locket Backups/
-└── Huy Locket - Backup FULL - 2026-08-09/
+Quyền Locket Backups/
+└── Quyền Locket - Backup FULL - 2026-08-09/
 ```
 
 Nếu lỗi nặng và không xác định được nguyên nhân, ưu tiên so diff với hai commit trên hoặc khôi phục snapshot rồi sửa từng thay đổi nhỏ.

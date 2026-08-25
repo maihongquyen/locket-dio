@@ -8,7 +8,7 @@ const {
 
 /**
  * Full Premium for every request when member JWT missing/invalid.
- * Huy Locket free-for-all — no paywall on self-host.
+ * Quyền Locket free-for-all — no paywall on self-host.
  */
 function freePlan(req) {
   const uid = req.user?.localId || req.user?.uid || "guest";
@@ -33,7 +33,7 @@ const verifyDioToken = (req, res, next) => {
       req.get("X-LocketDio-Member") ||
       "";
 
-    // Không có member token → free local (Huy Locket self-host)
+    // Không có member token → free local (Quyền Locket self-host)
     if (!token || token === "null" || token === "undefined") {
       logWarning(
         "verifyplanAuth",

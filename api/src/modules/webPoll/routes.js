@@ -19,7 +19,7 @@ function voterSnapshot(user, uid) {
     `${user?.firstName || ""} ${user?.lastName || ""}`.trim() ||
     user?.displayName ||
     user?.username ||
-    "Người dùng Huy Locket";
+    "Người dùng Quyền Locket";
   return {
     uid,
     username: user?.username || "",
@@ -111,7 +111,7 @@ router.put("/user/:uid/vote", verifyIdToken, async (req, res) => {
     );
     return res.json({
       success: true,
-      message: "Huy Locket đã lưu bình chọn của bạn.",
+      message: "Quyền Locket đã lưu bình chọn của bạn.",
       data: poll,
     });
   } catch (error) {

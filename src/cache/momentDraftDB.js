@@ -1,7 +1,7 @@
 import Dexie from "dexie";
 
 /**
- * Multi-draft offline library (Huy Locket).
+ * Multi-draft offline library (Quyền Locket).
  * v1: single draft per uid
  * v2: many drafts keyed by UUID + separate blob store
  */

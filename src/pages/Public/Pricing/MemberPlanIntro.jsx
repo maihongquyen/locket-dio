@@ -35,7 +35,7 @@ export default function MemberPlanIntro() {
         </div>
         <div>
           <h2 className="text-xl font-semibold text-gray-800 font-lovehouse -mb-1">
-            {FREE_FOR_ALL ? "Premium vĩnh viễn" : "Huy Locket Member"}
+            {FREE_FOR_ALL ? "Premium vĩnh viễn" : "Quyền Locket Member"}
           </h2>
           <p className="text-sm text-gray-500">
             {FREE_FOR_ALL
@@ -113,7 +113,7 @@ export default function MemberPlanIntro() {
 
       <div className="bg-gray-100 text-gray-700 rounded-xl p-4 text-center text-base font-semibold flex items-center justify-center gap-2">
         <HeartHandshake size={30} className="text-purple-500" />
-        Cảm ơn bạn đã đồng hành cùng Huy Locket
+        Cảm ơn bạn đã đồng hành cùng Quyền Locket
       </div>
     </div>
   );

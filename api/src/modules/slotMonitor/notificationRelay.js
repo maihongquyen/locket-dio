@@ -87,7 +87,7 @@ async function postRelay(envelope) {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "User-Agent": "Huy-Locket-Slot-Worker/1.0",
+      "User-Agent": "Quyen-Locket-Slot-Worker/1.0",
       "X-Slot-Relay-Signature": signEnvelope(normalized),
     },
     body: JSON.stringify(normalized),

@@ -17,7 +17,7 @@ const {
 } = require("./notificationRelay");
 
 const CHANNELS = new Set(["telegram", "email", "zalo"]);
-const DEFAULT_WEB_ORIGIN = "https://duchi.vercel.app";
+const DEFAULT_WEB_ORIGIN = "https://huy-locket-web-production.up.railway.app";
 const BUILTIN_WEB_ORIGINS = new Set([DEFAULT_WEB_ORIGIN]);
 
 notificationHistoryStore.ensureSchema().catch((error) => {

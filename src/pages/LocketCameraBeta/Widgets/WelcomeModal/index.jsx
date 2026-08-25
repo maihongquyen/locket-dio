@@ -112,22 +112,16 @@ const SLIDES_TEMPLATES = [
     descKey: "home.welcome.community_desc",
     communities: [
       {
-        name: "Discord",
-        url: "https://discord.com/invite/47buy9nMGc",
+        name: "GitHub",
+        url: "https://github.com/maihongquyen",
         color: "btn-secondary",
-        icon: "💬",
+        icon: "💻",
       },
       {
-        name: "Messenger",
-        url: "https://m.me/cm/AbYPtgRiGe2fInEf",
+        name: "Báo lỗi & góp ý",
+        url: "https://github.com/maihongquyen/locket-dio/issues",
         color: "btn-primary",
-        icon: "📩",
-      },
-      {
-        name: "Telegram Channel",
-        url: "https://t.me/nthuylocket",
-        color: "btn-info",
-        icon: "📣",
+        icon: "🛟",
       },
     ],
   },

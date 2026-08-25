@@ -1,47 +1,26 @@
 import React from "react";
 import "./styles.css";
-import { Mail, MapPin } from "lucide-react";
-import { COMMUNITY_CONFIG, CONFIG, CONTACT_CONFIG } from "@/config";
+import { Github, LifeBuoy, MapPin } from "lucide-react";
+import { CONFIG, CONTACT_CONFIG } from "@/config";
 
 export default function Contact() {
   const avatarUrl = CONFIG.app.myInfo.avatarUrl;
   const fullName = CONFIG.app.myInfo.fullName;
 
-  const communityLinks = [
+  const contactLinks = [
     {
-      name: "Discord",
-      icon: (
-        <img
-          src="https://img.icons8.com/?size=100&id=D2NqKl85S8Ye&format=png"
-          alt="Discord"
-          className="w-8 h-8"
-        />
-      ),
-      url: COMMUNITY_CONFIG.discord,
+      name: "GitHub",
+      description: "Trang cá nhân của Quyền",
+      icon: <Github className="w-8 h-8" aria-hidden="true" />,
+      url: CONTACT_CONFIG.github,
     },
     {
-      name: "Telegram",
-      icon: (
-        <img
-          src="https://img.icons8.com/?size=100&id=oWiuH0jFiU0R&format=png"
-          alt="Telegram"
-          className="w-8 h-8"
-        />
-      ),
-      url: COMMUNITY_CONFIG.telegram,
+      name: "Báo lỗi & góp ý",
+      description: "Gửi yêu cầu trên GitHub",
+      icon: <LifeBuoy className="w-8 h-8" aria-hidden="true" />,
+      url: CONTACT_CONFIG.issues,
     },
-    {
-      name: "Messenger",
-      icon: (
-        <img
-          src="https://cdn-icons-png.flaticon.com/128/5968/5968771.png"
-          alt="Messenger"
-          className="w-8 h-8"
-        />
-      ),
-      url: COMMUNITY_CONFIG.messenger,
-    },
-  ];
+  ].filter((link) => Boolean(link.url));
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-base-200 to-base-300 py-10 px-4">
@@ -53,7 +32,7 @@ export default function Contact() {
           </h1>
           <p className="mt-3 text-base-content/70 text-lg">
             Kết nối với <span className="font-semibold">{fullName}</span> - Tác
-            giả <span className="font-semibold">Huy Locket</span>
+            giả <span className="font-semibold">Quyền Locket</span>
           </p>
         </div>
 
@@ -62,12 +41,12 @@ export default function Contact() {
           <div className="bg-base-100 w-full flex flex-col items-center justify-start p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 animate-slideUp">
             <img
               src={avatarUrl}
-              alt="Bùi Đức Huy"
+              alt={fullName}
               className="w-28 h-28 rounded-full object-cover border-4 border-base-300 mb-4 shadow-md hover:scale-105 transition duration-300"
             />
-            <h2 className="text-xl font-bold">Bùi Đức Huy</h2>
+            <h2 className="text-xl font-bold">{fullName}</h2>
             <p className="mt-1 text-sm text-base-content/70">
-              Full-stack Developer
+              Chủ sở hữu Quyền Locket
             </p>
           </div>
 
@@ -75,9 +54,9 @@ export default function Contact() {
           <div className="space-y-6">
             {/* Community Links */}
             <div className="bg-base-100 p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 animate-slideUp delay-200">
-              <h3 className="text-lg font-semibold mb-4">Liên kết cộng đồng</h3>
-              <div className="grid grid-cols-3 sm:grid-cols-5 gap-4 text-center">
-                {communityLinks.map((link) => (
+              <h3 className="text-lg font-semibold mb-4">Kênh liên hệ chính thức</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-center">
+                {contactLinks.map((link) => (
                   <a
                     key={link.name}
                     href={link.url}
@@ -86,7 +65,10 @@ export default function Contact() {
                     className="flex flex-col items-center p-3 rounded-lg bg-base-200 hover:bg-base-300 transition transform hover:-translate-y-1 hover:scale-105 shadow-sm hover:shadow-md"
                   >
                     {link.icon}
-                    <span className="text-xs mt-2">{link.name}</span>
+                    <span className="text-sm font-semibold mt-2">{link.name}</span>
+                    <span className="text-xs mt-1 text-base-content/60">
+                      {link.description}
+                    </span>
                   </a>
                 ))}
               </div>
@@ -98,8 +80,8 @@ export default function Contact() {
                 <MapPin size={18} /> Thông tin hỗ trợ
               </h3>
               <ul className="text-sm text-base-content/70 space-y-1">
-                <li>• Thời gian hỗ trợ: 8h-20h</li>
-                <li>• Phản hồi: 2-8 giờ</li>
+                <li>• Hỗ trợ qua GitHub Issues</li>
+                <li>• Không có email, Discord hoặc Messenger chính thức</li>
                 <li>• Ngôn ngữ: Tiếng Việt</li>
               </ul>
             </div>
@@ -108,7 +90,7 @@ export default function Contact() {
 
         {/* Footer */}
         <div className="text-center mt-10 text-sm text-base-content/60 animate-fadeIn">
-          © 2025 Huy Locket. Made with ❤️ by Bùi Đức Huy
+          © 2025–{new Date().getFullYear()} Quyền Locket. Made with ❤️ by Quyền
         </div>
       </div>
     </div>

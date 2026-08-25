@@ -86,8 +86,8 @@ export default function PricingPage() {
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 mb-4">
             {FREE_FOR_ALL
-              ? "Premium vĩnh viễn — Huy Locket"
-              : "Đăng ký thành viên Huy Locket"}
+              ? "Premium vĩnh viễn — Quyền Locket"
+              : "Đăng ký thành viên Quyền Locket"}
           </h1>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
             {FREE_FOR_ALL

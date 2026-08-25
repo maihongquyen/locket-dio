@@ -12,7 +12,7 @@
     "restore_streak_desc": "Veröffentliche ein Foto oder Video auf dem Startbildschirm, um deine Streak wiederherzustellen!",
     "restore_streak_mode": "Streak-Wiederherstellungsmodus",
     "continue_streak_prompt": "Veröffentliche heute einen Beitrag, um deine Streak fortzusetzen!",
-    "activate_calendar_prompt": "Veröffentliche ein Foto oder Video, um den Huy-Locket-Kalender zu aktivieren 💛",
+    "activate_calendar_prompt": "Veröffentliche ein Foto oder Video, um den Quyền-Locket-Kalender zu aktivieren 💛",
     "loading": "Wird geladen...",
     "hide_comments": "Kommentare ausblenden",
     "view_comments": "Kommentare anzeigen",
@@ -180,8 +180,8 @@
     "flash_not_supported": "Diese Kamera unterstützt keinen Blitz.",
     "flash_enable_failed": "Der Blitz konnte auf der aktuellen Kamera nicht aktiviert werden.",
     "welcome": {
-      "title": "Willkommen bei Huy Locket!",
-      "desc": "Eine Web-App, mit der du Fotos und Videos einfacher denn je auf Locket posten kannst – mit exklusiven Funktionen, die nur Huy Locket bietet.",
+      "title": "Willkommen bei Quyền Locket!",
+      "desc": "Eine Web-App, mit der du Fotos und Videos einfacher denn je auf Locket posten kannst – mit exklusiven Funktionen, die nur Quyền Locket bietet.",
       "tip_personal_project": "Dies ist ein persönliches Projekt, das kontinuierlich weiterentwickelt wird.",
       "tip_contribution": "Jeder Beitrag hilft dabei, das System jeden Tag besser zu machen.",
       "tip_membership": "Erwäge eine Mitgliedschaft, um das Projekt zu unterstützen und weitere Funktionen freizuschalten.",
@@ -191,8 +191,8 @@
       "post_tip_formats": "Unterstützt JPG-, PNG- und WEBP-Bilder",
       "post_tip_camera": "Fotos direkt mit der Kamera aufnehmen",
       "post_tip_crop": "Bilder und Videos quadratisch zuschneiden",
-      "features_title": "Erweiterte Funktionen von Huy Locket",
-      "features_desc": "Entdecke versteckte und erweiterte Funktionen, die Huy Locket leistungsstärker, schneller und intelligenter machen.",
+      "features_title": "Erweiterte Funktionen von Quyền Locket",
+      "features_desc": "Entdecke versteckte und erweiterte Funktionen, die Quyền Locket leistungsstärker, schneller und intelligenter machen.",
       "features_tip_hidden": "Versteckte & experimentelle Funktionen (Beta)",
       "features_tip_invite": "Soforteinladungen (Instant Invite)",
       "features_tip_search": "Freunde blitzschnell suchen und filtern",
@@ -200,13 +200,13 @@
       "features_tip_anonymous": "Anonymer Ansichtsmodus",
       "features_tip_groups": "An ausgewählte Freundesgruppen senden",
       "features_tip_private": "Privat posten – nur für dich sichtbar",
-      "community_title": "Tritt der Huy-Locket-Community bei",
-      "community_desc": "Verbinde dich mit Tausenden von Huy-Locket-Nutzern, erhalte Support, neue Funktionen und tausche Erfahrungen aus!",
+      "community_title": "Tritt der Quyền-Locket-Community bei",
+      "community_desc": "Verbinde dich mit Tausenden von Quyền-Locket-Nutzern, erhalte Support, neue Funktionen und tausche Erfahrungen aus!",
       "community_join_tip": "Tritt bei, um Neuigkeiten frühzeitig zu erhalten und schneller Unterstützung zu bekommen.",
-      "notif_title": "Benachrichtigungen von Huy Locket aktivieren",
-      "notif_desc": "Erhalte sofort Benachrichtigungen über neue Funktionen, Störungen und wichtige Updates von Huy Locket.",
+      "notif_title": "Benachrichtigungen von Quyền Locket aktivieren",
+      "notif_desc": "Erhalte sofort Benachrichtigungen über neue Funktionen, Störungen und wichtige Updates von Quyền Locket.",
       "notif_enabled": "Benachrichtigungen wurden aktiviert! 🎉",
-      "notif_enabled_desc": "Du erhältst Benachrichtigungen über neue Updates von Huy Locket.",
+      "notif_enabled_desc": "Du erhältst Benachrichtigungen über neue Updates von Quyền Locket.",
       "notif_blocked": "⚠️ Du hast Benachrichtigungen blockiert",
       "notif_blocked_desc": "Gehe zu Browser-Einstellungen → Website-Berechtigungen → Benachrichtigungen, um sie wieder zu aktivieren.",
       "notif_allow": "Benachrichtigungen erlauben",
@@ -217,7 +217,7 @@
       "notif_blocked_alert": "Du hast Benachrichtigungen blockiert. Bitte aktiviere sie in den Browser-Einstellungen erneut.",
       "notif_unsupported_alert": "Dein Browser unterstützt keine Benachrichtigungen.",
       "notif_enabled_alert": "Benachrichtigungen aktiviert!",
-      "notif_enabled_alert_desc": "Du erhältst jetzt Updates von Huy Locket."
+      "notif_enabled_alert_desc": "Du erhältst jetzt Updates von Quyền Locket."
     }
   }
 }

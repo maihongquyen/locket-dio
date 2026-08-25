@@ -1,5 +1,5 @@
 /**
- * Generate Huy Locket Open Graph Banner (1200x630) for Social Media sharing (Zalo, Telegram, FB)
+ * Generate Quyền Locket Open Graph Banner (1200x630) for Social Media sharing (Zalo, Telegram, FB)
  */
 import { createRequire } from "module";
 import fs from "fs";
@@ -57,7 +57,7 @@ function buildOgSvg() {
   <text x="600" y="113" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="18" fill="#ffffff" letter-spacing="1">✨ MIỄN PHÍ &amp; GIAO DIỆN CỰC CHẤT ✨</text>
 
   <!-- Main Brand Title -->
-  <text x="600" y="205" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="900" font-size="82" fill="#ffffff" letter-spacing="4">HUY LOCKET</text>
+  <text x="600" y="205" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="900" font-size="82" fill="#ffffff" letter-spacing="4">QUYEN LOCKET</text>
 
   <!-- Glowing Title Divider Bar -->
   <rect x="450" y="230" width="300" height="6" rx="3" fill="url(#barGrad)"/>
@@ -76,10 +76,10 @@ function buildOgSvg() {
 
   <!-- Bottom Call-to-Action Button -->
   <rect x="340" y="460" width="520" height="64" rx="32" fill="url(#ctaGrad)" stroke="rgba(255,255,255,0.85)" stroke-width="2"/>
-  <text x="600" y="502" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="800" font-size="26" fill="#ffffff" letter-spacing="1">👉 Bắt đầu với duchi.vercel.app 👈</text>
+  <text x="600" y="502" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="800" font-size="26" fill="#ffffff" letter-spacing="1">👉 Trải nghiệm Quyền Locket 👈</text>
 
   <!-- Footer Credit -->
-  <text x="600" y="554" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="600" font-size="16" fill="rgba(255,255,255,0.65)">Huy Locket • Bản quyền độc lập phát triển bởi Bùi Đức Huy</text>
+  <text x="600" y="554" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="600" font-size="16" fill="rgba(255,255,255,0.65)">Quyền Locket • Dự án của Mai Hồng Quyền</text>
 </svg>`;
 }
 
@@ -106,7 +106,7 @@ async function generate() {
     await sharp(buffer).png().toFile(outPath);
     console.log("[og-banner] Saved:", outPath);
   }
-  console.log("[og-banner] SUCCESS! Huy Locket social sharing banners generated.");
+  console.log("[og-banner] SUCCESS! Quyền Locket social sharing banners generated.");
 }
 
 generate().catch((err) => {

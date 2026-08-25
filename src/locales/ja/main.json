@@ -12,7 +12,7 @@
     "restore_streak_desc": "ホーム画面で写真または動画を投稿してストリークを復元してください！",
     "restore_streak_mode": "ストリーク復元モード",
     "continue_streak_prompt": "今日のストリークを続けるには投稿してください！",
-    "activate_calendar_prompt": "写真または動画を投稿してHuy Locketカレンダーを有効化してください💛",
+    "activate_calendar_prompt": "写真または動画を投稿してQuyền Locketカレンダーを有効化してください💛",
     "loading": "読み込み中...",
     "hide_comments": "コメントを隠す",
     "view_comments": "コメントを見る",
@@ -184,8 +184,8 @@
     "flash_not_supported": "このカメラはフラッシュに対応していません",
     "flash_enable_failed": "現在のカメラでフラッシュをオンにできません",
     "welcome": {
-      "title": "Huy Locketへようこそ！",
-      "desc": "写真・動画をLocketにかんたんに投稿できるWebアプリ。Huy Locketだけの独自機能も多数。",
+      "title": "Quyền Locketへようこそ！",
+      "desc": "写真・動画をLocketにかんたんに投稿できるWebアプリ。Quyền Locketだけの独自機能も多数。",
       "tip_personal_project": "個人プロジェクトとして継続開発中です",
       "tip_contribution": "あなたのご支援が、システムをより良くする力になります",
       "tip_membership": "メンバーシップ登録でプロジェクトを支援し、さらに多くの機能を解放できます",
@@ -195,8 +195,8 @@
       "post_tip_formats": "JPG・PNG・WEBP画像に対応",
       "post_tip_camera": "カメラから直接撮影",
       "post_tip_crop": "動画・写真を正方形に切り抜き",
-      "features_title": "Huy Locketの高度な機能",
-      "features_desc": "Huy Locketをより強力・高速・スマートにする、隠し機能や高度な機能を探索しましょう。",
+      "features_title": "Quyền Locketの高度な機能",
+      "features_desc": "Quyền Locketをより強力・高速・スマートにする、隠し機能や高度な機能を探索しましょう。",
       "features_tip_hidden": "隠し機能・実験的機能（ベータ）",
       "features_tip_invite": "インスタント招待",
       "features_tip_search": "超高速の友だち検索・フィルター",
@@ -204,13 +204,13 @@
       "features_tip_anonymous": "匿名閲覧",
       "features_tip_groups": "カスタム友だちグループに送信",
       "features_tip_private": "自分だけに非公開で投稿",
-      "community_title": "Huy Locketコミュニティに参加",
-      "community_desc": "何千人ものHuy Locketユーザーとつながり、サポートや新機能の更新、体験を共有しましょう！",
+      "community_title": "Quyền Locketコミュニティに参加",
+      "community_desc": "何千人ものQuyền Locketユーザーとつながり、サポートや新機能の更新、体験を共有しましょう！",
       "community_join_tip": "参加して最新情報とより早いサポートを受けましょう",
-      "notif_title": "Huy Locketからの通知をオンにする",
-      "notif_desc": "Huy Locketの新機能・障害・重要なお知らせをすぐに通知で受け取ります。",
+      "notif_title": "Quyền Locketからの通知をオンにする",
+      "notif_desc": "Quyền Locketの新機能・障害・重要なお知らせをすぐに通知で受け取ります。",
       "notif_enabled": "通知をオンにしました！ 🎉",
-      "notif_enabled_desc": "Huy Locketに新しい更新があると通知を受け取ります。",
+      "notif_enabled_desc": "Quyền Locketに新しい更新があると通知を受け取ります。",
       "notif_blocked": "⚠️ 通知をブロックしています",
       "notif_blocked_desc": "ブラウザ設定 → サイトの権限 → 通知 から再度オンにしてください。",
       "notif_allow": "通知の受信を許可",
@@ -221,7 +221,7 @@
       "notif_blocked_alert": "通知をブロックしています。ブラウザ設定から再度有効にしてください。",
       "notif_unsupported_alert": "このブラウザは通知に対応していません。",
       "notif_enabled_alert": "通知をオンにしました！",
-      "notif_enabled_alert_desc": "Huy Locketからの更新を受け取れます。"
+      "notif_enabled_alert_desc": "Quyền Locketからの更新を受け取れます。"
     }
   }
 }

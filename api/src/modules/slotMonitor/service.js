@@ -102,7 +102,7 @@ async function getVapidKeys() {
     }
 
     webPush.setVapidDetails(
-      String(process.env.VAPID_SUBJECT || "mailto:buiduchuy2010qn@gmail.com"),
+      String(process.env.VAPID_SUBJECT || "https://github.com/maihongquyen"),
       keys.publicKey,
       keys.privateKey,
     );

@@ -4,7 +4,7 @@ const {
 } = require("../../../utils/cache/localUploadStats");
 
 /**
- * Full Premium for every user (Huy Locket free-for-all / self-host).
+ * Full Premium for every user (Quyền Locket free-for-all / self-host).
  * No paywall — all premium features + high limits, never expires.
  */
 async function buildLocalFreePlan(uid, email, phone, name, picture) {

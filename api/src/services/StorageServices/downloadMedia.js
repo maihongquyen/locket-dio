@@ -25,9 +25,9 @@ const downloadMediaOnStorage = async (
   filename = "temp"
 ) => {
   try {
-    // Media tạm của Huy Locket đã nằm trong private R2. Khi backend cần đọc
+    // Media tạm của Quyền Locket đã nằm trong private R2. Khi backend cần đọc
     // lại file để xử lý/đăng Locket, đọc trực tiếp bằng S3 credentials thay vì
-    // gọi vòng qua duchi.vercel.app/dio-api. Request server-to-server qua web
+    // gọi vòng qua web proxy. Request server-to-server qua web
     // có thể mang IP AWS/Vercel và bị WAF chặn 403 dù object R2 vẫn tồn tại.
     const tempMediaId = extractTempMediaId(url);
     if (tempMediaId && r2Storage.isConfigured()) {

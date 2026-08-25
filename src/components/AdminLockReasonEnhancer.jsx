@@ -3,7 +3,7 @@ import { adminRequest } from "@/services/AdminAuthService";
 import { SonnerSuccess, SonnerWarning } from "@/components/uikit/SonnerToast";
 
 const COMMON_LOCK_REASONS = [
-  "Vi phạm điều khoản / quy định sử dụng Huy Locket",
+  "Vi phạm điều khoản / quy định sử dụng Quyền Locket",
   "Hoạt động bất thường, nghi ngờ bot hoặc tool tự động",
   "Spam hoặc lạm dụng tính năng",
   "Gian lận, giả mạo hoặc lạm dụng tài khoản",

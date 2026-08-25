@@ -1,4 +1,4 @@
-// Chủ yếu dùng cho các yêu cầu API chính của Huy Locket
+// Chủ yếu dùng cho các yêu cầu API chính của Quyền Locket
 import { CONFIG } from "@/config";
 import { getToken, saveToken } from "@/utils";
 import axios from "axios";

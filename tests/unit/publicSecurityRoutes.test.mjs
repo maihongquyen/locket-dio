@@ -24,7 +24,7 @@ test("route gốc API chỉ trả trạng thái và không thay đổi cơ sở 
   const rootRouteSource = routeSource.slice(rootRouteStart, healthRouteStart);
   assert.doesNotMatch(rootRouteSource, /DELETE\s+FROM/i);
   assert.doesNotMatch(rootRouteSource, /@neondatabase\/serverless/);
-  assert.match(rootRouteSource, /Huy Locket API is running/);
+  assert.match(rootRouteSource, /Quyền Locket API is running/);
 });
 
 test("quản trị viên vẫn có công cụ xóa cảnh báo và mở khóa từng IP", () => {

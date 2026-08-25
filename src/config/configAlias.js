@@ -29,10 +29,14 @@ export const COMMUNITY_CONFIG = {
   discord: CONFIG.app.community.discord,
   messenger: CONFIG.app.community.messenger,
   telegram: CONFIG.app.community.telegram,
+  github: CONFIG.app.community.github,
+  issues: CONFIG.app.community.issues,
 };
 
 export const CONTACT_CONFIG = {
   supportEmail: CONFIG.app.contact.supportEmail,
+  github: CONFIG.app.contact.github,
+  issues: CONFIG.app.contact.issues,
 };
 
 export const MYBANK_CONFIG = {

@@ -1,13 +1,13 @@
-# HANDOFF — Huy Locket (copy sang Grok acc khác)
+# HANDOFF — Quyền Locket (copy sang Grok acc khác)
 
-> Cập nhật: **2026-07-14**  
+> Cập nhật: **2026-07-14**
 > Mục đích: paste file này (hoặc toàn bộ block) vào session Grok mới để tiếp tục dự án.
 
 ---
 
 ## 0. ⭐ Music — BẢN NGON (user confirmed)
 
-> **2026-07-14 — User: “bản này được rồi ngon lắm rồi nhớ nha”**  
+> **2026-07-14 — User: “bản này được rồi ngon lắm rồi nhớ nha”**
 > **Không rewrite / “cải tiến” luồng nhạc nếu không có bug mới rõ ràng.**
 
 | | |
@@ -17,7 +17,7 @@
 | **Web** | Generated domain của service `huy-locket-web` |
 | **API** | Generated domain của service `huy-locket-api` |
 
-App Locket hiện pill nhạc khi payload có: **ISRC 12 ký tự** + title + artist + **Spotify hoặc Apple URL** + cover.  
+App Locket hiện pill nhạc khi payload có: **ISRC 12 ký tự** + title + artist + **Spotify hoặc Apple URL** + cover.
 Server resolve ISRC (Deezer / iTunes / MusicBrainz). Client chặn attach nếu thiếu. Feed inject overlay sau post.
 
 Chi tiết file + rules: **`AGENTS.md` → section Music / ISRC**.
@@ -28,9 +28,9 @@ Chi tiết file + rules: **`AGENTS.md` → section Music / ISRC**.
 
 | Mục | Giá trị |
 |-----|---------|
-| **Tên UI** | **Huy Locket** (không hiện brand "Locket Dio" / "Đào Văn Đôi") |
-| **Tác giả** | Bùi Đức Huy · STK MBBank `0394709137` · email `buiduchuy2010qn@gmail.com` |
-| **Admin Gmail (Drive UI)** | `buiduchuy2010qn@gmail.com` |
+| **Tên UI** | **Quyền Locket** (không hiện brand "Locket Dio" / "Đào Văn Đôi") |
+| **Chủ sở hữu** | Mai Hồng Quyền · GitHub `maihongquyen` |
+| **Admin Gmail (Drive UI)** | Cấu hình riêng qua biến môi trường |
 | **Repo folder local** | `C:\Users\DucHuyy\.grok\bin\locket-dio` (tên folder cũ) |
 | **GitHub** | `https://github.com/maihongquyen/locket-dio.git` |
 | **Branch deploy** | `main` |
@@ -85,11 +85,11 @@ VITE_LOCKET_API_URL=https://api.locketcamera.com
 VITE_EXPORTS_API_URL=/dio-export
 VITE_AUTH_API_URL=/dio-auth
 VITE_PUBLIC_API_KEY=LKD-LOCKETDIO-AB02F55KYM55DD02MM03YY25-LKD
-VITE_ADMIN_EMAILS=buiduchuy2010qn@gmail.com
+VITE_ADMIN_EMAILS=your-admin@example.com
 VITE_SPOTIFY_CLIENT_ID=1f89199367264178a0b8c66d7e74c1d6
 ```
 
-API key public (Dio client): `LKD-LOCKETDIO-AB02F55KYM55DD02MM03YY25-LKD`  
+API key public (Dio client): `LKD-LOCKETDIO-AB02F55KYM55DD02MM03YY25-LKD`
 Firebase key (login Identity Toolkit): set `FIREBASE_API_KEY` trên Railway/Render Variables — **không commit key**
 
 ### `render.yaml` (Blueprint)
@@ -175,7 +175,7 @@ npm start
 :: http://localhost:5007
 ```
 
-Nối local: set `LOCKET_API_UPSTREAM=http://127.0.0.1:5007` khi chạy `server.mjs`,  
+Nối local: set `LOCKET_API_UPSTREAM=http://127.0.0.1:5007` khi chạy `server.mjs`,
 hoặc `START-WITH-LOCAL-API.bat`.
 
 ### Build production static (bắt buộc trước deploy nếu đổi src/)
@@ -203,7 +203,7 @@ Docker web chỉ copy `public/` + `server.mjs` — **đổi React mà không `bu
 
 ### Triệu chứng user thấy
 
-Toast xanh:  
+Toast xanh:
 `API đang khởi động (Render free). Đợi 10–20 giây rồi thử lại.`
 
 ### Root cause
@@ -245,9 +245,9 @@ Toast xanh:
 
 ### Branding rules (AGENTS.md)
 
-- UI: **Huy Locket** only  
-- Giữ: Google Drive backup (Neon + OAuth), weather (Open-Meteo fallback), theme **pinksnow**, `build:static` + `server.mjs`  
-- Internal API names/headers LocketDio **giữ** cho tương thích backend  
+- UI: **Quyền Locket** only
+- Giữ: Google Drive backup (Neon + OAuth), weather (Open-Meteo fallback), theme **pinksnow**, `build:static` + `server.mjs`
+- Internal API names/headers LocketDio **giữ** cho tương thích backend
 
 ### Drive backup
 
@@ -289,19 +289,19 @@ Toast xanh:
 6. Free Render: expect cold start; đừng “fix” bằng cách xóa toast mà không retry.
 7. Secrets: Render Dashboard / local `.env` — không commit secret mới.
 8. Test sau deploy:
-   - `GET /` → 200 HTML  
-   - `GET /dio-api/health` → JSON healthy  
-   - Login → `/locket` camera  
+   - `GET /` → 200 HTML
+   - `GET /dio-api/health` → JSON healthy
+   - Login → `/locket` camera
 
 ---
 
 ## 9. Prompt gợi ý paste vào Grok acc mới
 
 ```
-Tiếp tục dự án Huy Locket.
+Tiếp tục dự án Quyền Locket.
 
 Local: C:\Users\DucHuyy\.grok\bin\locket-dio
-GitHub: https://github.com/buiduchuy2010qn-prog/locket-dio.git (branch main)
+GitHub: https://github.com/maihongquyen/locket-dio.git (branch main)
 Web: https://huy-locket.onrender.com
 API: https://huy-locket-api.onrender.com
 Chi tiết full: đọc HANDOFF-GROK.md và AGENTS.md trong repo.
@@ -309,7 +309,7 @@ Chi tiết full: đọc HANDOFF-GROK.md và AGENTS.md trong repo.
 Kiến trúc: server.mjs proxy /dio-api → huy-locket-api (Render free).
 Mới fix cold start (commit e8360cf): proxy retry + client retry + wake health.
 
-Quy tắc: brand Huy Locket; build:static trước deploy UI; push main auto Render.
+Quy tắc: brand Quyền Locket; build:static trước deploy UI; push main auto Render.
 [Mô tả task tiếp theo ở đây]
 ```
 
@@ -319,11 +319,11 @@ Quy tắc: brand Huy Locket; build:static trước deploy UI; push main auto Ren
 
 | Hệ thống | Ghi chú |
 |----------|---------|
-| GitHub | `buiduchuy2010qn-prog` / repo `locket-dio` |
+| GitHub | `maihongquyen` / repo `locket-dio` |
 | Render | services `huy-locket`, `huy-locket-api` |
 | Neon | `DATABASE_URL` cho Drive OAuth |
 | Spotify Dev | Client ID public trong `.env.production` |
-| MBBank ủng hộ | 0394709137 · BUI DUC HUY |
+| Thông tin ủng hộ | Chưa công khai |
 | Discord/Telegram community | trong `webConfig.js` community block |
 
 ---

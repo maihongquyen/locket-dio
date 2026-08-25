@@ -1,4 +1,4 @@
-# Huy Locket Anti-Bot & Anti-Scraper Robots.txt Policy
+# Quyền Locket Anti-Bot & Anti-Scraper Robots.txt Policy
 
 # Từ chối toàn bộ Bot cào dữ liệu AI và Crawler rác
 User-agent: ChatGPT-User
@@ -53,4 +53,4 @@ Disallow: /dio-payment/
 Disallow: /admin/
 Disallow: /settings/
 
-Sitemap: https://duchi.vercel.app/sitemap.xml
+Sitemap: https://huy-locket-web-production.up.railway.app/sitemap.xml

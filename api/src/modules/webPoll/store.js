@@ -7,7 +7,7 @@ const sql = databaseUrl ? neon(databaseUrl) : null;
 let schemaPromise = null;
 
 function databaseError() {
-  const error = new Error("DATABASE_URL is required for Huy Locket polls");
+  const error = new Error("DATABASE_URL is required for Quyền Locket polls");
   error.code = "WEB_POLL_DATABASE_UNAVAILABLE";
   error.status = 503;
   return error;
@@ -61,7 +61,7 @@ function mapPoll(row, votes, viewerUid) {
   const normalizedVotes = (votes || []).map((vote) => ({
     uid: vote.voter_uid,
     username: vote.voter_username || "",
-    displayName: vote.voter_display_name || vote.voter_username || "Người dùng Huy Locket",
+    displayName: vote.voter_display_name || vote.voter_username || "Người dùng Quyền Locket",
     avatar: vote.voter_avatar_url || "",
     choice: vote.choice,
     updatedAt: vote.updated_at ? new Date(vote.updated_at).getTime() : null,

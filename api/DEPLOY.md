@@ -1,6 +1,6 @@
-# Huy Locket API (backend chính)
+# Quyền Locket API (backend chính)
 
-Nguồn: Server-Locket-Dio — đã nâng cấp / sửa cho client **Huy Locket**.
+Nguồn: Server-Locket-Dio — đã nâng cấp / sửa cho client **Quyền Locket**.
 
 Thư mục: `C:\Users\DucHuyy\.grok\bin\huy-locket-server`
 
@@ -15,9 +15,9 @@ Thư mục: `C:\Users\DucHuyy\.grok\bin\huy-locket-server`
 | **Redis** | Optional — server vẫn chạy single-instance nếu Redis down |
 | **Weather** | WeatherAPI nếu có key; **fallback Open-Meteo** (không key) |
 | **Routes** | `POST /api/weatherV2` + `POST /api/weatherV3` |
-| **Health** | `/health` trả meta Huy Locket + memory |
+| **Health** | `/health` trả meta Quyền Locket + memory |
 | **Config** | Fix `maxVideoSizeBytes` NaN |
-| **Banner** | HUY LOCKET API |
+| **Banner** | QUYEN LOCKET API |
 
 ---
 
@@ -45,7 +45,7 @@ curl -X POST http://localhost:5007/api/weatherV2 -H "Content-Type: application/j
 
 ---
 
-## Nối client Huy Locket (`locket-dio`)
+## Nối client Quyền Locket (`locket-dio`)
 
 ### Cách A — Proxy (khuyến nghị)
 

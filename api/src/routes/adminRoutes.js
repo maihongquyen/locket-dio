@@ -386,7 +386,7 @@ router.get("/setup-2fa", requireActivityDatabase, requireActiveAdminSession, asy
       secret = await generateSecret();
       await setAdmin2FASecret(req.adminUid, secret, false);
     }
-    const serviceName = "Huy Locket Admin";
+    const serviceName = "Quyền Locket Admin";
     const userLabel = req.adminEmail || req.adminUid || "Admin";
     const otpauth = await generateURI({ secret, label: userLabel, issuer: serviceName });
     const qrCodeBase64 = await qrcode.toDataURL(otpauth);
@@ -561,7 +561,7 @@ router.get("/users", requireActivityDatabase, async (req, res) => {
     }));
 
     if (req.query.live !== "1") {
-      await audit(req, "LIST_WEB_USERS", null, "Listed verified Huy Locket website users");
+      await audit(req, "LIST_WEB_USERS", null, "Listed verified Quyền Locket website users");
     }
     return res.status(200).json({
       success: true,
@@ -957,7 +957,7 @@ router.post("/apology-email", requireActivityDatabase, requireActiveAdminSession
       return res.status(404).json({
         success: false,
         code: "USER_NOT_FOUND",
-        error: "Không tìm thấy email này trong danh sách người dùng Huy Locket",
+        error: "Không tìm thấy email này trong danh sách người dùng Quyền Locket",
       });
     }
 
@@ -1038,7 +1038,7 @@ router.post("/users/:uid/apology-email", requireActivityDatabase, requireActiveA
   try {
     const user = await getWebUser(targetUid);
     if (!user) {
-      return res.status(404).json({ success: false, code: "USER_NOT_FOUND", error: "Không tìm thấy người dùng trong hệ thống Huy Locket" });
+      return res.status(404).json({ success: false, code: "USER_NOT_FOUND", error: "Không tìm thấy người dùng trong hệ thống Quyền Locket" });
     }
 
     const targetEmail = String(user.email || "").trim().toLowerCase();
@@ -1114,14 +1114,14 @@ router.delete("/users/:uid/auth", requireActiveAdminSession, async (req, res) =>
   try {
     await adminAuth.getUser(req.params.uid);
     await adminAuth.deleteUser(req.params.uid);
-    await audit(req, "DELETE_ADMIN_IDENTITY", req.params.uid, "Deleted Huy Locket admin Firebase identity");
+    await audit(req, "DELETE_ADMIN_IDENTITY", req.params.uid, "Deleted Quyền Locket admin Firebase identity");
     return res.status(200).json({ success: true });
   } catch (error) {
     if (error?.code === "auth/user-not-found") {
       return res.status(409).json({
         success: false,
         code: "OFFICIAL_LOCKET_ACCOUNT",
-        error: "Official Locket accounts cannot be deleted from Huy Locket",
+        error: "Official Locket accounts cannot be deleted from Quyền Locket",
       });
     }
     console.error("Failed to delete admin identity:", error?.code || error?.name || "unknown");
@@ -1329,7 +1329,7 @@ router.delete("/users/:uid/nuke", requireActiveAdminSession, async (req, res) =>
   }
   await nukeUserPermanently(targetUid);
   await audit(req, "NUKE_USER_PERMANENTLY", targetUid, "Permanently deleted user and all login histories");
-  res.json({ success: true, message: "Đã tiêu hủy vĩnh viễn toàn bộ hồ sơ và lịch sử tài khoản khỏi cơ sở dữ liệu Huy Locket!" });
+  res.json({ success: true, message: "Đã tiêu hủy vĩnh viễn toàn bộ hồ sơ và lịch sử tài khoản khỏi cơ sở dữ liệu Quyền Locket!" });
 });
 
 router.get("/server-health", async (req, res) => {
@@ -1339,7 +1339,7 @@ router.get("/server-health", async (req, res) => {
 
 router.get("/users/:uid/password-status", async (req, res) => {
   const u = await getWebUser(req.params.uid);
-  if (!u) return res.status(404).json({ success: false, error: "Không tìm thấy người dùng trong hệ thống Huy Locket" });
+  if (!u) return res.status(404).json({ success: false, error: "Không tìm thấy người dùng trong hệ thống Quyền Locket" });
   const status = getUserPasswordRecoveryStatus(u.email);
   res.json({ success: true, data: { uid: u.uid, displayName: u.displayName || u.email, ...status } });
 });

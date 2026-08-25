@@ -110,7 +110,7 @@
   "friends": {
     "accepting_request": "친구 요청을 수락하는 중...",
     "accept_success": "{{name}}님의 친구 요청을 수락했습니다.",
-    "notif_title": "Huy Locket 알림",
+    "notif_title": "Quyền Locket 알림",
     "request_not_found": "수락할 친구 요청을 찾을 수 없습니다.",
     "accept_failed": "❌ 친구 요청 수락에 실패했습니다!",
     "friends_count": "친구 {{count}}명",

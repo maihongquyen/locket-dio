@@ -5,7 +5,7 @@
 
 import { useUserSetting } from "@/stores/SettingStores/useUserSetting";
 
-/** Official-style watermark: ♥ Locket (not Huy) */
+/** Official-style watermark: ♥ Locket (not Quyền) */
 const WATERMARK_LABEL = "Locket";
 
 /**

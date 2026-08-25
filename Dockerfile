@@ -1,4 +1,4 @@
-# Huy Locket — Railway web: build frontend from current source, then serve with server.mjs
+# Quyền Locket — Railway web: build frontend from current source, then serve with server.mjs
 FROM node:24-bookworm-slim AS build
 WORKDIR /app
 

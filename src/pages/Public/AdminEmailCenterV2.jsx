@@ -486,7 +486,7 @@ export default function AdminEmailCenterV2() {
             </div>
 
             <label className="text-xs font-black uppercase tracking-wide text-slate-600">Email người nhận</label>
-            <input id="admin-mail-recipient" type="email" value={targetEmail} onChange={(event) => setTargetEmail(event.target.value)} placeholder="Nhập email người dùng Huy Locket..." className="input input-bordered mt-2 w-full h-12 rounded-2xl bg-slate-50 border-slate-200 focus:border-violet-500" />
+            <input id="admin-mail-recipient" type="email" value={targetEmail} onChange={(event) => setTargetEmail(event.target.value)} placeholder="Nhập email người dùng Quyền Locket..." className="input input-bordered mt-2 w-full h-12 rounded-2xl bg-slate-50 border-slate-200 focus:border-violet-500" />
             {recentRecipients.length > 0 && (
               <div className="mt-2 flex flex-wrap gap-1.5">
                 {recentRecipients.map((email, index) => (

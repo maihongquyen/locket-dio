@@ -6,7 +6,7 @@ export default function TermsPage() {
     {
       title: "1. Giới thiệu dịch vụ",
       content: [
-        "Huy Locket là nền tảng cung cấp các công cụ, tiện ích và dịch vụ hỗ trợ liên quan đến hệ sinh thái Locket, bao gồm nhưng không giới hạn:",
+        "Quyền Locket là nền tảng cung cấp các công cụ, tiện ích và dịch vụ hỗ trợ liên quan đến hệ sinh thái Locket, bao gồm nhưng không giới hạn:",
         [
           "Đăng tải và quản lý ảnh/video/moments",
           "Các tiện ích mở rộng và công cụ hỗ trợ người dùng",
@@ -18,7 +18,7 @@ export default function TermsPage() {
     {
       title: "2. Tài khoản người dùng",
       content: [
-        "Khi đăng ký tài khoản tại Huy Locket, bạn đồng ý rằng:",
+        "Khi đăng ký tài khoản tại Quyền Locket, bạn đồng ý rằng:",
         [
           "Thông tin cung cấp là chính xác và đầy đủ",
           "Bạn chịu trách nhiệm bảo mật thông tin đăng nhập",
@@ -77,7 +77,7 @@ export default function TermsPage() {
     {
       title: "7. Quyền sở hữu trí tuệ",
       content: [
-        "Toàn bộ thương hiệu, giao diện, mã nguồn, thiết kế và tài sản trí tuệ liên quan đến Huy Locket thuộc quyền sở hữu của chúng tôi.",
+        "Toàn bộ thương hiệu, giao diện, mã nguồn, thiết kế và tài sản trí tuệ liên quan đến Quyền Locket thuộc quyền sở hữu của chúng tôi.",
       ],
     },
     {
@@ -93,7 +93,7 @@ export default function TermsPage() {
     {
       title: "9. Chấm dứt hoặc hạn chế truy cập",
       content: [
-        "Chúng tôi (Huy Locket) có quyền khóa, giới hạn hoặc chấm dứt quyền truy cập của người dùng đối với dịch vụ trong trường hợp phát hiện vi phạm Điều Khoản Sử Dụng hoặc hành vi gây ảnh hưởng tiêu cực đến hệ thống mà không cần báo trước.",
+        "Chúng tôi (Quyền Locket) có quyền khóa, giới hạn hoặc chấm dứt quyền truy cập của người dùng đối với dịch vụ trong trường hợp phát hiện vi phạm Điều Khoản Sử Dụng hoặc hành vi gây ảnh hưởng tiêu cực đến hệ thống mà không cần báo trước.",
         "Ngoài ra, các hành vi vi phạm nghiêm trọng hoặc lạm dụng liên quan đến hệ sinh thái bên thứ ba có thể dẫn đến việc tài khoản của bạn bị xử lý bởi chủ sở hữu nền tảng tương ứng, bao gồm nhưng không giới hạn ở Locket Widget.",
       ],
     },
@@ -166,7 +166,7 @@ export default function TermsPage() {
         {/* Footer Notice */}
         <div className="mt-5 rounded-2xl border border-primary/15 bg-primary/5 px-6 py-5 text-center">
           <p className="text-sm sm:text-base text-base-content/70 leading-7">
-            Bằng việc sử dụng <span className="font-semibold">Huy Locket</span>,
+            Bằng việc sử dụng <span className="font-semibold">Quyền Locket</span>,
             bạn xác nhận rằng mình đã đọc, hiểu và đồng ý với toàn bộ Điều Khoản
             Sử Dụng này.
           </p>

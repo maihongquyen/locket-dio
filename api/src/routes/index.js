@@ -58,7 +58,7 @@ module.exports = (app) => {
   app.get("/", (_req, res) => {
     res.json({
       status: "success",
-      message: "Huy Locket API is running",
+      message: "Quyền Locket API is running",
       service: "huy-locket-api",
       host: process.env.VERCEL ? "vercel" : "node",
       docs: "See DEPLOY.md",

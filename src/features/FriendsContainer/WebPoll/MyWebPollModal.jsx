@@ -71,7 +71,7 @@ export default function MyWebPollModal({ open, onClose, onUseCaption }) {
       toast.success(poll ? "Đã cập nhật bình chọn" : "Đã tạo bình chọn", {
         description: changedQuestion
           ? "Câu hỏi mới bắt đầu lượt bình chọn mới."
-          : "Bạn bè trên Huy Locket Web có thể bình chọn ngay.",
+          : "Bạn bè trên Quyền Locket Web có thể bình chọn ngay.",
       });
     } catch (err) {
       toast.error("Không lưu được bình chọn", {
@@ -309,7 +309,7 @@ export default function MyWebPollModal({ open, onClose, onUseCaption }) {
               )}
 
               <p className="mt-4 text-center text-[10px] font-medium text-base-content/40">
-                Danh sách này là bình chọn trên Huy Locket Web • chưa đồng bộ sang app Locket chính hãng
+                Danh sách này là bình chọn trên Quyền Locket Web • chưa đồng bộ sang app Locket chính hãng
               </p>
             </>
           )}

@@ -1,13 +1,13 @@
 @echo off
 cd /d "%~dp0"
 echo ========================================
-echo   HUY LOCKET WEB + LOCAL API
+echo   QUYEN LOCKET WEB + LOCAL API
 echo ========================================
 echo Proxy /dio-api -^> http://127.0.0.1:5007
 echo.
 
 REM Start API in new window
-start "Huy Locket API" cmd /k "cd /d C:\Users\DucHuyy\.grok\bin\huy-locket-server && set NODE_ENV=development && node app.js"
+start "Quyền Locket API" cmd /k "cd /d C:\Users\DucHuyy\.grok\bin\huy-locket-server && set NODE_ENV=development && node app.js"
 
 timeout /t 2 /nobreak >nul
 

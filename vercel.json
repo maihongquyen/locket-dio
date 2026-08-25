@@ -7,7 +7,7 @@
   "outputDirectory": "vercel-static",
   "trailingSlash": false,
   "redirects": [
-    { "source": "/about-dio", "destination": "/about-huy", "permanent": true }
+    { "source": "/about-dio", "destination": "/about-quyen", "permanent": true }
   ],
   "rewrites": [
     { "source": "/dio-api", "destination": "https://huy-locket-api-huy-locket.vercel.app/" },

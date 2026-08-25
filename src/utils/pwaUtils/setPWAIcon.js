@@ -2,9 +2,9 @@ export function setPWAIcon(iconName = "default", path = "pwa-icons") {
   const base = window.location.origin;
 
   const manifest = {
-    name: "Huy Locket",
-    short_name: "Huy Locket",
-    description: "Huy Locket - Đăng ảnh & Video lên Locket",
+    name: "Quyền Locket",
+    short_name: "Quyền Locket",
+    description: "Quyền Locket - Đăng ảnh & Video lên Locket",
     display: "standalone",
     scope: base + "/",
     start_url: base,

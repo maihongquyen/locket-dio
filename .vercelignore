@@ -1,4 +1,4 @@
-# Huy Locket now runs the Express backend on Vercel.
+# Quyền Locket now runs the Express backend on Vercel.
 # Keep runtime backend source and package manifests available to the function tracer.
 
 # Backend-only files not needed at runtime

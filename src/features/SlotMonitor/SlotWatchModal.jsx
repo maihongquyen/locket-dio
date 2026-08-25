@@ -206,7 +206,7 @@ export default function SlotWatchModal({ isOpen, onClose }) {
     ? "Canh 24/7 đang bật — có slot sẽ báo ra điện thoại/màn hình khóa."
     : backgroundEnabled
       ? "Hệ thống đang canh 24/7. Thiết bị này chưa bật được thông báo hệ thống."
-      : "Bật Canh Slot 24/7 để hệ thống vẫn theo dõi khi bạn đóng Huy Locket.";
+      : "Bật Canh Slot 24/7 để hệ thống vẫn theo dõi khi bạn đóng Quyền Locket.";
 
   return (
     <div
@@ -275,7 +275,7 @@ export default function SlotWatchModal({ isOpen, onClose }) {
           )}
           {slotPushState?.permission === "denied" && (
             <p className="mt-2 text-xs text-warning">
-              Trình duyệt đang chặn thông báo. Hãy bật quyền thông báo cho Huy Locket trong cài đặt trình duyệt/điện thoại.
+              Trình duyệt đang chặn thông báo. Hãy bật quyền thông báo cho Quyền Locket trong cài đặt trình duyệt/điện thoại.
             </p>
           )}
           {backgroundEnabled && pushUnsupported && (

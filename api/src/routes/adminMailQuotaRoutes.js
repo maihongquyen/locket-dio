@@ -21,7 +21,7 @@ const PUBLIC_URL = String(
   process.env.PUBLIC_URL
     || process.env.PUBLIC_WEB_URL
     || process.env.APP_PUBLIC_URL
-    || "https://duchi.vercel.app",
+    || "https://huy-locket-web-production.up.railway.app",
 ).replace(/\/$/, "");
 const GOOGLE_USERINFO_EMAIL_SCOPE = "https://www.googleapis.com/auth/userinfo.email";
 

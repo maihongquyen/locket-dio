@@ -110,7 +110,7 @@
   "friends": {
     "accepting_request": "リクエストを承認中...",
     "accept_success": "{{name}}さんを承認しました",
-    "notif_title": "Huy Locketからの通知",
+    "notif_title": "Quyền Locketからの通知",
     "request_not_found": "友だちリクエストが見つかりません。",
     "accept_failed": "❌ リクエストの承認に失敗しました！",
     "friends_count": "{{count}}人の友だち",

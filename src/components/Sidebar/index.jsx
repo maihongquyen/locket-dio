@@ -210,10 +210,10 @@ const Sidebar = () => {
         ]
       : []),
     {
-      title: "Huy Locket",
+      title: "Quyền Locket",
       items: [
         { to: "/home", icon: Home, text: t("sidebar.menu.home") },
-        { to: "/about", icon: Info, text: "Huy Locket" },
+        { to: "/about", icon: Info, text: "Quyền Locket" },
         { to: "/newsfeed", icon: Newspaper, text: t("sidebar.menu.newsfeed"), badge: "New" },
         {
           to: "/download",
@@ -281,7 +281,7 @@ const Sidebar = () => {
       items: [
         { to: "/", icon: Home, text: t("sidebar.menu.home") },
         { to: "/about", icon: Info, text: t("sidebar.menu.about") },
-        { to: "/about-huy", icon: UserCircle, text: "Về Huy" },
+        { to: "/about-quyen", icon: UserCircle, text: "Về Quyền" },
         { to: "/newsfeed", icon: Newspaper, text: t("sidebar.menu.newsfeed"), badge: "New" },
         {
           to: "/download",
@@ -325,7 +325,7 @@ const Sidebar = () => {
   const menuSections = [
     ...(isAdmin || isDriveAdmin
       ? [{
-          title: "Quản trị Huy Locket",
+          title: "Quản trị Quyền Locket",
           items: [{
             to: "/admin/users",
             icon: UserRound,
@@ -437,7 +437,7 @@ const Sidebar = () => {
           <p className="text-center text-xs pb-2 text-base-content/70">
             © {startYear}
             {currentYear > startYear && `–${currentYear}`}{" "}
-            <span className="font-semibold font-lovehouse">Huy</span>.{" "}
+            <span className="font-semibold font-lovehouse">Quyền</span>.{" "}
             {t("sidebar.copyright")}
           </p>
         </div>

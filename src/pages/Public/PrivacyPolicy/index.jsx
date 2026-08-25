@@ -58,7 +58,7 @@ const PrivacyPolicy = () => {
           <p>
             <strong>Company</strong> (referred to as either &quot;the
             Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in
-            this Agreement) refers to Huy Locket.
+            this Agreement) refers to Quyền Locket.
           </p>
         </li>
         <li className="mb-4">
@@ -110,13 +110,13 @@ const PrivacyPolicy = () => {
         </li>
         <li className="mb-4">
           <p>
-            <strong>Website</strong> refers to Huy Locket, accessible from{" "}
+            <strong>Website</strong> refers to Quyền Locket, accessible from{" "}
             <a
-              href="https://duchi.vercel.app/"
+              href="https://huy-locket-web-production.up.railway.app/"
               rel="external nofollow noopener"
               target="_blank"
             >
-              https://duchi.vercel.app/
+              https://huy-locket-web-production.up.railway.app/
             </a>
           </p>
         </li>
@@ -530,17 +530,26 @@ const PrivacyPolicy = () => {
       </p>
       <ul className="list-disc ml-6">
         <li className="mb-4">
-          <p>By email: {CONTACT_CONFIG.supportEmail}</p>
+          <p>
+            Via GitHub:{" "}
+            <a
+              href={CONTACT_CONFIG.issues}
+              rel="external nofollow noopener"
+              target="_blank"
+            >
+              Quyền Locket Issues
+            </a>
+          </p>
         </li>
         <li className="mb-4">
           <p>
             By visiting this page on our website:{" "}
             <a
-              href="https://duchi.vercel.app/contact"
+              href="https://huy-locket-web-production.up.railway.app/contact"
               rel="external nofollow noopener"
               target="_blank"
             >
-              https://duchi.vercel.app/contact
+              https://huy-locket-web-production.up.railway.app/contact
             </a>
           </p>
         </li>

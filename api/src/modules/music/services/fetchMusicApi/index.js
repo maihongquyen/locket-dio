@@ -1271,7 +1271,7 @@ async function fetchIsrcFromMusicBrainz(songName, artist) {
       timeout: 12000,
       headers: {
         "User-Agent":
-          "HuyLocket/1.4 (https://github.com/buiduchuy2010qn-prog/locket-dio)",
+          "HuyLocket/1.4 (https://github.com/maihongquyen/locket-dio)",
         Accept: "application/json",
       },
     });

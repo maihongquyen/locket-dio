@@ -1,4 +1,4 @@
-//config/webConfig.js — Huy Locket
+//config/webConfig.js — Quyền Locket
 
 import { MAX_IMAGE_UPLOAD_MB } from "./uploadLimits.js";
 
@@ -30,13 +30,13 @@ export const CONFIG = {
   },
 
   app: {
-    name: "Huy Locket",
+    name: "Quyền Locket",
     watermark: "huy-locket",
     /** Save watermark text: official-style ♥ Locket */
     watermarkLabel: "Locket",
-    author: "Huy",
-    shortname: "huylocket",
-    fullName: "Huy Locket - Đăng ảnh & Video lên Locket",
+    author: "Quyền",
+    shortname: "quyenlocket",
+    fullName: "Quyền Locket - Đăng ảnh & Video lên Locket",
     clientVersion: "Beta1.3.6",
     apiVersion: "v2.2.1",
     startYear: 2025,
@@ -88,52 +88,53 @@ export const CONFIG = {
       loadMoreLimit: 50,
     },
     contact: {
-      supportEmail: "buiduchuy2010qn@gmail.com",
-      supportNumber: "1800-123-456",
+      supportEmail: "",
+      supportNumber: "",
+      github: "https://github.com/maihongquyen",
+      issues: "https://github.com/maihongquyen/locket-dio/issues",
     },
     community: {
-      discord: "https://discord.com/invite/47buy9nMGc",
-      telegram: "https://t.me/ddevdio",
-      messenger: "https://m.me/cm/AbYPtgRiGe2fInEf",
+      discord: "",
+      telegram: "",
+      messenger: "",
+      github: "https://github.com/maihongquyen",
+      issues: "https://github.com/maihongquyen/locket-dio/issues",
     },
-    // Ủng hộ — STK Huy (MBBank)
+    // Chưa công khai thông tin nhận ủng hộ của chủ sở hữu mới.
     sponsors: {
-      bankName: "Ngân hàng MBBank (MB)",
-      accountNumber: "0394709137",
-      accountName: "BUI DUC HUY",
-      bankBin: "970422",
-      urlImg:
-        "https://img.vietqr.io/image/970422-0394709137-compact2.png?accountName=BUI%20DUC%20HUY",
+      bankName: "",
+      accountNumber: "",
+      accountName: "",
+      bankBin: "",
+      urlImg: "",
     },
     bankInfo: {
-      bankCode: "MB",
-      short_name: "MBBank",
-      bankName: "Ngân hàng MBBank (MB)",
-      accountNumber: "0394709137",
-      accountName: "BUI DUC HUY",
-      bankBin: "970422",
-      urlImg:
-        "https://img.vietqr.io/image/970422-0394709137-compact2.png?accountName=BUI%20DUC%20HUY",
+      bankCode: "",
+      short_name: "",
+      bankName: "",
+      accountNumber: "",
+      accountName: "",
+      bankBin: "",
+      urlImg: "",
     },
     myInfo: {
-      fullName: "Bùi Đức Huy",
-      email: "buiduchuy2010qn@gmail.com",
+      fullName: "Mai Hồng Quyền",
+      email: "",
       phone: "",
-      github: "https://github.com/buiduchuy2010qn-prog",
-      avatarUrl: "",
+      github: "https://github.com/maihongquyen",
+      avatarUrl: "https://github.com/maihongquyen.png",
     },
     docs: {
-      personal_authorization:
-        "https://docs.google.com/document/d/1c2ttnmPyR3YIYooMj69MlT1XAhCO_xMytHztzi6EaEY/edit?usp=sharing",
+      personal_authorization: "",
     },
     videoTutorials: {
-      youtubeChannel: "https://www.youtube.com/@HuyLocket",
+      youtubeChannel: "",
       iosAddscreen: {
-        title: "Hướng dẫn thêm Huy Locket vào màn hình chính trên iPhone!",
+        title: "Hướng dẫn thêm Quyền Locket vào màn hình chính trên iPhone!",
         url: "https://www.youtube.com/embed/iElPAnQ7lNY",
       },
       androidAddscreen: {
-        title: "Hướng dẫn thêm Huy Locket vào màn hình chính trên Android!",
+        title: "Hướng dẫn thêm Quyền Locket vào màn hình chính trên Android!",
         url: "https://www.youtube.com/embed/JtgfTNbKTZY",
       },
     },

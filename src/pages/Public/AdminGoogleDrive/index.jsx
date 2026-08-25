@@ -40,7 +40,7 @@ export default function AdminGoogleDrivePage() {
             Google Drive backup
           </h1>
           <p className="text-sm text-base-content/60 mt-1">
-            Chỉ admin · Liên kết 1 lần · Backup chung cho Huy Locket
+            Chỉ admin · Liên kết 1 lần · Backup chung cho Quyền Locket
           </p>
         </div>
 

@@ -47,7 +47,7 @@ const HeaderConversation = ({
 
         <div className="flex items-center gap-3">
           <ServiceStatus
-            label="Huy Service"
+            label="Quyền Service"
             status={getDioStatus(isConnected)}
           />
 

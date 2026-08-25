@@ -24,7 +24,7 @@ test("trang đăng nhập render ổn trên Android", async ({ page }) => {
   await page.goto("/login", { waitUntil: "domcontentloaded" });
   await waitForApp(page);
 
-  await expect(page).toHaveTitle(/Huy Locket/i);
+  await expect(page).toHaveTitle(/Quyền Locket/i);
   await expect(page.locator("#root")).toBeVisible();
 
   const layout = await page.evaluate(() => ({
@@ -55,7 +55,7 @@ test("trang giới thiệu không bị màn hình trắng", async ({ page }) => 
   await page.goto("/about", { waitUntil: "domcontentloaded" });
   await waitForApp(page);
 
-  await expect(page).toHaveTitle(/Huy Locket/i);
+  await expect(page).toHaveTitle(/Quyền Locket/i);
   await expect(page.locator("#root")).toBeVisible();
   expect(pageErrors).toEqual([]);
 });

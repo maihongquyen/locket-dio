@@ -242,7 +242,7 @@ export default function AppUpdateButton({ className = "" }) {
     ? "Có bản mới — bấm để cập nhật"
     : loading
       ? "Đang kiểm tra cập nhật"
-      : "Kiểm tra / cập nhật Huy Locket";
+      : "Kiểm tra / cập nhật Quyền Locket";
 
   return (
     <button

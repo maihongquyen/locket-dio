@@ -13,9 +13,9 @@
     "locket",
     "api"
   ],
-  "author": "Bùi Đức Huy",
+  "author": "Mai Hồng Quyền",
   "license": "ISC",
-  "description": "Huy Locket API / backend (from Server-Locket-Dio)",
+  "description": "Quyền Locket API / backend (from Server-Locket-Dio)",
   "dependencies": {
     "@google-cloud/firestore": "^8.0.0",
     "@grpc/grpc-js": "^1.14.3",

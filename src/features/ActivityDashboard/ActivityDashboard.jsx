@@ -109,7 +109,7 @@ export default function ActivityDashboard() {
             <div>
               <h2 className="text-2xl font-bold">Hoạt động Locket</h2>
               <p className="mt-1 text-sm text-base-content/60">
-                Số liệu tài khoản lấy từ API; biểu đồ ngày dùng lịch sử bài đã đăng qua Huy Locket trên thiết bị này.
+                Số liệu tài khoản lấy từ API; biểu đồ ngày dùng lịch sử bài đã đăng qua Quyền Locket trên thiết bị này.
               </p>
             </div>
             <button className="btn btn-sm btn-outline" disabled={refreshing} onClick={refresh}>
@@ -131,7 +131,7 @@ export default function ActivityDashboard() {
             <div>
               <h3 className="font-bold">Nhịp đăng bài</h3>
               <p className="text-xs text-base-content/50">
-                {busiest?.count ? `Ngày nhiều nhất trong khoảng: ${busiest.label} · ${busiest.count} bài` : "Chưa có bài Huy Locket nào trong khoảng này."}
+                {busiest?.count ? `Ngày nhiều nhất trong khoảng: ${busiest.label} · ${busiest.count} bài` : "Chưa có bài Quyền Locket nào trong khoảng này."}
               </p>
             </div>
             <div className="join">

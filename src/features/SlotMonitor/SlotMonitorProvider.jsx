@@ -150,7 +150,7 @@ export function SlotMonitorProvider({ children }) {
             });
           } else if (result?.backgroundEnabled && result?.permission === "denied") {
             toast.warning("Canh nền đã bật nhưng thông báo đang bị chặn", {
-              description: "Hãy cho phép thông báo của Huy Locket để nhận ngoài màn hình khóa.",
+              description: "Hãy cho phép thông báo của Quyền Locket để nhận ngoài màn hình khóa.",
             });
           } else {
             toast.warning("Chưa bật được thông báo Canh Slot 24/7", {
@@ -435,7 +435,7 @@ export function SlotMonitorProvider({ children }) {
     return () => document.removeEventListener("visibilitychange", onVisibility);
   }, [pollCelebs]);
 
-  // Nếu user đã cấp quyền từ trước, tự nối lại Web Push khi mở Huy Locket.
+  // Nếu user đã cấp quyền từ trước, tự nối lại Web Push khi mở Quyền Locket.
   useEffect(() => {
     if (backgroundHydratedRef.current || watchedCelebs.length === 0) return;
     if (typeof window === "undefined" || !("Notification" in window)) return;
@@ -465,12 +465,12 @@ export function SlotMonitorProvider({ children }) {
         }
 
         if (background?.enabled) {
-          toast.success("🔔 Đang canh cả khi đóng Huy Locket", {
+          toast.success("🔔 Đang canh cả khi đóng Quyền Locket", {
             description: "Có slot sẽ báo về thông báo điện thoại/màn hình khóa.",
           });
         } else if (background?.permission === "denied") {
           toast.warning("Đã canh nhưng điện thoại đang chặn thông báo", {
-            description: "Bật quyền thông báo cho Huy Locket để nhận ngoài màn hình khóa.",
+            description: "Bật quyền thông báo cho Quyền Locket để nhận ngoài màn hình khóa.",
           });
         } else {
           toast.success("Đã bật Canh Slot", {
@@ -530,7 +530,7 @@ export function SlotMonitorProvider({ children }) {
     const state = await enableBackgroundPush({ requestPermission: true, showFeedback: false });
     if (!state?.enabled) {
       toast.error("Chưa thể gửi thông báo test", {
-        description: "Hãy cho phép thông báo của Huy Locket trước.",
+        description: "Hãy cho phép thông báo của Quyền Locket trước.",
       });
       return false;
     }

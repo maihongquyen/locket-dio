@@ -188,7 +188,7 @@ export const UserPlanCard = React.memo(
           {isFree ? (
             <div className="flex items-center justify-between">
               <span className="font-semibold text-amber-600">
-                🌟 Huy Locket Membership
+                🌟 Quyền Locket Membership
               </span>
               <span className="text-sm font-medium text-amber-500">
                 Gói miễn phí

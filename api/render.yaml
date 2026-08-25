@@ -13,7 +13,7 @@ services:
       - key: NODE_ENV
         value: production
       - key: PUBLIC_WEB_URL
-        value: https://duchi.vercel.app
+        value: https://huy-locket-web-production.up.railway.app
       # Must match the Vercel backend values so stored sessions can be read.
       - key: DATABASE_URL
         sync: false

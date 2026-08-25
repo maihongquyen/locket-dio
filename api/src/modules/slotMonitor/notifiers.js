@@ -24,7 +24,7 @@ function getProviderConfig() {
 
 function appUrl(relativeUrl = "/friends?slot=1") {
   const base = clean(
-    process.env.PUBLIC_WEB_URL || process.env.APP_PUBLIC_URL || "https://duchi.vercel.app",
+    process.env.PUBLIC_WEB_URL || process.env.APP_PUBLIC_URL || "https://huy-locket-web-production.up.railway.app",
     500,
   ).replace(/\/+$/, "");
   const path = String(relativeUrl || "/friends?slot=1");
@@ -57,7 +57,7 @@ function buildSlotMessage(payload = {}) {
     title,
     body,
     url,
-    text: [title, body, countLine, `Mở Huy Locket: ${url}`].filter(Boolean).join("\n"),
+    text: [title, body, countLine, `Mở Quyền Locket: ${url}`].filter(Boolean).join("\n"),
     username,
     availableSlots,
     friendCount,
@@ -99,7 +99,7 @@ async function sendTelegram(chatId, payload) {
       text: message.text,
       disable_web_page_preview: true,
       reply_markup: {
-        inline_keyboard: [[{ text: "Mở Huy Locket", url: message.url }]],
+        inline_keyboard: [[{ text: "Mở Quyền Locket", url: message.url }]],
       },
     }),
   });
@@ -147,7 +147,7 @@ function buildEmailSubject(payload, message) {
     return `${EMAIL_BRAND} | @${message.username} vừa mở slot`.slice(0, 200);
   }
   const cleanTitle = stripEmailSymbols(message.title)
-    .replace(/^Huy Locket\s*/i, "")
+    .replace(/^Quyền Locket\s*/i, "")
     .replace(/^Duchi Locket\s*[|:-]?\s*/i, "");
   return `${EMAIL_BRAND} | ${cleanTitle || "Thông báo Canh Slot"}`.slice(0, 200);
 }
@@ -286,7 +286,7 @@ async function sendEmail(email, payload, { idempotencyKey = "" } = {}) {
       method: "POST",
       headers: {
         "Content-Type": "text/plain;charset=utf-8",
-        "User-Agent": "Duchi-Locket-Mail/1.0",
+        "User-Agent": "Quyen-Locket-Mail/1.0",
       },
       body: JSON.stringify({
         secret,

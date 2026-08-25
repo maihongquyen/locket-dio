@@ -138,30 +138,12 @@ export default function RestoreStreak() {
             </a>
 
             <a
-              href={"https://m.me/cm/AbYPtgRiGe2fInEf"}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-sm btn-primary"
-            >
-              👥 Messenger
-            </a>
-
-            <a
-              href={"https://discord.gg/47buy9nMGc"}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-sm btn-secondary"
-            >
-              💬 Discord
-            </a>
-
-            <a
-              href={"https://t.me/nthuylocket"}
+              href={"https://github.com/maihongquyen/locket-dio/issues"}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-sm btn-accent"
             >
-              🚀 Telegram
+              🛟 Báo lỗi & góp ý
             </a>
           </div>
         </div>

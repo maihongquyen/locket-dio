@@ -22,7 +22,7 @@ function isAdminRequest(req) {
         return true;
       }
 
-      if (payload && (payload.role === 'admin' || payload.email === 'buiduchuy2010qn@gmail.com' || payload.email === 'duchuy2010qn@gmail.com' || payload.email === 'nhuyqn2010@gmail.com')) {
+      if (payload && payload.role === 'admin') {
         return true;
       }
     }

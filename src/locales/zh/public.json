@@ -12,7 +12,7 @@
   },
   "error_boundary": {
     "title": "哎呀！发生了一些错误。",
-    "description": "Huy Locket 网页应用遇到了意外错误。请尝试重新启动应用，或加入社区寻求帮助。",
+    "description": "Quyền Locket 网页应用遇到了意外错误。请尝试重新启动应用，或加入社区寻求帮助。",
     "restart": "重新启动",
     "join_community": "加入社区"
   },
@@ -22,11 +22,11 @@
     "go_home": "返回首页"
   },
   "loading_page": {
-    "title": "Huy Locket 正在加载。",
+    "title": "Quyền Locket 正在加载。",
     "description": "正在准备你的精彩回忆..."
   },
   "rotating_circle": {
-    "outer": "Huy Locket • 分享精彩瞬间 •",
-    "inner": "Huy Locket • 现代 • 便捷 • 跨平台 • 安全 •"
+    "outer": "Quyền Locket • 分享精彩瞬间 •",
+    "inner": "Quyền Locket • 现代 • 便捷 • 跨平台 • 安全 •"
   }
 }

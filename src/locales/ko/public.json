@@ -12,7 +12,7 @@
   },
   "error_boundary": {
     "title": "앗! 오류가 발생했습니다.",
-    "description": "Huy Locket 웹 앱에서 예기치 않은 오류가 발생했습니다. 앱을 다시 시작하거나 커뮤니티에서 도움을 받아보세요.",
+    "description": "Quyền Locket 웹 앱에서 예기치 않은 오류가 발생했습니다. 앱을 다시 시작하거나 커뮤니티에서 도움을 받아보세요.",
     "restart": "다시 시작",
     "join_community": "커뮤니티 참여"
   },
@@ -22,11 +22,11 @@
     "go_home": "홈으로 이동"
   },
   "loading_page": {
-    "title": "Huy Locket를 불러오는 중입니다.",
+    "title": "Quyền Locket를 불러오는 중입니다.",
     "description": "소중한 추억을 준비하고 있습니다..."
   },
   "rotating_circle": {
-    "outer": "Huy Locket • 순간을 공유하세요 •",
-    "inner": "Huy Locket • 현대적 • 편리함 • 크로스 플랫폼 • 보안 •"
+    "outer": "Quyền Locket • 순간을 공유하세요 •",
+    "inner": "Quyền Locket • 현대적 • 편리함 • 크로스 플랫폼 • 보안 •"
   }
 }

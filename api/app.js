@@ -1,5 +1,5 @@
 /**
- * Huy Locket API — backend chính (từ Server-Locket-Dio)
+ * Quyền Locket API — backend chính (từ Server-Locket-Dio)
  */
 const dotenv = require("dotenv");
 const express = require("express");
@@ -249,7 +249,7 @@ app.use(logGroupWrapper);
 app.get("/api/meta", (_req, res) => {
   res.json({
     status: "success",
-    name: "Huy Locket API",
+    name: "Quyền Locket API",
     version: "1.0.0",
     env: process.env.NODE_ENV || "development",
     host: isVercel ? "vercel" : "node",
@@ -263,7 +263,7 @@ const PORT = Number(process.env.PORT) || 5007;
 
 if (!isVercel) {
   server.listen(PORT, "0.0.0.0", () => {
-    logInfo("SERVER", `🚀 Huy Locket API đang chạy tại http://0.0.0.0:${PORT}`);
+    logInfo("SERVER", `🚀 Quyền Locket API đang chạy tại http://0.0.0.0:${PORT}`);
     printServerBanner({
       isProd: process.env.NODE_ENV === "production",
       PORT,

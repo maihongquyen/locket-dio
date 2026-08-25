@@ -2,7 +2,7 @@ import { useAuthStore } from "@/stores";
 import { MAX_IMAGE_UPLOAD_MB } from "@/config/uploadLimits";
 
 /**
- * Huy Locket — full Premium cho mọi user (không paywall).
+ * Quyền Locket — full Premium cho mọi user (không paywall).
  * Mọi feature flag client-side luôn mở; limits = gói Premium.
  * Không khóa theo plan / feature_blocks.
  */

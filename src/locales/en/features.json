@@ -111,7 +111,7 @@
   "friends": {
     "accepting_request": "Accepting request...",
     "accept_success": "Accepted {{name}}",
-    "notif_title": "Notification from Huy Locket",
+    "notif_title": "Notification from Quyền Locket",
     "request_not_found": "Friend request not found.",
     "accept_failed": "❌ Failed to accept request!",
     "friends_count": "{{count}} friends",

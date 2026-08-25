@@ -1,7 +1,7 @@
-# HANDOFF — Huy Locket cho Anti / Antigravity
+# HANDOFF — Quyền Locket cho Anti / Antigravity
 
 > Cập nhật: **2026-08-19 21:10 ICT**  
-> Mục đích: Anti/Antigravity đọc file này để tiếp tục dự án **Huy Locket** đúng trạng thái hiện tại, không quay lại kiến trúc cũ, không phá các chức năng đang ổn và không tạo thêm service thừa.
+> Mục đích: Anti/Antigravity đọc file này để tiếp tục dự án **Quyền Locket** đúng trạng thái hiện tại, không quay lại kiến trúc cũ, không phá các chức năng đang ổn và không tạo thêm service thừa.
 
 ---
 
@@ -9,14 +9,14 @@
 
 ### Source of truth hiện tại
 
-- Repo hiện tại: **`buiduchuy2010qn-prog/duchi-locketgold`**
+- Repo hiện tại: **`maihongquyen/locket-dio`**
 - Branch production: **`main`**
 - HEAD ngay trước lần cập nhật handoff này:
   - **`6cf60c56afa43c8f2d8c4555d7345cb14695fde6`**
   - `chore: retrigger Vercel deploy`
 - Frontend/web chính: **Vercel project `huy-locket`**.
 - Backend/API chính cho web: **Vercel project `huy-locket-api`**.
-- Domain web chính: **`https://duchi.vercel.app`**.
+- Domain web chính: **`https://huy-locket-web-production.up.railway.app`**.
 - Render **không phải web chính**.
 - Render hiện dùng làm **backend helper + media API + long-lived Slot Monitor worker**.
 - Render service cần giữ: **`huy-locket-media-api`**.
@@ -55,7 +55,7 @@ Khi tài liệu xung đột:
 
 ## 1. Dự án là gì?
 
-**Huy Locket** là web client mở rộng cho Locket, có các nhóm chức năng:
+**Quyền Locket** là web client mở rộng cho Locket, có các nhóm chức năng:
 
 - đăng ảnh/video lên Locket;
 - camera và preview media;
@@ -71,7 +71,7 @@ Khi tài liệu xung đột:
 
 ### Branding bắt buộc
 
-- UI hiển thị: **Huy Locket**.
+- UI hiển thị: **Quyền Locket**.
 - Không tự đổi branding UI thành `Locket Dio`, `Dio` hay brand cũ.
 - Một số internal API/header/path/class vẫn có chữ `Dio` vì backward compatibility — **không mass rename**.
 - App định hướng **free**, không tự bật lại paywall/feature lock.
@@ -88,7 +88,7 @@ Browser / PWA
     v
 Vercel project: huy-locket
 React + Vite frontend
-https://duchi.vercel.app
+https://huy-locket-web-production.up.railway.app
 ```
 
 Web chính **phải tiếp tục ở Vercel**.
@@ -119,7 +119,7 @@ https://huy-locket-media-api.onrender.com
 service id: srv-da2q86uk1f9s73drk4hg
 region: Singapore
 runtime: Node
-repo: buiduchuy2010qn-prog/duchi-locketgold
+repo: maihongquyen/locket-dio
 branch: main
 ```
 
@@ -825,7 +825,7 @@ project id: prj_IYydzPJ3EAbY0n2khx7K8y7bfaLA
 Domain chính:
 
 ```text
-https://duchi.vercel.app
+https://huy-locket-web-production.up.railway.app
 ```
 
 Build:
@@ -911,7 +911,7 @@ Không push refactor lớn không liên quan bug hiện tại.
 ## 17. Checklist khi nhận session mới
 
 ```text
-[ ] Repo: buiduchuy2010qn-prog/duchi-locketgold
+[ ] Repo: maihongquyen/locket-dio
 [ ] Branch: main
 [ ] Pull HEAD mới nhất
 [ ] Đọc HANDOFF-ANTI.md
@@ -919,7 +919,7 @@ Không push refactor lớn không liên quan bug hiện tại.
 [ ] Check Vercel huy-locket-api
 [ ] Check Render huy-locket-media-api
 [ ] Không tạo lại huy-locket-slot-worker
-[ ] Web chính vẫn là duchi.vercel.app
+[ ] Web chính vẫn là huy-locket-web-production.up.railway.app
 [ ] Check Vercel build-rate-limit trước khi spam commit
 [ ] Nếu media post lỗi: kiểm tra R2 upload/direct-read/signature/delete
 [ ] Nếu Slot lỗi: kiểm tra merged worker + DATABASE_URL + encryption key + Firebase key
@@ -939,7 +939,7 @@ Không push refactor lớn không liên quan bug hiện tại.
 
 ```text
 WEB CHÍNH:
-Vercel -> duchi.vercel.app
+Railway -> huy-locket-web-production.up.railway.app
 
 API CHÍNH:
 Vercel -> huy-locket-api

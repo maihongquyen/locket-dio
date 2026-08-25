@@ -1,5 +1,5 @@
 /**
- * Huy Locket Service Worker (injectManifest)
+ * Quyền Locket Service Worker (injectManifest)
  * - Precache app shell (hashed assets via Workbox manifest)
  * - Navigation: network-first + short timeout → always cached shell (never ERR_FAILED)
  * - /assets/*: cache-first (immutable hashes)
@@ -12,7 +12,7 @@ const SW_VERSION = import.meta.env.VITE_APP_VERSION;
 const SHELL_CACHE = "hl-app-shell-v2";
 const PAGES_CACHE = "hl-pages-v2";
 
-console.log(`[SW] Huy Locket SW ${SW_VERSION} - loaded`);
+console.log(`[SW] Quyền Locket SW ${SW_VERSION} - loaded`);
 
 import {
   precacheAndRoute,
@@ -153,7 +153,7 @@ async function navigationFallback() {
 
   // 3) Never Response.error() for navigations — Chrome shows ERR_FAILED otherwise.
   return new Response(
-    `<!DOCTYPE html><html lang="vi"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Huy Locket</title></head><body style="font-family:system-ui;display:flex;min-height:100vh;align-items:center;justify-content:center;background:#0f0f12;color:#f5f5f7;margin:0"><div style="text-align:center;padding:24px"><h1 style="font-size:1.2rem">Đang ngoại tuyến</h1><p style="opacity:.8">Mở lại khi có mạng để tải app shell. Bản nháp vẫn lưu trên máy.</p><button onclick="location.reload()" style="border:0;border-radius:999px;padding:10px 18px;background:#ffb800;font-weight:600">Thử lại</button></div></body></html>`,
+    `<!DOCTYPE html><html lang="vi"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Quyền Locket</title></head><body style="font-family:system-ui;display:flex;min-height:100vh;align-items:center;justify-content:center;background:#0f0f12;color:#f5f5f7;margin:0"><div style="text-align:center;padding:24px"><h1 style="font-size:1.2rem">Đang ngoại tuyến</h1><p style="opacity:.8">Mở lại khi có mạng để tải app shell. Bản nháp vẫn lưu trên máy.</p><button onclick="location.reload()" style="border:0;border-radius:999px;padding:10px 18px;background:#ffb800;font-weight:600">Thử lại</button></div></body></html>`,
     {
       status: 200,
       statusText: "OK",

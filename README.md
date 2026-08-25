@@ -1,4 +1,4 @@
-# 📸 Huy Locket
+# 📸 Quyền Locket
 
 <div align="center">
 
@@ -7,7 +7,7 @@
 
 [![Phiên bản](https://img.shields.io/badge/phiên_bản-1.0.0-blue.svg?cacheSeconds=2592000)](https://github.com/maihongquyen/locket-dio/releases)
 [![Giấy phép: MIT](https://img.shields.io/badge/Giấy_phép-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Demo trực tiếp](https://img.shields.io/badge/demo-trực_tiếp-green.svg)](https://duchi.vercel.app)
+[![Demo trực tiếp](https://img.shields.io/badge/demo-trực_tiếp-green.svg)](https://huy-locket-web-production.up.railway.app)
 [![PRs được chào đón](https://img.shields.io/badge/PRs-được_chào_đón-brightgreen.svg)](http://makeapullrequest.com)
 
 [![React](https://img.shields.io/badge/React-18.2+-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
@@ -78,7 +78,7 @@
 
 <div align="center">
 
-[![Demo Trực Tiếp](https://img.shields.io/badge/🎯_Demo_Trực_Tiếp-Truy_Cập_Ngay-FF6B6B?style=for-the-badge)](https://duchi.vercel.app)
+[![Demo Trực Tiếp](https://img.shields.io/badge/🎯_Demo_Trực_Tiếp-Truy_Cập_Ngay-FF6B6B?style=for-the-badge)](https://huy-locket-web-production.up.railway.app)
 
 </div>
 
@@ -201,7 +201,7 @@ VITE_VAPID_PUBLIC_KEY=your_vapid_public_key_here
 ## 📁 Cấu Trúc Dự Án Tham Khảo
 
 ```
-duchi-locketgold/
+locket-dio/
 ├── 📂 public/                      # Tài nguyên tĩnh, truy cập trực tiếp
 │   ├── 📁 images/                  # Ảnh minh họa, biểu tượng
 │   ├── 📄 favicon.ico             # Icon website
@@ -373,14 +373,14 @@ Khi báo cáo lỗi, vui lòng bao gồm:
 
 <div align="center">
 
-![GitHub stars](https://img.shields.io/github/stars/buiduchuy2010qn-prog/duchi-locketgold?style=social)
-![GitHub forks](https://img.shields.io/github/forks/buiduchuy2010qn-prog/duchi-locketgold?style=social)
-![GitHub watchers](https://img.shields.io/github/watchers/buiduchuy2010qn-prog/duchi-locketgold?style=social)
+![GitHub stars](https://img.shields.io/github/stars/maihongquyen/locket-dio?style=social)
+![GitHub forks](https://img.shields.io/github/forks/maihongquyen/locket-dio?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/maihongquyen/locket-dio?style=social)
 
-![GitHub last commit](https://img.shields.io/github/last-commit/buiduchuy2010qn-prog/duchi-locketgold)
-![GitHub issues](https://img.shields.io/github/issues/buiduchuy2010qn-prog/duchi-locketgold)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/buiduchuy2010qn-prog/duchi-locketgold)
-![GitHub code size](https://img.shields.io/github/languages/code-size/buiduchuy2010qn-prog/duchi-locketgold)
+![GitHub last commit](https://img.shields.io/github/last-commit/maihongquyen/locket-dio)
+![GitHub issues](https://img.shields.io/github/issues/maihongquyen/locket-dio)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/maihongquyen/locket-dio)
+![GitHub code size](https://img.shields.io/github/languages/code-size/maihongquyen/locket-dio)
 
 </div>
 
@@ -406,11 +406,11 @@ Khi báo cáo lỗi, vui lòng bao gồm:
 [![GitHub Issues](https://img.shields.io/badge/🐛_Báo_Cáo_Lỗi-GitHub_Issues-red?style=for-the-badge)](https://github.com/maihongquyen/locket-dio/issues)
 [![GitHub Discussions](https://img.shields.io/badge/💡_Đề_Xuất_Tính_Năng-Discussions-purple?style=for-the-badge)](https://github.com/maihongquyen/locket-dio/discussions)
 
-### 📧 Thông Tin Liên Hệ
+### 🔗 Thông Tin Liên Hệ
 
-- **Email**: buiduchuy2010qn@gmail.com
-- **Website**: [https://duchi.vercel.app](https://duchi.vercel.app)
-- **GitHub**: [@buiduchuy2010qn-prog](https://github.com/buiduchuy2010qn-prog)
+- **Website**: [https://huy-locket-web-production.up.railway.app](https://huy-locket-web-production.up.railway.app)
+- **GitHub**: [@maihongquyen](https://github.com/maihongquyen)
+- **Báo lỗi & góp ý**: [GitHub Issues](https://github.com/maihongquyen/locket-dio/issues)
 
 ---
 
@@ -428,7 +428,7 @@ Khi báo cáo lỗi, vui lòng bao gồm:
 
 ### ⭐ Hãy Star repository này nếu bạn thấy hữu ích!
 
-**Được tạo với ❤️ bởi [Huy](https://github.com/buiduchuy2010qn-prog) | © 2025 [Huy Locket](https://duchi.vercel.app) | Tất cả quyền được bảo lưu**
+**Được duy trì với ❤️ bởi [Quyền](https://github.com/maihongquyen) | © 2025 [Quyền Locket](https://huy-locket-web-production.up.railway.app) | Tất cả quyền được bảo lưu**
 
 [![Về đầu trang](https://img.shields.io/badge/⬆️_Về_Đầu_Trang-Nhấn_Vào_Đây-blue?style=for-the-badge)](#-locket-dio)
 

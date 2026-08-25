@@ -110,7 +110,7 @@
   "friends": {
     "accepting_request": "Freundschaftsanfrage wird angenommen...",
     "accept_success": "{{name}} wurde als Freund hinzugefügt",
-    "notif_title": "Benachrichtigung von Huy Locket",
+    "notif_title": "Benachrichtigung von Quyền Locket",
     "request_not_found": "Keine anzunehmende Anfrage gefunden.",
     "accept_failed": "❌ Freundschaftsanfrage konnte nicht angenommen werden!",
     "friends_count": "{{count}} Freunde",

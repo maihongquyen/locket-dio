@@ -12,7 +12,7 @@
     "restore_streak_desc": "Hãy đăng một ảnh hoặc video trên màn hình chính để khôi phục chuỗi!",
     "restore_streak_mode": "Chế độ khôi phục chuỗi",
     "continue_streak_prompt": "Hãy đăng bài viết để tiếp tục chuỗi ngày hôm nay!",
-    "activate_calendar_prompt": "Hãy đăng một ảnh hoặc video để kích hoạt lịch Huy Locket💛",
+    "activate_calendar_prompt": "Hãy đăng một ảnh hoặc video để kích hoạt lịch Quyền Locket💛",
     "loading": "Đang tải...",
     "hide_comments": "Ẩn bình luận",
     "view_comments": "Xem bình luận",
@@ -190,8 +190,8 @@
     "flash_not_supported": "Camera này không hỗ trợ flash",
     "flash_enable_failed": "Không thể bật flash trên camera hiện tại",
     "welcome": {
-      "title": "Chào mừng đến với Huy Locket!",
-      "desc": "Ứng dụng Web giúp bạn đăng ảnh & video lên Locket dễ dàng hơn bao giờ hết — với nhiều tính năng độc quyền chỉ có tại Huy Locket.",
+      "title": "Chào mừng đến với Quyền Locket!",
+      "desc": "Ứng dụng Web giúp bạn đăng ảnh & video lên Locket dễ dàng hơn bao giờ hết — với nhiều tính năng độc quyền chỉ có tại Quyền Locket.",
       "tip_personal_project": "Đây là một dự án cá nhân đang phát triển liên tục",
       "tip_contribution": "Mỗi đóng góp của bạn đều giúp hệ thống tốt hơn mỗi ngày",
       "tip_membership": "Hãy cân nhắc đăng ký thành viên để ủng hộ và mở khóa thêm tính năng",
@@ -201,8 +201,8 @@
       "post_tip_formats": "Hỗ trợ ảnh JPG, PNG, WEBP",
       "post_tip_camera": "Chụp ảnh trực tiếp từ camera",
       "post_tip_crop": "Cắt crop video/ảnh theo khung vuông",
-      "features_title": "Tính năng nâng cao của Huy Locket",
-      "features_desc": "Khám phá những tính năng ẩn và nâng cao giúp bạn sử dụng Huy Locket mạnh mẽ hơn, nhanh hơn và thông minh hơn bao giờ hết.",
+      "features_title": "Tính năng nâng cao của Quyền Locket",
+      "features_desc": "Khám phá những tính năng ẩn và nâng cao giúp bạn sử dụng Quyền Locket mạnh mẽ hơn, nhanh hơn và thông minh hơn bao giờ hết.",
       "features_tip_hidden": "Tính năng ẩn & experimental (beta features)",
       "features_tip_invite": "Gửi lời mời tức thì (Instant Invite)",
       "features_tip_search": "Tìm kiếm & lọc bạn bè siêu nhanh",
@@ -210,13 +210,13 @@
       "features_tip_anonymous": "Chế độ xem ẩn danh (Anonymous View)",
       "features_tip_groups": "Gửi nhóm bạn bè tuỳ chọn",
       "features_tip_private": "Đăng riêng tư chỉ mình bạn xem",
-      "community_title": "Tham gia cộng đồng Huy Locket",
-      "community_desc": "Kết nối với hàng nghìn người dùng Huy Locket để nhận hỗ trợ, cập nhật tính năng mới và chia sẻ kinh nghiệm!",
+      "community_title": "Tham gia cộng đồng Quyền Locket",
+      "community_desc": "Kết nối với hàng nghìn người dùng Quyền Locket để nhận hỗ trợ, cập nhật tính năng mới và chia sẻ kinh nghiệm!",
       "community_join_tip": "Tham gia để nhận thông tin sớm nhất và hỗ trợ nhanh hơn",
-      "notif_title": "Bật thông báo từ Huy Locket",
-      "notif_desc": "Nhận ngay thông báo khi có tính năng mới, sự cố hoặc cập nhật quan trọng từ Huy Locket.",
+      "notif_title": "Bật thông báo từ Quyền Locket",
+      "notif_desc": "Nhận ngay thông báo khi có tính năng mới, sự cố hoặc cập nhật quan trọng từ Quyền Locket.",
       "notif_enabled": "Thông báo đã được bật! 🎉",
-      "notif_enabled_desc": "Bạn sẽ nhận thông báo khi có cập nhật mới từ Huy Locket.",
+      "notif_enabled_desc": "Bạn sẽ nhận thông báo khi có cập nhật mới từ Quyền Locket.",
       "notif_blocked": "⚠️ Bạn đã chặn thông báo",
       "notif_blocked_desc": "Vào Cài đặt trình duyệt → Quyền trang web → Thông báo để bật lại.",
       "notif_allow": "Cho phép nhận thông báo",
@@ -227,7 +227,7 @@
       "notif_blocked_alert": "Bạn đã chặn thông báo. Hãy vào cài đặt trình duyệt để bật lại.",
       "notif_unsupported_alert": "Trình duyệt không hỗ trợ thông báo.",
       "notif_enabled_alert": "Đã bật thông báo!",
-      "notif_enabled_alert_desc": "Bạn sẽ nhận cập nhật từ Huy Locket."
+      "notif_enabled_alert_desc": "Bạn sẽ nhận cập nhật từ Quyền Locket."
     }
   }
 }

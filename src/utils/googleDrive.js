@@ -6,10 +6,9 @@
 const STATUS_CACHE_KEY = "gdrive_server_status";
 const STATUS_CACHE_AT = "gdrive_server_status_at";
 
-/** Gmail + Locket ID admin mặc định (có thể bổ sung qua env) */
-const DEFAULT_ADMIN_EMAILS = ["buiduchuy2010qn@gmail.com"];
-/** Locket ID thật (localId / user_uid) của admin */
-const DEFAULT_ADMIN_LOCKET_IDS = ["y82fIv1QyDXLrMZ012MKYoYmAVz2"];
+/** Admin chỉ được cấp qua env của deployment hiện tại. */
+const DEFAULT_ADMIN_EMAILS = [];
+const DEFAULT_ADMIN_LOCKET_IDS = [];
 
 function normalizeEmail(v) {
   if (!v) return "";
@@ -242,7 +241,7 @@ export async function uploadFileToGoogleDrive(file, options = {}) {
       if (!ident && localId) {
         ident = `user_${String(localId).slice(0, 8)}`;
       }
-      ident = ident ? ident.replace(/[^\w\s\-()]/g, "").replace(/\s+/g, "_") : "HuyLocket_Guest";
+      ident = ident ? ident.replace(/[^\w\s\-()]/g, "").replace(/\s+/g, "_") : "QuyenLocket_Guest";
 
       const now = new Date();
       const dateStr = now.getFullYear() + "-" + String(now.getMonth() + 1).padStart(2, "0") + "-" + String(now.getDate()).padStart(2, "0");

@@ -1,4 +1,4 @@
-// Vercel adapter for the existing Huy Locket Express backend.
+// Vercel adapter for the existing Quyền Locket Express backend.
 // Keeps api/app.js usable on a traditional Node host while preventing it from
 // opening a TCP listener inside a Vercel Function.
 const http = require("http");
@@ -24,7 +24,7 @@ http.createServer = originalCreateServer;
 http.Server.prototype.listen = originalListen;
 
 if (!capturedServer) {
-  throw new Error("Huy Locket API server was not initialized");
+  throw new Error("Quyền Locket API server was not initialized");
 }
 
 function applyForwardedPath(req) {

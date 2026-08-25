@@ -1,7 +1,7 @@
 const { logInfo, logError } = require("../../utils/logEventUtils");
 
 /**
- * Huy Locket free-for-all: mọi user = Premium — không chặn Member-only.
+ * Quyền Locket free-for-all: mọi user = Premium — không chặn Member-only.
  */
 const onlyMemberCheck = async (req, res, next) => {
   try {

@@ -1,5 +1,5 @@
 /**
- * Huy Locket static + API proxy
+ * Quyền Locket static + API proxy
  * Browser → same origin → this server → configured API and media upstreams
  * Shared Google Drive backup (1 Drive for whole site, admin env only)
  */
@@ -295,7 +295,7 @@ async function initNeon() {
   }
 }
 
-/** Tìm hoặc tạo folder gốc "Huy Locket Web" trên Drive của user OAuth */
+/** Tìm hoặc tạo folder gốc "Quyền Locket Web" trên Drive của user OAuth */
 async function ensureRootBackupFolder(token, preferredId) {
   // 1) Thử folder ID form (nếu còn)
   if (preferredId && String(preferredId).length >= 10) {
@@ -313,15 +313,15 @@ async function ensureRootBackupFolder(token, preferredId) {
         !meta.trashed &&
         String(meta.mimeType || "").includes("folder")
       ) {
-        return { id: meta.id, name: meta.name || "Huy Locket Web", created: false };
+        return { id: meta.id, name: meta.name || "Quyền Locket Web", created: false };
       }
     } catch {
       /* fall through */
     }
   }
 
-  // 2) Tìm folder Huy Locket Web (hoặc tên cũ Locket Dio Web)
-  for (const folderName of ["Huy Locket Web", "Locket Dio Web"]) {
+  // 2) Tìm folder Quyền Locket Web (hoặc tên cũ Locket Dio Web)
+  for (const folderName of ["Quyền Locket Web", "Locket Dio Web"]) {
     const q = [
       `name='${folderName}'`,
       "mimeType='application/vnd.google-apps.folder'",
@@ -363,7 +363,7 @@ async function ensureRootBackupFolder(token, preferredId) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        name: "Huy Locket Web",
+        name: "Quyền Locket Web",
         mimeType: "application/vnd.google-apps.folder",
       }),
     }
@@ -372,10 +372,10 @@ async function ensureRootBackupFolder(token, preferredId) {
   if (!createRes.ok || !created.id) {
     throw new Error(
       created?.error?.message ||
-        "Không tạo được folder Huy Locket Web trên Drive"
+        "Không tạo được folder Quyền Locket Web trên Drive"
     );
   }
-  return { id: created.id, name: created.name || "Huy Locket Web", created: true };
+  return { id: created.id, name: created.name || "Quyền Locket Web", created: true };
 }
 
 async function readDriveConfigFromNeon() {
@@ -629,7 +629,7 @@ function publicBaseUrl(req) {
     .split(",")[0]
     .trim();
   if (host.includes("railway.app") || host.includes("locket-dio")) {
-    return "https://duchi.vercel.app";
+    return "https://huy-locket-web-production.up.railway.app";
   }
   const proto = (req.headers["x-forwarded-proto"] || "https")
     .toString()
@@ -1004,26 +1004,24 @@ function normalizeEmail(v) {
     .replace(/\s+/g, "");
 }
 
-/** Admin Gmail mặc định + env */
+/** Admin Gmail chỉ lấy từ env của chủ sở hữu hiện tại. */
 function getAdminEmails() {
-  const defaults = ["buiduchuy2010qn@gmail.com"];
   const fromEnv = parseAdminList(
     process.env.ADMIN_EMAILS ||
       process.env.VITE_ADMIN_EMAILS ||
       ""
   ).map(normalizeEmail);
-  return Array.from(new Set([...defaults.map(normalizeEmail), ...fromEnv]));
+  return Array.from(new Set(fromEnv));
 }
 
-/** Locket ID thật (user_uid) admin mặc định + env */
+/** Locket ID admin chỉ lấy từ env của chủ sở hữu hiện tại. */
 function getAdminLocketIds() {
-  const defaults = ["y82fIv1QyDXLrMZ012MKYoYmAVz2"];
   const fromEnv = parseAdminList(
     process.env.ADMIN_LOCAL_IDS ||
       process.env.VITE_ADMIN_LOCAL_IDS ||
       ""
   );
-  return Array.from(new Set([...defaults, ...fromEnv]));
+  return Array.from(new Set(fromEnv));
 }
 
 function isAdminRequest(req) {
@@ -1164,7 +1162,7 @@ async function handleDriveConfigSave(req, res) {
     nextOauth.refreshToken = String(body.refreshToken).trim();
   }
 
-  // Folder ID tuỳ chọn — OAuth xong server tự tạo "Huy Locket Web" nếu thiếu
+  // Folder ID tuỳ chọn — OAuth xong server tự tạo "Quyền Locket Web" nếu thiếu
   if (folderId && folderId.length > 0 && folderId.length < 10) {
     return corsJson(req, res, 400, {
       error: "Folder ID quá ngắn. Để trống để tự tạo folder, hoặc dán ID đúng.",
@@ -1272,7 +1270,7 @@ async function handleDriveOAuthStart(req, res) {
       error: "Thiếu OAuth Client ID / Secret. Lưu form trước.",
     });
   }
-  // folderId có thể rỗng → callback tự tạo "Huy Locket Web"
+  // folderId có thể rỗng → callback tự tạo "Quyền Locket Web"
 
   // State ký — sống sót qua restart Render (không còn “Hết hạn” do mất RAM)
   const state = signOauthState({
@@ -1316,8 +1314,8 @@ async function handleDriveOAuthCallback(req, res) {
       <style>body{font-family:system-ui;max-width:520px;margin:40px auto;padding:16px;line-height:1.5}
       .ok{color:#15803d}.err{color:#b91c1c}a{color:#2563eb}</style></head>
       <body><h1 class="${ok ? "ok" : "err"}">${title}</h1><p>${msg}</p>
-      <p><a href="https://duchi.vercel.app/admin/google-drive">← Về trang cấu hình Drive trên Huy Locket</a></p>
-      <script>try{localStorage.removeItem("gdrive_server_status");localStorage.removeItem("gdrive_server_status_at")}catch(e){}; ${ok ? 'setTimeout(() => window.location.href = "https://duchi.vercel.app/admin/google-drive", 2500);' : ''}</script>
+      <p><a href="https://huy-locket-web-production.up.railway.app/admin/google-drive">← Về trang cấu hình Drive trên Quyền Locket</a></p>
+      <script>try{localStorage.removeItem("gdrive_server_status");localStorage.removeItem("gdrive_server_status_at")}catch(e){}; ${ok ? 'setTimeout(() => window.location.href = "https://huy-locket-web-production.up.railway.app/admin/google-drive", 2500);' : ''}</script>
       </body></html>`,
       { "Content-Type": "text/html; charset=utf-8" }
     );
@@ -1394,7 +1392,7 @@ async function handleDriveOAuthCallback(req, res) {
       mode: "oauth",
     };
 
-    // Tự tìm / tạo folder Huy Locket Web trên Drive Gmail vừa login
+    // Tự tìm / tạo folder Quyền Locket Web trên Drive Gmail vừa login
     let testMsg = "";
     let rootFolderId = oauthCtx.folderId || prev.folderId || "";
     try {
@@ -1416,7 +1414,7 @@ async function handleDriveOAuthCallback(req, res) {
       };
       const test = await uploadToSharedDrive(
         Buffer.from(
-          `Huy Locket backup test ${new Date().toISOString()}\n`,
+          `Quyền Locket backup test ${new Date().toISOString()}\n`,
           "utf8"
         ),
         "text/plain",

@@ -117,7 +117,7 @@
   "friends": {
     "accepting_request": "Đang chấp nhận lời mời...",
     "accept_success": "Đã chấp nhận {{name}}",
-    "notif_title": "Thông báo từ Huy Locket",
+    "notif_title": "Thông báo từ Quyền Locket",
     "request_not_found": "Không tìm thấy lời mời để chấp nhận.",
     "accept_failed": "❌ Chấp nhận lời mời thất bại!",
     "friends_count": "{{count}} người bạn",

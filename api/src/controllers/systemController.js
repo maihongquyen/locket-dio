@@ -23,7 +23,7 @@ const healthController = (req, res) => {
     success: true,
     status: "healthy",
     service: "huy-locket-api",
-    name: "Huy Locket API",
+    name: "Quyền Locket API",
     uptime_seconds: uptime,
     uptime_human: formatUptime(uptime),
     timestamp: new Date().toISOString(),

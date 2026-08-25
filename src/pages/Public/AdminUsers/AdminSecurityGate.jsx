@@ -389,12 +389,12 @@ export default function AdminSecurityGate({
         <header className="admin-vault-header">
           <div className="admin-vault-badges"><span><i /> SECURE ACCESS</span></div>
           <SecurityMark />
-          <span className="admin-vault-eyebrow">HUY LOCKET · SECURITY CONSOLE</span>
+          <span className="admin-vault-eyebrow">QUYỀN LOCKET · SECURITY CONSOLE</span>
           <h1 id="admin-vault-title">Xác minh quản trị</h1>
           <p>{isRecovery ? recoveryDescription : isOtp ? "Hoàn tất lớp xác thực thứ hai để mở khóa trung tâm quản trị." : hasPin ? "Nhập mã PIN bảo mật để khởi tạo phiên quản trị riêng tư." : "Tạo mã PIN quản trị gồm 4–8 chữ số để bảo vệ khu vực nhạy cảm."}</p>
           <div className="admin-vault-identity">
             <span>{(currentEmail || "HL").slice(0, 2).toUpperCase()}</span>
-            <div><strong>{currentEmail || "Huy Locket"}</strong><small>{String(currentRole || "admin").replaceAll("_", " ")}</small></div>
+            <div><strong>{currentEmail || "Quyền Locket"}</strong><small>{String(currentRole || "admin").replaceAll("_", " ")}</small></div>
             <ShieldCheck />
           </div>
         </header>
@@ -473,7 +473,7 @@ export default function AdminSecurityGate({
 
         <footer className="admin-vault-footer">
           <div><Sparkles /><span>TLS 1.3</span><i /><span>ENCRYPTED SESSION</span><i /><span>SESSION 30 MIN</span></div>
-          <button type="button" onClick={onLeave} disabled={busy || verified}><ArrowLeft /> Quay lại Huy Locket</button>
+          <button type="button" onClick={onLeave} disabled={busy || verified}><ArrowLeft /> Quay lại Quyền Locket</button>
         </footer>
       </section>
     </Motion.main>

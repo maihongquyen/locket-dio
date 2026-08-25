@@ -25,7 +25,7 @@ function printServerBanner({ isProd, PORT }) {
 
   console.log(`
 ╔${"═".repeat(width)}╗
-${line(cyan + bold + "HUY LOCKET API" + reset)}
+${line(cyan + bold + "QUYEN LOCKET API" + reset)}
 ╠${"═".repeat(width)}╣
 ${row("MODE", isProd ? green + "PRODUCTION" + reset : yellow + "DEVELOPMENT" + reset)}
 ${row("NODE", cyan + (process.env.NODE_ENV || "development") + reset)}

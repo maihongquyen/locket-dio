@@ -1,13 +1,13 @@
-Huy Locket — Deploy
+Quyền Locket — Deploy
 
 PRIMARY (user): huy-locket
   - Docker · Singapore · auto from git push main
-  - Repo: https://github.com/buiduchuy2010qn-prog/locket-dio.git
+  - Repo: https://github.com/maihongquyen/locket-dio.git
   - After code changes: commit + push origin main → service rebuilds
 
 ---
 
-Huy Locket on Render — CORS proxy fix
+Quyền Locket on Render — CORS proxy fix
 
 Problem:
   api.locket-dio.com only allows Origin: https://locket-dio.com (and localhost).
@@ -22,7 +22,7 @@ Fix:
 
 IMPORTANT — service type must be WEB (Node), not Static:
   1. Render Dashboard → New → Web Service
-  2. Repo: buiduchuy2010qn-prog/locket-dio
+  2. Repo: maihongquyen/locket-dio
   3. Runtime: Node
   4. Build: echo "Using prebuilt public/ + server.mjs proxy"
   5. Start: node server.mjs

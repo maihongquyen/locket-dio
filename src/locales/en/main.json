@@ -12,7 +12,7 @@
     "restore_streak_desc": "Please post a photo or video on the home screen to restore your streak!",
     "restore_streak_mode": "Streak recovery mode",
     "continue_streak_prompt": "Please post to continue your streak today!",
-    "activate_calendar_prompt": "Please post a photo or video to activate your Huy Locket calendar💛",
+    "activate_calendar_prompt": "Please post a photo or video to activate your Quyền Locket calendar💛",
     "loading": "Loading...",
     "hide_comments": "Hide comments",
     "view_comments": "View comments",
@@ -191,8 +191,8 @@
     "flash_not_supported": "This camera does not support flash",
     "flash_enable_failed": "Cannot enable flash on current camera",
     "welcome": {
-      "title": "Welcome to Huy Locket!",
-      "desc": "Web application that helps you upload photos & videos to Locket easier than ever — with many exclusive features only on Huy Locket.",
+      "title": "Welcome to Quyền Locket!",
+      "desc": "Web application that helps you upload photos & videos to Locket easier than ever — with many exclusive features only on Quyền Locket.",
       "tip_personal_project": "This is a personal project under continuous development",
       "tip_contribution": "Every contribution you make helps make the system better every day",
       "tip_membership": "Please consider registering a membership to support and unlock more features",
@@ -202,8 +202,8 @@
       "post_tip_formats": "Supports JPG, PNG, WEBP images",
       "post_tip_camera": "Take photos directly from the camera",
       "post_tip_crop": "Crop videos/photos to square",
-      "features_title": "Advanced Features of Huy Locket",
-      "features_desc": "Explore hidden and advanced features that make using Huy Locket more powerful, faster, and smarter than ever.",
+      "features_title": "Advanced Features of Quyền Locket",
+      "features_desc": "Explore hidden and advanced features that make using Quyền Locket more powerful, faster, and smarter than ever.",
       "features_tip_hidden": "Hidden & experimental features (beta features)",
       "features_tip_invite": "Instant Invite",
       "features_tip_search": "Ultra-fast search & filter friends",
@@ -211,13 +211,13 @@
       "features_tip_anonymous": "Anonymous View",
       "features_tip_groups": "Send to custom groups of friends",
       "features_tip_private": "Post privately for your eyes only",
-      "community_title": "Join the Huy Locket Community",
-      "community_desc": "Connect with thousands of Huy Locket users for support, new feature updates, and sharing experiences!",
+      "community_title": "Join the Quyền Locket Community",
+      "community_desc": "Connect with thousands of Quyền Locket users for support, new feature updates, and sharing experiences!",
       "community_join_tip": "Join to get the earliest updates and faster support",
-      "notif_title": "Turn on notifications from Huy Locket",
-      "notif_desc": "Receive instant notifications for new features, incidents, or important updates from Huy Locket.",
+      "notif_title": "Turn on notifications from Quyền Locket",
+      "notif_desc": "Receive instant notifications for new features, incidents, or important updates from Quyền Locket.",
       "notif_enabled": "Notifications turned on! 🎉",
-      "notif_enabled_desc": "You will receive notifications when there are new updates from Huy Locket.",
+      "notif_enabled_desc": "You will receive notifications when there are new updates from Quyền Locket.",
       "notif_blocked": "⚠️ You have blocked notifications",
       "notif_blocked_desc": "Go to Browser Settings → Site Permissions → Notifications to turn them back on.",
       "notif_allow": "Allow receiving notifications",
@@ -228,7 +228,7 @@
       "notif_blocked_alert": "You have blocked notifications. Please go to browser settings to enable them again.",
       "notif_unsupported_alert": "Browser does not support notifications.",
       "notif_enabled_alert": "Notifications turned on!",
-      "notif_enabled_alert_desc": "You will receive updates from Huy Locket."
+      "notif_enabled_alert_desc": "You will receive updates from Quyền Locket."
     }
   }
 }

@@ -1,7 +1,7 @@
 const crypto = require("node:crypto");
 
-const REPO_OWNER = String(process.env.GITHUB_REPO_OWNER || "buiduchuy2010qn-prog").trim();
-const REPO_NAME = String(process.env.GITHUB_REPO_NAME || "duchi-locketgold").trim();
+const REPO_OWNER = String(process.env.GITHUB_REPO_OWNER || "maihongquyen").trim();
+const REPO_NAME = String(process.env.GITHUB_REPO_NAME || "locket-dio").trim();
 const GITHUB_API = "https://api.github.com";
 const MAX_COMMITS = 12;
 
@@ -16,7 +16,7 @@ function githubToken() {
 function headers({ authenticated = false } = {}) {
   const out = {
     Accept: "application/vnd.github+json",
-    "User-Agent": "Duchi-Locket-Admin-Ops/1.0",
+    "User-Agent": "Quyen-Locket-Admin-Ops/1.0",
     "X-GitHub-Api-Version": "2022-11-28",
   };
   const token = githubToken();

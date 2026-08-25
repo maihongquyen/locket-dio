@@ -16,7 +16,7 @@ if (!isSupabaseConfigured) {
   );
 } else if (isLegacyPushConfigured) {
   webPush.setVapidDetails(
-    "mailto:buiduchuy2010qn@gmail.com",
+    process.env.VAPID_SUBJECT || "https://github.com/maihongquyen",
     vapidPublic,
     vapidPrivate,
   );

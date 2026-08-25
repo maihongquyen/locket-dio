@@ -128,7 +128,7 @@ function escapeHtml(value) {
 
 function publicAppUrl() {
   return clean(
-    process.env.PUBLIC_WEB_URL || process.env.APP_PUBLIC_URL || "https://duchi.vercel.app",
+    process.env.PUBLIC_WEB_URL || process.env.APP_PUBLIC_URL || "https://huy-locket-web-production.up.railway.app",
     500,
   ).replace(/\/+$/, "");
 }
@@ -357,7 +357,7 @@ async function sendRecoveryEmail({ email, otp, idempotencyKey }) {
     method: "POST",
     headers: {
       "Content-Type": "text/plain;charset=utf-8",
-      "User-Agent": "Huy-Locket-Admin-Pin-Recovery/2.0",
+      "User-Agent": "Quyen-Locket-Admin-Pin-Recovery/2.0",
     },
     body: JSON.stringify({
       secret,

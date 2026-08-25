@@ -118,7 +118,7 @@ export default function NormalFriendRequestTest() {
         showResult(
           "error",
           "Chưa xác nhận được request trên Locket.",
-          "Huy Locket sẽ không hiện “thành công” nếu chưa đọc lại được trạng thái thật.",
+          "Quyền Locket sẽ không hiện “thành công” nếu chưa đọc lại được trạng thái thật.",
         );
         return;
       }

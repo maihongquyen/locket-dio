@@ -1,4 +1,4 @@
-# Báo Cáo Cập Nhật Bảo Mật — Huy Locket
+# Báo Cáo Cập Nhật Bảo Mật — Quyền Locket
 
 ## Mục Tiêu Đạt Được
 

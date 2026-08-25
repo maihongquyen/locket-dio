@@ -14,7 +14,7 @@ const read = (path) => readFile(new URL(`../../${path}`, import.meta.url), "utf8
  * Celeb auto-request end-to-end.
  */
 
-test("manual friend requests stay on the Huy Locket backend", async () => {
+test("manual friend requests stay on the Quyền Locket backend", async () => {
   const source = await read("src/services/LocketDioServices/RequestServices.js");
 
   assert.match(source, /api\.post\(["']locket\/sendFriendRequestV2["']/);

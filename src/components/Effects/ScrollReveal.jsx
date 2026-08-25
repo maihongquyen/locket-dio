@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useAnimation } from "@/context/AnimationContext";
 
 /**
- * Familiar Huy Locket fade + slide-up reveal.
+ * Familiar Quyền Locket fade + slide-up reveal.
  *
  * Máy yếu still uses this cheap opacity/transform motion. Heavy decorative GPU
  * effects are reduced elsewhere; the post/list appearance itself is preserved.

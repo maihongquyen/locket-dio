@@ -1,6 +1,6 @@
-# Gmail thật cho Huy Locket qua Google Apps Script
+# Gmail thật cho Quyền Locket qua Google Apps Script
 
-Railway Trial/Free/Hobby chặn outbound SMTP, vì vậy Huy Locket gửi Gmail qua HTTPS đến một Google Apps Script Web App chạy bằng tài khoản Gmail của Duchi Locket.
+Railway Trial/Free/Hobby chặn outbound SMTP, vì vậy Quyền Locket gửi Gmail qua HTTPS đến một Google Apps Script Web App chạy bằng tài khoản Gmail của Duchi Locket.
 
 ## Apps Script
 
@@ -64,7 +64,7 @@ function doPost(e) {
     }
 
     const to = String(data.to || "").trim().toLowerCase();
-    const subject = String(data.subject || "Huy Locket").slice(0, 200);
+    const subject = String(data.subject || "Quyền Locket").slice(0, 200);
     const text = String(data.text || "").slice(0, 20000);
     const html = String(data.html || "").slice(0, 50000);
     const fromName = String(data.fromName || "Duchi Locket").slice(0, 120);
@@ -81,7 +81,7 @@ function doPost(e) {
       return jsonResponse({ ...quota, action: "send", deduped: true });
     }
 
-    GmailApp.sendEmail(to, subject, text || "Huy Locket notification", {
+    GmailApp.sendEmail(to, subject, text || "Quyền Locket notification", {
       htmlBody: html || undefined,
       name: fromName,
     });
@@ -104,7 +104,7 @@ function doPost(e) {
 Trong Apps Script mở **Project Settings > Script Properties** và thêm:
 
 - Property: `HUY_LOCKET_MAIL_SECRET`
-- Value: một chuỗi ngẫu nhiên dài, chỉ dùng cho Huy Locket.
+- Value: một chuỗi ngẫu nhiên dài, chỉ dùng cho Quyền Locket.
 
 Tùy chọn, có thể thêm:
 

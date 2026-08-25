@@ -40,7 +40,7 @@ export default function AccountLockNotice() {
               🔒
             </div>
             <div>
-              <div className="text-xs font-black uppercase tracking-[0.18em] text-rose-100">Huy Locket Security</div>
+              <div className="text-xs font-black uppercase tracking-[0.18em] text-rose-100">Quyền Locket Security</div>
               <h2 id="account-lock-notice-title" className="mt-1 text-2xl font-black">Tài khoản đã bị khóa</h2>
             </div>
           </div>
@@ -48,7 +48,7 @@ export default function AccountLockNotice() {
 
         <div className="space-y-5 p-6">
           <p className="text-sm font-semibold leading-relaxed text-base-content/80">
-            Tài khoản Huy Locket của bạn đã bị Quản Trị Viên khóa quyền truy cập. Bạn sẽ không thể tiếp tục sử dụng các tính năng của web cho đến khi tài khoản được mở khóa.
+            Tài khoản Quyền Locket của bạn đã bị Quản Trị Viên khóa quyền truy cập. Bạn sẽ không thể tiếp tục sử dụng các tính năng của web cho đến khi tài khoản được mở khóa.
           </p>
 
           <div className="rounded-2xl border border-rose-200 bg-rose-50 p-4 text-rose-950 shadow-inner">
@@ -63,7 +63,7 @@ export default function AccountLockNotice() {
           )}
 
           <p className="rounded-2xl border border-base-300 bg-base-200/60 p-3 text-xs font-medium leading-relaxed text-base-content/70">
-            Nếu bạn cho rằng tài khoản bị khóa nhầm, hãy liên hệ Quản Trị Viên Huy Locket để được kiểm tra và xem xét mở khóa.
+            Nếu bạn cho rằng tài khoản bị khóa nhầm, hãy liên hệ Quản Trị Viên Quyền Locket để được kiểm tra và xem xét mở khóa.
           </p>
 
           <button

@@ -194,13 +194,13 @@ class ErrorBoundary extends React.Component {
               </button>
 
               <a
-                href="https://discord.com/invite/47buy9nMGc"
+                href="https://github.com/maihongquyen/locket-dio/issues"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative rounded-2xl px-6 py-3 bg-base-300 font-semibold transition-all duration-200 hover:scale-[1.03] hover:bg-base-200 active:scale-95 shadow hover:shadow-md focus:outline-none focus:ring-2 focus:ring-base-content/20 text-center"
               >
                 <span className="inline-flex items-center gap-2">
-                  {this.props.t("error_boundary.join_community")}
+                  Báo lỗi trên GitHub
                 </span>
               </a>
             </div>

@@ -1,1 +1,0 @@
-import{r as t}from"./vendor-CQZzD-j3.js";import{cV as r}from"./index-MMAVlx3e.js";function i(){const o=t.useContext(r);if(!o)throw new Error("useSlotMonitor must be used inside SlotMonitorProvider");return o}export{i as u};

@@ -4,10 +4,10 @@ const path = require("path");
 
 const router = express.Router();
 const DRIVE_SCOPE = "https://www.googleapis.com/auth/drive.file";
-const PUBLIC_URL = (process.env.PUBLIC_URL || "https://duchi.vercel.app").replace(/\/$/, "");
+const PUBLIC_URL = (process.env.PUBLIC_URL || "https://huy-locket-web-production.up.railway.app").replace(/\/$/, "");
 const STATE_SECRET = process.env.OAUTH_STATE_SECRET || process.env.COOKIE_SECRET || process.env.LOCKETDIO_SIGNATURE_SECRET || crypto.createHash("sha256").update("huy-locket-vercel-drive").digest("hex");
-const ADMIN_EMAILS = new Set(String(process.env.ADMIN_EMAILS || process.env.VITE_ADMIN_EMAILS || "buiduchuy2010qn@gmail.com").split(/[,;\s]+/).map((v) => v.trim().toLowerCase()).filter(Boolean));
-const ADMIN_IDS = new Set(String(process.env.ADMIN_LOCAL_IDS || process.env.VITE_ADMIN_LOCAL_IDS || "y82fIv1QyDXLrMZ012MKYoYmAVz2").split(/[,;\s]+/).map((v) => v.trim()).filter(Boolean));
+const ADMIN_EMAILS = new Set(String(process.env.ADMIN_EMAILS || process.env.VITE_ADMIN_EMAILS || "").split(/[,;\s]+/).map((v) => v.trim().toLowerCase()).filter(Boolean));
+const ADMIN_IDS = new Set(String(process.env.ADMIN_LOCAL_IDS || process.env.VITE_ADMIN_LOCAL_IDS || "").split(/[,;\s]+/).map((v) => v.trim()).filter(Boolean));
 
 let sqlClient = null;
 let driveConfigCache = null;
@@ -150,14 +150,14 @@ async function ensureRootFolder(token, preferredId) {
       if (m.id && !m.trashed && String(m.mimeType).includes("folder")) return m.id;
     }
   }
-  const q = "name='Huy Locket Web' and mimeType='application/vnd.google-apps.folder' and trashed=false and 'root' in parents";
+  const q = "name='Quyền Locket Web' and mimeType='application/vnd.google-apps.folder' and trashed=false and 'root' in parents";
   const list = await fetch(`https://www.googleapis.com/drive/v3/files?${new URLSearchParams({ q, fields: "files(id,name)", pageSize: "5", spaces: "drive" })}`, { headers: { authorization: `Bearer ${token}` } });
   const listed = await list.json().catch(() => ({}));
   if (list.ok && listed.files?.[0]?.id) return listed.files[0].id;
   const create = await fetch("https://www.googleapis.com/drive/v3/files?fields=id,name", {
     method: "POST",
     headers: { authorization: `Bearer ${token}`, "content-type": "application/json" },
-    body: JSON.stringify({ name: "Huy Locket Web", mimeType: "application/vnd.google-apps.folder" }),
+    body: JSON.stringify({ name: "Quyền Locket Web", mimeType: "application/vnd.google-apps.folder" }),
   });
   const created = await create.json().catch(() => ({}));
   if (!create.ok || !created.id) throw new Error(created?.error?.message || "Không tạo được folder Drive");
@@ -325,7 +325,7 @@ router.get("/drive-oauth-start", oauthStart);
 router.post("/drive-oauth-start", express.json({ limit: "1mb" }), oauthStart);
 
 router.get("/drive-oauth-callback", async (req, res) => {
-  const fail = (message) => res.status(400).send(`<!doctype html><meta charset="utf-8"><title>Google Drive</title><h2>OAuth thất bại</h2><p>${String(message).replace(/[<>]/g, "")}</p><p><a href="${PUBLIC_URL}/admin/google-drive">Về Huy Locket</a></p>`);
+  const fail = (message) => res.status(400).send(`<!doctype html><meta charset="utf-8"><title>Google Drive</title><h2>OAuth thất bại</h2><p>${String(message).replace(/[<>]/g, "")}</p><p><a href="${PUBLIC_URL}/admin/google-drive">Về Quyền Locket</a></p>`);
   try {
     if (req.query.error) return fail(req.query.error);
     const ctx = verifyState(req.query.state);
@@ -348,7 +348,7 @@ router.get("/drive-oauth-callback", async (req, res) => {
     await ensureSubfolder(token.access_token, rootId, "Video");
     const prev = await readConfig();
     await saveConfig({ ...prev, folderId: rootId, oauth: { clientId: ctx.clientId, clientSecret: ctx.clientSecret, refreshToken: token.refresh_token, email }, updatedBy: email || "oauth" });
-    return res.send(`<!doctype html><meta charset="utf-8"><title>Google Drive</title><h2>Đã bật Google Drive trên Vercel</h2><p>${email || "OAuth OK"}</p><p><a href="${PUBLIC_URL}/admin/google-drive">Về Huy Locket</a></p><script>setTimeout(()=>location.href=${JSON.stringify(`${PUBLIC_URL}/admin/google-drive`)},1800)</script>`);
+    return res.send(`<!doctype html><meta charset="utf-8"><title>Google Drive</title><h2>Đã bật Google Drive trên Vercel</h2><p>${email || "OAuth OK"}</p><p><a href="${PUBLIC_URL}/admin/google-drive">Về Quyền Locket</a></p><script>setTimeout(()=>location.href=${JSON.stringify(`${PUBLIC_URL}/admin/google-drive`)},1800)</script>`);
   } catch (e) {
     return fail(e.message);
   }

@@ -4,7 +4,7 @@
   "version": "1.4.1",
   "type": "module",
   "license": "MIT",
-  "description": "Huy Locket — web client for Locket, with Drive backup",
+  "description": "Quyền Locket — web client for Locket, with Drive backup",
   "scripts": {
     "start": "node server.mjs",
     "dev": "vite",

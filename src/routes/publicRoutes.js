@@ -12,7 +12,7 @@ const NewsPage = React.lazy(() => import("@/pages/Public/NewsPage"));
 const NewsDetailPage = React.lazy(() => import("@/pages/Public/NewsDetailPage"));
 const ForgotPassword = React.lazy(() => import("@/pages/Public/ForgotPassword"));
 const DonatePage = React.lazy(() => import("@/pages/Public/Sponsors"));
-const AboutHuyLocket = React.lazy(() => import("../pages/Public/About"));
+const AboutQuyenLocket = React.lazy(() => import("../pages/Public/About"));
 const AboutMe = React.lazy(() => import("../pages/Auth/AboutMe"));
 const Timeline = React.lazy(() => import("../pages/Public/Timeline"));
 const Docs = React.lazy(() => import("../pages/Public/Docs"));
@@ -52,8 +52,8 @@ export const publicRoutes = [
     title: `Liên kết Spotify | ${APP_NAME}`,
   },
 
-  { path: "/about", component: AboutHuyLocket, title: `Về Website Huy Locket | ${APP_NAME}` },
-  { path: "/about-huy", component: AboutMe, title: `Về Huy | ${APP_NAME}` },
+  { path: "/about", component: AboutQuyenLocket, title: `Về Website Quyền Locket | ${APP_NAME}` },
+  { path: "/about-quyen", component: AboutMe, title: `Về Quyền | ${APP_NAME}` },
 
   { path: "/newsfeed", component: NewsPage, title: `Bảng tin | ${APP_NAME}` },
   { path: "/newsfeed/:slug", component: NewsDetailPage, title: `Bảng tin | ${APP_NAME}` },
@@ -83,7 +83,7 @@ export const publicRoutes = [
 
   { path: "/collab/caption-kanade", component: ManageCaption, title: `Web hợp tác Caption Kanade | ${APP_NAME}` },
   { path: "/collab/locket-upload", component: LocketUpload, title: `Web hợp tác Locket Upload | ${APP_NAME}` },
-  { path: "/happy-birthday", component: BirthdayPage, title: `Chúc mừng sinh nhật Huy | ${APP_NAME}` },
+  { path: "/happy-birthday", component: BirthdayPage, title: `Chúc mừng sinh nhật Quyền | ${APP_NAME}` },
 
   { path: "/terms", component: TermsPage, title: `Điều khoản sử dụng | ${APP_NAME}` },
   // { path: "/locket", component: LocketCameraBeta, title: `White Page for Development | ${APP_NAME}` },

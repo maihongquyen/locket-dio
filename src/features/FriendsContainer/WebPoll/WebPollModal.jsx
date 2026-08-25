@@ -91,7 +91,7 @@ export default function WebPollModal({ open, onClose, friend }) {
       setPoll(updated);
       createBurst(choice);
       toast.success(choice === "up" ? "Đã bình chọn 👍" : "Đã bình chọn 👎", {
-        description: "Đã lưu trên Huy Locket Web.",
+        description: "Đã lưu trên Quyền Locket Web.",
       });
     } catch (err) {
       toast.error("Chưa gửi được bình chọn", {
@@ -137,7 +137,7 @@ export default function WebPollModal({ open, onClose, friend }) {
             <div className="min-w-0">
               <p className="truncate text-base font-extrabold">{friendName(friend)}</p>
               <p className="truncate text-xs text-white/75">
-                {friend?.username ? `@${friend.username}` : "Huy Locket"}
+                {friend?.username ? `@${friend.username}` : "Quyền Locket"}
               </p>
             </div>
           </div>
@@ -179,7 +179,7 @@ export default function WebPollModal({ open, onClose, friend }) {
               <div className="text-5xl">🗳️</div>
               <p className="mt-3 font-bold">Chưa có bình chọn</p>
               <p className="mt-1 max-w-xs text-xs text-base-content/50">
-                Người này chưa tạo câu hỏi bình chọn trên Huy Locket Web.
+                Người này chưa tạo câu hỏi bình chọn trên Quyền Locket Web.
               </p>
             </div>
           ) : (
@@ -290,7 +290,7 @@ export default function WebPollModal({ open, onClose, friend }) {
               )}
 
               <p className="mt-3 text-center text-[10px] font-medium text-base-content/40">
-                Bình chọn trên Huy Locket Web • chưa đồng bộ sang app Locket
+                Bình chọn trên Quyền Locket Web • chưa đồng bộ sang app Locket
               </p>
             </>
           )}

@@ -1,7 +1,7 @@
 const { supabaseConfig } = require("./app.config");
 
 /**
- * Supabase client — optional on Huy Locket self-host.
+ * Supabase client — optional on Quyền Locket self-host.
  * Without SUPABASE_URL + SERVICE_ROLE_KEY: safe no-op client (never throws).
  * Login / moments work with Free local plan; membership DB features are skipped.
  */

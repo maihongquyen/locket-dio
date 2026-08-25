@@ -3,6 +3,12 @@ import { Heart, Coffee } from "lucide-react";
 import { Link } from "react-router-dom";
 import { SPONSORS_CONFIG } from "@/config";
 const DonatePage = () => {
+  const bankConfigured = Boolean(
+    SPONSORS_CONFIG.urlImg &&
+      SPONSORS_CONFIG.bankName &&
+      SPONSORS_CONFIG.accountNumber &&
+      SPONSORS_CONFIG.accountName,
+  );
 
   return (
     <div className="min-h-screen bg-base-200 py-6 px-4">
@@ -71,23 +77,31 @@ const DonatePage = () => {
               <div className="flex justify-center items-center gap-2 mb-3 text-lg font-semibold text-base-content">
                 <Coffee className="w-5 h-5 text-amber-500" /> Give me a coffee
               </div>
-              <img
-                src={SPONSORS_CONFIG.urlImg}
-                alt="QR Code Donate"
-                className="w-52 h-52 mx-auto rounded-lg shadow-sm"
-              />
             </div>
-            <div className="mt-4 space-y-2 text-sm text-base-content">
-              <div className="p-3 border border-base-300 rounded">
-                NH: <span className="font-semibold">{SPONSORS_CONFIG.bankName}</span>
+            {bankConfigured ? (
+              <>
+                <img
+                  src={SPONSORS_CONFIG.urlImg}
+                  alt="Mã QR ủng hộ Quyền Locket"
+                  className="w-52 h-52 mx-auto rounded-lg shadow-sm"
+                />
+                <div className="mt-4 space-y-2 text-sm text-base-content">
+                  <div className="p-3 border border-base-300 rounded">
+                    NH: <span className="font-semibold">{SPONSORS_CONFIG.bankName}</span>
+                  </div>
+                  <div className="p-3 border border-base-300 rounded">
+                    STK: <span className="font-semibold">{SPONSORS_CONFIG.accountNumber}</span>
+                  </div>
+                  <div className="p-3 border border-base-300 rounded">
+                    CTK: <span className="font-semibold">{SPONSORS_CONFIG.accountName}</span>
+                  </div>
+                </div>
+              </>
+            ) : (
+              <div className="rounded-xl border border-base-300 bg-base-200 p-5 text-center text-sm text-base-content/70">
+                Quyền chưa công khai thông tin nhận ủng hộ. Trang này sẽ được cập nhật khi có kênh chính thức.
               </div>
-              <div className="p-3 border border-base-300 rounded">
-                STK: <span className="font-semibold">{SPONSORS_CONFIG.accountNumber}</span>
-              </div>
-              <div className="p-3 border border-base-300 rounded">
-                CTK: <span className="font-semibold">{SPONSORS_CONFIG.accountName}</span>
-              </div>
-            </div>
+            )}
             <p className="mt-4 text-base-content text-sm text-left">
               Mỗi đóng góp là động lực để mình tiếp tục phát triển và duy trì website ☕.
             </p>

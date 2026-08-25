@@ -311,7 +311,7 @@ router.post("/test-push", verifyIdToken, async (req, res, next) => {
   try {
     const result = await sendPushToUser(req.user.uid, {
       type: "slot-test",
-      title: "🔔 Huy Locket Canh Slot",
+      title: "🔔 Quyền Locket Canh Slot",
       body: "Thông báo màn hình khóa đã hoạt động.",
       icon: "/icons/icon-192.png",
       badge: "/icons/icon-192.png",

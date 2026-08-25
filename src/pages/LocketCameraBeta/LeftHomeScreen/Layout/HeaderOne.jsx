@@ -23,7 +23,7 @@ function HeaderOne({ setIsProfileOpen }) {
     <>
       <div className="flex items-center justify-between px-4 py-1">
         <div className="font-lovehouse shadow/40 select-none backdrop-blur-2xl text-xl px-3 pt-1.5 border-3 border-amber-400 rounded-xl">
-          Huy Locket
+          Quyền Locket
         </div>
         <div className="flex items-center gap-2 sm:gap-3">
           <button

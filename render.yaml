@@ -29,7 +29,7 @@ services:
       - key: VITE_SPOTIFY_CLIENT_ID
         sync: false
 
-  # ── API: backend Huy Locket (folder /api) ─────────────────────
+  # ── API: backend Quyền Locket (folder /api) ─────────────────────
   - type: web
     name: huy-locket-api
     runtime: docker

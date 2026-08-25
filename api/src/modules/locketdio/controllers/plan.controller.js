@@ -13,7 +13,7 @@ const planControllerV2 = async (req, res, next) => {
     req.headers["x-forwarded-host"] || req.headers.host || req.hostname;
 
   try {
-    // Huy Locket free-for-all: always grant full Premium (no paywall)
+    // Quyền Locket free-for-all: always grant full Premium (no paywall)
     let userPlan = await planServices.getLocalFreePlan(
       uid,
       email,

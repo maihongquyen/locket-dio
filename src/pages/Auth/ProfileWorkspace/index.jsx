@@ -142,7 +142,7 @@ export default function ProfileWorkspace() {
 
         if (description) {
           const desiredDescription = isRealGold
-            ? "Ẩn/hiện huy hiệu Gold trên giao diện hồ sơ của Huy Locket"
+            ? "Ẩn/hiện huy hiệu Gold trên giao diện hồ sơ của Quyền Locket"
             : "Tài khoản Locket này hiện chưa có Locket Gold nên không thể bật huy hiệu.";
           if (description.textContent !== desiredDescription) {
             description.textContent = desiredDescription;

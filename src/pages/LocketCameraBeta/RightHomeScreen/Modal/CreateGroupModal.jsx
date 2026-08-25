@@ -86,7 +86,7 @@ const CreateGroupModal = ({ open, onClose, onCreated }) => {
       let group = await createGroup({
         userIds: uids,
         initialMessage:
-          "Hello, this group was created on Huy Locket💛!",
+          "Hello, this group was created on Quyền Locket💛!",
       });
 
       if (!group?.id) {

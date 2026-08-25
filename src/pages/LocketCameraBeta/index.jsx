@@ -142,7 +142,7 @@ export default function LocketCameraBeta() {
         <MusicPlayer music={overlayData.payload} />
       )}
       <span className="fixed pointer-events-none z-60 bottom-3 right-4 text-xs text-gray-400 select-none">
-        © Huy Locket
+        © Quyền Locket
       </span>
     </>
   );

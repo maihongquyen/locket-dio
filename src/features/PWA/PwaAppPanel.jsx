@@ -103,7 +103,7 @@ export default function PwaAppPanel() {
         description: "Trên iPhone/iPad dùng Chia sẻ → Thêm vào Màn hình chính. Chrome có thể hiện biểu tượng cài ở thanh địa chỉ.",
       });
     } else if (result.outcome === "accepted") {
-      toast.success("Đã chấp nhận cài Huy Locket");
+      toast.success("Đã chấp nhận cài Quyền Locket");
     }
     await inspect();
   };
@@ -193,7 +193,7 @@ export default function PwaAppPanel() {
         <header className="border-b border-base-300 p-4 sm:p-6">
           <h2 className="flex items-center gap-2 text-2xl font-bold"><Smartphone className="h-6 w-6" /> Ứng dụng & PWA</h2>
           <p className="mt-1 text-sm text-base-content/60">
-            Cài Huy Locket như app, offline shell, Web Push, badge, bộ nhớ bền vững và cập nhật Service Worker.
+            Cài Quyền Locket như app, offline shell, Web Push, badge, bộ nhớ bền vững và cập nhật Service Worker.
           </p>
         </header>
 
@@ -201,9 +201,9 @@ export default function PwaAppPanel() {
           <div className="rounded-2xl border border-base-300 bg-base-200/35 p-4">
             <div className="flex items-center justify-between"><span className="font-bold">Cài ứng dụng</span><Download className="h-5 w-5" /></div>
             <p className="mt-2 text-sm text-base-content/60">
-              {state.standalone ? "Đang chạy ở chế độ standalone như app." : state.installAvailable ? "Trình duyệt sẵn sàng cài Huy Locket." : "Có thể cài bằng menu của trình duyệt nếu được hỗ trợ."}
+              {state.standalone ? "Đang chạy ở chế độ standalone như app." : state.installAvailable ? "Trình duyệt sẵn sàng cài Quyền Locket." : "Có thể cài bằng menu của trình duyệt nếu được hỗ trợ."}
             </p>
-            <button className="btn btn-sm btn-primary mt-3" disabled={state.standalone} onClick={install}>{state.standalone ? "Đã cài" : "Cài Huy Locket"}</button>
+            <button className="btn btn-sm btn-primary mt-3" disabled={state.standalone} onClick={install}>{state.standalone ? "Đã cài" : "Cài Quyền Locket"}</button>
           </div>
 
           <div className={`rounded-2xl border p-4 transition-all duration-300 ${updateReady ? "border-primary/40 bg-primary/5 shadow-md" : "border-base-300 bg-base-200/35"}`}>

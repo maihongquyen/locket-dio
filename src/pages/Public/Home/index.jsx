@@ -44,14 +44,14 @@ const Home = () => {
             </p>
 
             <p className="text-base-content/80 text-sm italic">
-              “Huy Locket” là dự án cá nhân, hoạt động độc lập. Không liên kết
-              với bên thứ ba nào trừ khi có thông báo chính thức từ Huy.
+              “Quyền Locket” là dự án cá nhân, hoạt động độc lập. Không liên kết
+              với bên thứ ba nào trừ khi có thông báo chính thức từ Quyền.
             </p>
 
             <p className="text-base-content/90 text-sm font-semibold space-y-1">
               <span className="block">
                 ❗ Mọi giao dịch mua bán “quyền sử dụng” hay “truy cập web”
-                không do Huy ủy quyền đều là <b>gian lận</b>.
+                không do Quyền ủy quyền đều là <b>gian lận</b>.
               </span>
               <span className="block">
                 • Nếu bạn phải trả phí để truy cập trang web này thì thì đó là
@@ -107,7 +107,7 @@ const Home = () => {
             <div className="relative transform hover:scale-105 transition-transform duration-500">
               <img
                 src="https://cdn.locket-dio.com/v1/images/double-phone-view-huylocket.webp"
-                alt="Huy Locket WebApp Preview"
+                alt="Quyền Locket WebApp Preview"
                 loading="lazy"
                 onLoad={() => setLoaded(true)}
                 className={`
@@ -157,7 +157,7 @@ const Home = () => {
             Bắt đầu hành trình sáng tạo
           </h2>
           <p className="text-lg md:text-xl text-base-content/80 mb-8 max-w-2xl mx-auto">
-            Cài đặt hoặc thêm Huy Locket vào màn hình chính ngay hôm nay và khám
+            Cài đặt hoặc thêm Quyền Locket vào màn hình chính ngay hôm nay và khám
             phá thế giới photography & videography đầy màu sắc!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -172,12 +172,12 @@ const Home = () => {
             </MagneticButton>
             <MagneticButton>
               <a
-                href={COMMUNITY_CONFIG.discord}
+                href={COMMUNITY_CONFIG.github}
                 target="_blank"
                 className="px-8 py-4 bg-base-100/20 backdrop-blur-[2px] border-base-content/10 border text-base-content font-bold rounded-3xl transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <UserPlus className="w-5 h-5" />
-                Tham gia Discord
+                GitHub của Quyền
               </a>
             </MagneticButton>
           </div>

@@ -81,7 +81,7 @@ async function parseResponse(response) {
 export async function adminRequest(path, options = {}) {
   const token = getLocketToken();
   if (!token) {
-    const error = new Error("Bạn cần đăng nhập Huy Locket");
+    const error = new Error("Bạn cần đăng nhập Quyền Locket");
     error.status = 401;
     throw error;
   }

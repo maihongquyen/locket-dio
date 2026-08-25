@@ -1,14 +1,15 @@
-# Huy Locket — Agent instructions
+# Quyền Locket — Agent instructions
 
 ## Branding
 
-- **App display name:** Huy Locket (never "Locket Dio" / "Đào Văn Đôi" in UI)
-- Author: Bùi Đức Huy · STK MBBank 0394709137
+- **App display name:** Quyền Locket (never "Locket Dio" / "Đào Văn Đôi" in UI)
+- Owner: Mai Hồng Quyền · GitHub `maihongquyen`
+- Không công khai email, số điện thoại hoặc thông tin ngân hàng nếu chủ sở hữu chưa tự cung cấp.
 - Repo folder may still be `locket-dio`; Docker service: **huy-locket**
 
 ## Free for all (mandatory)
 
-- **Huy Locket is 100% free** — open every client feature for every user.
+- **Quyền Locket is 100% free** — open every client feature for every user.
 - `src/hooks/useFeature.js` → `FREE_FOR_ALL = true` (do not re-enable plan locks casually).
 - `useFeatureVisible` always `true`; generous upload limits; no FeatureGate paywall.
 - Pricing page may remain for optional support/sponsors; never block core camera/post/tools.
@@ -73,7 +74,7 @@ Dashboard Render → service **huy-locket** và **huy-locket-api** → Settings 
 
 ## API note
 
-Internal API paths/headers (`LocketDioServices`, `X-LocketDio-Member`) stay for backend compatibility — only user-facing brand is Huy Locket.
+Internal API paths/headers (`LocketDioServices`, `X-LocketDio-Member`) stay for backend compatibility — only user-facing brand is Quyền Locket.
 
 ### Backend chính (upgrade/fix)
 

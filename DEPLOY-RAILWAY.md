@@ -1,4 +1,4 @@
-# Deploy Huy Locket riêng trên Railway
+# Deploy Quyền Locket riêng trên Railway
 
 Repo triển khai: `https://github.com/maihongquyen/locket-dio`
 
@@ -23,7 +23,7 @@ LOCKETDIO_SIGNATURE_SECRET=<giữ cố định>
 JWT_SECRET=<tối thiểu 32 ký tự, giữ cố định>
 VAPID_PUBLIC_KEY=<khớp VITE_VAPID_PUBLIC_KEY>
 VAPID_PRIVATE_KEY=<giữ kín>
-VAPID_SUBJECT=mailto:buiduchuy2010qn@gmail.com
+VAPID_SUBJECT=https://github.com/maihongquyen
 LOCKET_APP_CHECK_DEVICE_ID=1:641029076083:ios:cc8eb46290d69b234fa606
 LOCKET_APP_CHECK_DEVICE_TOKEN=
 ```

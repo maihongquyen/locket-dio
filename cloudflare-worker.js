@@ -59,6 +59,6 @@ export default {
       }
     }
 
-    return new Response("Huy Locket Media Service is running!", { status: 200, headers: corsHeaders });
+    return new Response("Quyền Locket Media Service is running!", { status: 200, headers: corsHeaders });
   }
 };

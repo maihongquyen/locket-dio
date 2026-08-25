@@ -1,4 +1,4 @@
-# Huy Locket API — production
+# Quyền Locket API — production
 FROM node:20-alpine
 
 WORKDIR /usr/src/app

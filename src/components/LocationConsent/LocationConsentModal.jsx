@@ -32,7 +32,7 @@ export default function LocationConsentModal() {
     try {
       localStorage.setItem(CONSENT_KEY, "granted");
       await updateAndSyncGpsLocation();
-      SonnerSuccess("🎉 Đã bật định vị thành công!", "Hệ thống Huy Locket Shield đã sẵn sàng bảo vệ và cá nhân hóa trải nghiệm của bạn.");
+      SonnerSuccess("🎉 Đã bật định vị thành công!", "Hệ thống Quyền Locket Shield đã sẵn sàng bảo vệ và cá nhân hóa trải nghiệm của bạn.");
     } catch (error) {
       SonnerInfo("Chưa thể lấy vị trí từ thiết bị. Bạn có thể kiểm tra lại quyền trong cài đặt trình duyệt.");
     } finally {
@@ -64,13 +64,13 @@ export default function LocationConsentModal() {
               📍 Yêu Cầu Quyền Truy Cập Vị Trí
             </h3>
             <p className="text-xs text-base-content/60 font-medium mt-0.5">
-              Hệ thống Bảo Mật & Cá Nhân Hóa Huy Locket
+              Hệ thống Bảo Mật & Cá Nhân Hóa Quyền Locket
             </p>
           </div>
         </div>
 
         <p className="text-sm text-base-content/80 font-medium mb-5 leading-relaxed">
-          <strong>Huy Locket</strong> mong muốn được sự cho phép của bạn để tiếp cận tọa độ vị trí (GPS) hiện tại với 2 mục đích an toàn:
+          <strong>Quyền Locket</strong> mong muốn được sự cho phép của bạn để tiếp cận tọa độ vị trí (GPS) hiện tại với 2 mục đích an toàn:
         </p>
 
         <div className="space-y-3 mb-6">

@@ -364,7 +364,7 @@ export default function AdminEmailCenter() {
               type="email"
               value={targetEmail}
               onChange={(event) => setTargetEmail(event.target.value)}
-              placeholder="Nhập email người dùng Huy Locket..."
+              placeholder="Nhập email người dùng Quyền Locket..."
               className="input input-bordered mt-2 w-full h-12 rounded-2xl bg-slate-50 border-slate-200 focus:border-violet-500"
             />
 

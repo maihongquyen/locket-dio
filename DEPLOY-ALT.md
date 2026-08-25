@@ -1,4 +1,4 @@
-# Đăng web Huy Locket chỗ khác (khi Render hết pipeline minutes)
+# Đăng web Quyền Locket chỗ khác (khi Render hết pipeline minutes)
 
 Render **web** hết phút build → deploy fail.  
 **API** `huy-locket-api.onrender.com` thường **vẫn chạy** (chỉ không rebuild được).  

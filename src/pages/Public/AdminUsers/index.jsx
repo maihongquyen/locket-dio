@@ -304,7 +304,7 @@ export default function AdminUsers() {
         method: "GET",
         isCors: true,
         errorHelp: "Bị phong tỏa đường truyền: Trình duyệt đang bật 'Trình chặn quảng cáo / Quyền riêng tư' (AdBlock / Brave / Edge Privacy / Tracking Protection) cản lệnh gọi IP.",
-        remedy: "Bấm vào biểu tượng Khiên (Shield/Lock) bên trái thanh URL trình duyệt -> Tắt 'Chặn Theo Dõi (Tracking Protection)' hoặc tắt AdBlock cho trang duchi.vercel.app để Cảm biến Radar hoạt động bình thường."
+        remedy: "Bấm vào biểu tượng Khiên (Shield/Lock) bên trái thanh URL trình duyệt -> Tắt 'Chặn Theo Dõi (Tracking Protection)' hoặc tắt AdBlock cho website Quyền Locket để Cảm biến Radar hoạt động bình thường."
       },
       {
         id: "media_proxy",
@@ -346,7 +346,7 @@ export default function AdminUsers() {
         const timeoutId = setTimeout(() => controller.abort(), 6000);
         const fetchOpts = { method: t.method || "GET", signal: controller.signal };
         if (t.isCors) fetchOpts.mode = "no-cors";
-        
+
         const res = await fetch(t.url, fetchOpts);
         clearTimeout(timeoutId);
         const duration = Math.round(performance.now() - startTime);
@@ -1084,7 +1084,7 @@ export default function AdminUsers() {
           : entry;
         setUsers((current) => current.map(update));
         setSelectedUser((current) => current && current.uid === user.uid ? update(current) : current);
-        SonnerInfo(nextDisabled ? "Đã khóa quyền truy cập Huy Locket" : "Đã mở khóa quyền truy cập");
+        SonnerInfo(nextDisabled ? "Đã khóa quyền truy cập Quyền Locket" : "Đã mở khóa quyền truy cập");
       } else if (type === "revoke") {
         const res = await adminRequest(`/users/${encodeURIComponent(user.uid)}/revoke-sessions`, {
           method: "POST",
@@ -1280,10 +1280,10 @@ export default function AdminUsers() {
               <span className="p-2 rounded-2xl bg-gradient-to-tr from-indigo-600 to-blue-600 text-white shadow-md text-2xl sm:text-3xl shrink-0 flex items-center justify-center">
                 🛡️
               </span>
-              <span>Trạm Quản Trị Hệ Thống Huy Locket</span>
+              <span>Trạm Quản Trị Hệ Thống Quyền Locket</span>
             </h1>
             <p className="text-sm text-slate-600 font-medium flex flex-wrap items-center gap-2 pt-1">
-              <span>Quyền lực của bạn:</span> {roleBadge(currentRole)} 
+              <span>Quyền lực của bạn:</span> {roleBadge(currentRole)}
               <span className="text-slate-400 font-bold">•</span>
               <span className="inline-flex items-center gap-1 font-mono text-emerald-700 font-black bg-emerald-50 px-2.5 py-0.5 rounded-lg border border-emerald-200/80">
                 👥 {totalUsers} tài khoản được rà soát Live
@@ -1298,7 +1298,7 @@ export default function AdminUsers() {
               className={`btn btn-sm sm:btn-md ${is2FAEnabled ? "bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300" : "bg-gradient-to-r from-amber-500 to-orange-500 text-white border-0 shadow-[0_5px_15px_-3px_rgba(245,158,11,0.4)]"} font-black rounded-2xl h-11 px-4 shadow-sm transition-all flex items-center gap-2 cursor-pointer active:scale-95`}
               title="Cài đặt xác thực 2 yếu tố Google Authenticator cho Quản Trị Viên"
             >
-              <Shield size={16} className={is2FAEnabled ? "text-emerald-600" : "text-amber-100"} /> 
+              <Shield size={16} className={is2FAEnabled ? "text-emerald-600" : "text-amber-100"} />
               <span>{is2FAEnabled ? "🛡️ 2FA: Đã Bật (Google Auth)" : "🔐 Bật 2FA (Google Auth)"}</span>
             </button>
             <button
@@ -1312,7 +1312,7 @@ export default function AdminUsers() {
               className="btn btn-sm sm:btn-md bg-white hover:bg-slate-50 text-indigo-700 border border-slate-200 hover:border-indigo-300 font-bold rounded-2xl h-11 px-4 shadow-sm transition-all flex items-center gap-2 cursor-pointer active:scale-95"
               title="Tự động thay đổi mã PIN Bảo Mật số cho Quản trị viên"
             >
-              <Key size={16} className="text-indigo-600" /> 
+              <Key size={16} className="text-indigo-600" />
               <span>Đổi Mã PIN Quản Trị</span>
             </button>
             <button
@@ -1325,7 +1325,7 @@ export default function AdminUsers() {
               className="btn btn-sm sm:btn-md bg-gradient-to-r from-rose-600 via-red-600 to-amber-600 hover:from-rose-500 hover:to-amber-500 text-white font-extrabold border-0 rounded-2xl h-11 px-5 shadow-[0_10px_20px_-5px_rgba(225,29,72,0.4)] transition-all flex items-center gap-2 cursor-pointer active:scale-95"
               title="Khóa ngay phiên làm việc admin hiện tại"
             >
-              <Lock size={16} /> 
+              <Lock size={16} />
               <span>Khóa Trạm Admin</span>
             </button>
           </div>
@@ -1338,12 +1338,12 @@ export default function AdminUsers() {
           type="button"
           onClick={() => setActiveTab("users")}
           className={`flex items-center gap-2.5 px-5 py-3 rounded-2xl font-black text-sm transition-all duration-300 cursor-pointer ${
-            activeTab === "users" 
-              ? "bg-gradient-to-r from-indigo-600 via-blue-600 to-indigo-700 text-white shadow-lg shadow-indigo-500/20 scale-[1.02] border-0" 
+            activeTab === "users"
+              ? "bg-gradient-to-r from-indigo-600 via-blue-600 to-indigo-700 text-white shadow-lg shadow-indigo-500/20 scale-[1.02] border-0"
               : "bg-indigo-50/90 text-indigo-900 hover:bg-indigo-100 border border-indigo-200 shadow-sm"
           }`}
         >
-          <Users size={18} className={activeTab === "users" ? "text-indigo-200 animate-pulse" : "text-indigo-600"} /> 
+          <Users size={18} className={activeTab === "users" ? "text-indigo-200 animate-pulse" : "text-indigo-600"} />
           <span>Người dùng & Phân quyền ({totalUsers})</span>
         </button>
 
@@ -1351,12 +1351,12 @@ export default function AdminUsers() {
           type="button"
           onClick={() => { setActiveTab("user_actions"); fetchUserActions(); }}
           className={`flex items-center gap-2.5 px-5 py-3 rounded-2xl font-black text-sm transition-all duration-300 cursor-pointer ${
-            activeTab === "user_actions" 
-              ? "bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white shadow-lg shadow-teal-500/20 scale-[1.02] border-0" 
+            activeTab === "user_actions"
+              ? "bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white shadow-lg shadow-teal-500/20 scale-[1.02] border-0"
               : "bg-teal-50/90 text-teal-900 hover:bg-teal-100 border border-teal-200 shadow-sm"
           }`}
         >
-          <Activity size={18} className={activeTab === "user_actions" ? "text-teal-200 animate-pulse" : "text-teal-600"} /> 
+          <Activity size={18} className={activeTab === "user_actions" ? "text-teal-200 animate-pulse" : "text-teal-600"} />
           <span>Giám Sát Hành Vi Web (Realtime)</span>
         </button>
 
@@ -1364,12 +1364,12 @@ export default function AdminUsers() {
           type="button"
           onClick={() => { setActiveTab("security_threats"); fetchSecurityThreats(); }}
           className={`flex items-center gap-2.5 px-5 py-3 rounded-2xl font-black text-sm transition-all duration-300 cursor-pointer ${
-            activeTab === "security_threats" 
-              ? "bg-gradient-to-r from-red-600 via-rose-600 to-amber-600 text-white shadow-lg shadow-red-500/20 scale-[1.02] border-0" 
+            activeTab === "security_threats"
+              ? "bg-gradient-to-r from-red-600 via-rose-600 to-amber-600 text-white shadow-lg shadow-red-500/20 scale-[1.02] border-0"
               : "bg-red-50/90 text-red-950 hover:bg-red-100 border border-red-200 shadow-sm font-bold"
           }`}
         >
-          <ShieldAlert size={18} className={activeTab === "security_threats" ? "text-amber-200 animate-bounce" : "text-red-600"} /> 
+          <ShieldAlert size={18} className={activeTab === "security_threats" ? "text-amber-200 animate-bounce" : "text-red-600"} />
           <span>Phát hiện Tấn công Web (WAF)</span>
         </button>
 
@@ -1378,12 +1378,12 @@ export default function AdminUsers() {
             type="button"
             onClick={() => setActiveTab("audit")}
             className={`flex items-center gap-2.5 px-5 py-3 rounded-2xl font-black text-sm transition-all duration-300 cursor-pointer ${
-              activeTab === "audit" 
-                ? "bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-700 text-white shadow-lg shadow-purple-500/20 scale-[1.02] border-0" 
+              activeTab === "audit"
+                ? "bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-700 text-white shadow-lg shadow-purple-500/20 scale-[1.02] border-0"
                 : "bg-purple-50/90 text-purple-900 hover:bg-purple-100 border border-purple-200 shadow-sm"
             }`}
           >
-            <FileText size={18} className={activeTab === "audit" ? "text-purple-200 animate-pulse" : "text-purple-600"} /> 
+            <FileText size={18} className={activeTab === "audit" ? "text-purple-200 animate-pulse" : "text-purple-600"} />
             <span>Nhật ký Quản trị (Audit Log)</span>
           </button>
         )}
@@ -1393,12 +1393,12 @@ export default function AdminUsers() {
             type="button"
             onClick={() => setActiveTab("reports")}
             className={`flex items-center gap-2.5 px-5 py-3 rounded-2xl font-black text-sm transition-all duration-300 cursor-pointer ${
-              activeTab === "reports" 
-                ? "bg-gradient-to-r from-rose-600 via-amber-600 to-orange-600 text-white shadow-lg shadow-rose-500/20 scale-[1.02] border-0" 
+              activeTab === "reports"
+                ? "bg-gradient-to-r from-rose-600 via-amber-600 to-orange-600 text-white shadow-lg shadow-rose-500/20 scale-[1.02] border-0"
                 : "bg-rose-50/90 text-rose-900 hover:bg-rose-100 border border-rose-200 shadow-sm"
             }`}
           >
-            <Shield size={18} className={activeTab === "reports" ? "text-amber-200 animate-pulse" : "text-rose-600"} /> 
+            <Shield size={18} className={activeTab === "reports" ? "text-amber-200 animate-pulse" : "text-rose-600"} />
             <span>Quản lý Nội dung vi phạm</span>
           </button>
         )}
@@ -1407,12 +1407,12 @@ export default function AdminUsers() {
           type="button"
           onClick={() => setActiveTab("health")}
           className={`flex items-center gap-2.5 px-5 py-3 rounded-2xl font-black text-sm transition-all duration-300 cursor-pointer ${
-            activeTab === "health" 
-              ? "bg-gradient-to-r from-cyan-600 via-sky-600 to-blue-600 text-white shadow-lg shadow-sky-500/20 scale-[1.02] border-0" 
+            activeTab === "health"
+              ? "bg-gradient-to-r from-cyan-600 via-sky-600 to-blue-600 text-white shadow-lg shadow-sky-500/20 scale-[1.02] border-0"
               : "bg-sky-50/90 text-sky-950 hover:bg-sky-100 border border-sky-200 shadow-sm font-bold"
           }`}
         >
-          <Activity size={18} className={activeTab === "health" ? "text-sky-200 animate-pulse" : "text-sky-600"} /> 
+          <Activity size={18} className={activeTab === "health" ? "text-sky-200 animate-pulse" : "text-sky-600"} />
           <span>🩺 Kiểm Tra Tình Trạng Web (Health)</span>
         </button>
 
@@ -1420,12 +1420,12 @@ export default function AdminUsers() {
           type="button"
           onClick={() => { setActiveTab("advanced"); fetchAdvancedData(); }}
           className={`flex items-center gap-2.5 px-5 py-3 rounded-2xl font-black text-sm transition-all duration-300 cursor-pointer ${
-            activeTab === "advanced" 
-              ? "bg-gradient-to-r from-amber-500 via-orange-500 to-red-600 text-white shadow-lg shadow-orange-500/20 scale-[1.02] border-0" 
+            activeTab === "advanced"
+              ? "bg-gradient-to-r from-amber-500 via-orange-500 to-red-600 text-white shadow-lg shadow-orange-500/20 scale-[1.02] border-0"
               : "bg-amber-50/80 text-amber-800 hover:bg-amber-100/90 border border-amber-200/80"
           }`}
         >
-          <Zap size={18} className="text-amber-500 animate-bounce fill-amber-500" /> 
+          <Zap size={18} className="text-amber-500 animate-bounce fill-amber-500" />
           <span>🚀 Quyền Lực Tối Thượng</span>
         </button>
       </div>
@@ -1454,12 +1454,12 @@ export default function AdminUsers() {
 
             <div className="flex items-center gap-3 w-full md:w-auto shrink-0">
               <div className="relative flex-1 md:w-72">
-                <input 
-                  type="text" 
-                  placeholder="Tìm kiếm email, tên, UID..." 
-                  className="input w-full pl-10 rounded-2xl h-11 text-sm bg-slate-50 text-slate-900 placeholder:text-slate-400 border border-slate-200 focus:border-indigo-600 focus:bg-white font-medium shadow-inner transition-colors" 
-                  value={search} 
-                  onChange={(e) => setSearch(e.target.value)} 
+                <input
+                  type="text"
+                  placeholder="Tìm kiếm email, tên, UID..."
+                  className="input w-full pl-10 rounded-2xl h-11 text-sm bg-slate-50 text-slate-900 placeholder:text-slate-400 border border-slate-200 focus:border-indigo-600 focus:bg-white font-medium shadow-inner transition-colors"
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
                 />
                 <Search size={17} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
               </div>
@@ -1512,14 +1512,14 @@ export default function AdminUsers() {
             </div>
           )}
 
-          {/* SECTION A: BAN QUẢN TRỊ HUY LOCKET */}
+          {/* SECTION A: BAN QUẢN TRỊ QUYỀN LOCKET */}
           <div>
             <div className="flex items-center justify-between mb-5 pb-3 border-b border-slate-200/80">
               <h2 className="text-xl sm:text-2xl font-black flex items-center gap-3 tracking-tight text-slate-900">
                 <span className="w-9 h-9 rounded-xl bg-amber-50 border border-amber-200 text-amber-600 flex items-center justify-center text-xl shadow-sm">
                   👑
                 </span>
-                <span>Ban Quản trị Huy Locket</span>
+                <span>Ban Quản trị Quyền Locket</span>
                 <span className="badge bg-gradient-to-r from-amber-500 to-indigo-600 text-white font-black text-xs px-3 py-3 rounded-xl shadow-md border-0">
                   {adminTeam.length} Admin
                 </span>
@@ -1531,7 +1531,7 @@ export default function AdminUsers() {
               {adminTeam.map((admin) => {
                 const latestLogin = admin.latestLoginData || admin;
                 const locationElement = renderUserLocation(admin, latestLogin);
-                const isSuperAdmin = admin.role === "super_admin" || admin.email?.toLowerCase() === "buiduchuy2010qn@gmail.com";
+                const isSuperAdmin = admin.role === "super_admin";
                 const isSelf = admin.uid === currentUserUid;
 
                 return (
@@ -1560,10 +1560,10 @@ export default function AdminUsers() {
                             </div>
                           </div>
                         </div>
-                        <button 
-                          type="button" 
-                          className="btn btn-sm bg-slate-100 hover:bg-indigo-50 text-slate-600 hover:text-indigo-700 border border-slate-200 hover:border-indigo-200 rounded-xl px-2.5 h-9 shrink-0 transition-colors" 
-                          onClick={() => openUser(admin)} 
+                        <button
+                          type="button"
+                          className="btn btn-sm bg-slate-100 hover:bg-indigo-50 text-slate-600 hover:text-indigo-700 border border-slate-200 hover:border-indigo-200 rounded-xl px-2.5 h-9 shrink-0 transition-colors"
+                          onClick={() => openUser(admin)}
                           title="Xem chi tiết & lịch sử đăng nhập thực"
                         >
                           <Info size={18} />
@@ -1782,12 +1782,12 @@ export default function AdminUsers() {
                     ) : normalUsers.map((user) => {
                       const latestLogin = user.latestLoginData || user;
                       const locationElement = renderUserLocation(user, latestLogin);
-                      const isSuperAdmin = user.role === "super_admin" || user.email?.toLowerCase() === "buiduchuy2010qn@gmail.com";
+                      const isSuperAdmin = user.role === "super_admin";
                       const isSelf = user.uid === currentUserUid;
 
                       return (
-                        <ScrollReveal 
-                          key={user.uid} 
+                        <ScrollReveal
+                          key={user.uid}
                           as="tr"
                           delay={(normalUsers.indexOf(user) % 10) * 0.05}
                           className="hover:bg-indigo-50/40 transition-colors group"
@@ -1823,7 +1823,7 @@ export default function AdminUsers() {
                           </td>
                           <td className="min-w-48">
                             <div className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-900">
-                              <Monitor size={14} className="text-emerald-600 shrink-0" /> 
+                              <Monitor size={14} className="text-emerald-600 shrink-0" />
                               <span>{latestLogin?.browser || UNKNOWN} {latestLogin?.browser_version !== UNKNOWN ? latestLogin?.browser_version : ""}</span>
                             </div>
                             <div className="text-[11px] text-slate-500 mt-0.5 font-semibold">{latestLogin ? `${latestLogin.os || UNKNOWN} · ${latestLogin.device || UNKNOWN}` : UNKNOWN}</div>
@@ -1916,10 +1916,10 @@ export default function AdminUsers() {
                                   )}
                                 </>
                               )}
-                              <button 
-                                type="button" 
-                                className="btn btn-sm bg-slate-100 hover:bg-indigo-50 text-slate-600 hover:text-indigo-700 border border-slate-200 hover:border-indigo-200 rounded-xl px-2.5 h-8 transition-colors" 
-                                onClick={() => openUser(user)} 
+                              <button
+                                type="button"
+                                className="btn btn-sm bg-slate-100 hover:bg-indigo-50 text-slate-600 hover:text-indigo-700 border border-slate-200 hover:border-indigo-200 rounded-xl px-2.5 h-8 transition-colors"
+                                onClick={() => openUser(user)}
                                 title="Xem trọn bộ lịch sử đăng nhập thực"
                               >
                                 <Info size={18} />
@@ -1957,7 +1957,7 @@ export default function AdminUsers() {
         <div className="bg-white/95 text-slate-800 rounded-[2.5rem] shadow-[0_15px_50px_-10px_rgba(30,41,59,0.08)] border border-slate-200/80 p-6 sm:p-9 animate-fade-in relative overflow-hidden backdrop-blur-2xl">
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-teal-400/10 rounded-full blur-[130px] pointer-events-none -mt-32 -mr-32" />
           <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-emerald-400/10 rounded-full blur-[120px] pointer-events-none -mb-32 -ml-32" />
-          
+
           <div className="relative z-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8 pb-6 border-b border-slate-200/80">
             <div>
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200 text-teal-800 text-xs font-black mb-3 shadow-sm">
@@ -1968,7 +1968,7 @@ export default function AdminUsers() {
                 Giám Sát Hành Vi Người Dùng Trực Tuyến
               </h2>
               <p className="text-sm text-slate-600 font-medium mt-1">
-                Tường thuật thời gian thực mọi thao tác trên ứng dụng web của thành viên Huy Locket (truy cập menu, mở lịch sử, đăng bài, hay điều hướng các trang).
+                Tường thuật thời gian thực mọi thao tác trên ứng dụng web của thành viên Quyền Locket (truy cập menu, mở lịch sử, đăng bài, hay điều hướng các trang).
               </p>
             </div>
 
@@ -2185,7 +2185,7 @@ export default function AdminUsers() {
       {activeTab === "security_threats" && (
         <div className="bg-white/95 text-slate-800 rounded-[2.5rem] shadow-[0_15px_50px_-10px_rgba(30,41,59,0.08)] border border-slate-200/80 p-6 sm:p-9 animate-fade-in relative overflow-hidden backdrop-blur-2xl">
           <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-red-400/10 rounded-full blur-[120px] pointer-events-none -mt-32 -mr-32" />
-          
+
           <div className="relative z-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8 pb-6 border-b border-slate-200/80">
             <div>
               <div className="flex items-center gap-2 mb-1">
@@ -2375,7 +2375,7 @@ export default function AdminUsers() {
                   </tr>
                 ) : (
                   securityThreats.map((item) => {
-                    const sevColor = 
+                    const sevColor =
                       item.severity === 'CRITICAL' ? 'bg-red-500 text-white font-black animate-pulse' :
                       item.severity === 'HIGH' ? 'bg-amber-100 text-amber-900 font-bold border border-amber-300' :
                       'bg-slate-100 text-slate-800 font-bold';
@@ -2441,14 +2441,14 @@ export default function AdminUsers() {
       {activeTab === "audit" && (
         <div className="bg-white/95 text-slate-800 rounded-[2.5rem] shadow-[0_15px_50px_-10px_rgba(30,41,59,0.08)] border border-slate-200/80 p-6 sm:p-9 animate-fade-in relative overflow-hidden backdrop-blur-2xl">
           <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-purple-400/10 rounded-full blur-[120px] pointer-events-none -mt-32 -mr-32" />
-          
+
           <div className="relative z-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8 pb-6 border-b border-slate-200/80">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-50 border border-purple-200 text-purple-700 text-xs font-black mb-2 shadow-sm">
                 <span>📜 IMMUTABLE SECURITY TRACKER</span>
               </div>
               <h2 className="text-2xl sm:text-3xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-950 via-slate-900 to-indigo-900 flex items-center gap-2.5">
-                Nhật Ký Quản Trị Huy Locket (Audit Log)
+                Nhật Ký Quản Trị Quyền Locket (Audit Log)
               </h2>
               <p className="text-sm text-slate-600 font-medium mt-1">
                 Lưu vết toàn bộ thao tác nhạy cảm của các quản trị viên theo chuẩn Append-Only. Dữ liệu vĩnh viễn không thể tẩy xóa bởi admin thường.
@@ -2549,7 +2549,7 @@ export default function AdminUsers() {
                 Quản Lý Nội Dung Bị Báo Cáo
               </h2>
               <p className="text-sm text-slate-600 font-medium mt-1">
-                Trạm xử lý vi phạm tiêu chuẩn cộng đồng dành riêng cho Quản trị viên và Moderator của Huy Locket.
+                Trạm xử lý vi phạm tiêu chuẩn cộng đồng dành riêng cho Quản trị viên và Moderator của Quyền Locket.
               </p>
             </div>
             <button type="button" onClick={fetchReports} className="btn bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-200 rounded-2xl h-11 px-5 font-black flex items-center gap-2 shadow-sm cursor-pointer active:scale-95" title="Tải lại">
@@ -2777,7 +2777,7 @@ export default function AdminUsers() {
                         EDGE ACTIVE
                       </span>
                     </div>
-                    
+
                     <div className="space-y-3.5">
                       <div className="bg-slate-950/90 p-4 rounded-2xl border border-slate-800/80 hover:border-indigo-500/40 transition-all shadow-inner">
                         <span className="text-[11px] uppercase tracking-wider text-slate-400 font-black block mb-1.5">
@@ -3341,7 +3341,7 @@ export default function AdminUsers() {
                   Cấm Cửa Địa Chỉ IP Vĩnh Viễn
                 </h3>
                 <p className="text-sm text-slate-400 font-medium mt-1 max-w-3xl leading-relaxed">
-                  Những địa chỉ IP nằm trong danh sách đen này sẽ bị Tường Lửa Thép Huy Locket từ chối kết nối ngay tại tầng giao thức trước khi chạm vào máy chủ Node.js, vô hiệu hóa hoàn toàn mọi truy cập của tin tặc hay spammer.
+                  Những địa chỉ IP nằm trong danh sách đen này sẽ bị Tường Lửa Thép Quyền Locket từ chối kết nối ngay tại tầng giao thức trước khi chạm vào máy chủ Node.js, vô hiệu hóa hoàn toàn mọi truy cập của tin tặc hay spammer.
                 </p>
               </div>
 
@@ -3447,7 +3447,7 @@ export default function AdminUsers() {
             </div>
           )}
 
-          
+
             {/* Section: Whitelist */}
             {advancedSubTab === "whitelist" && (
               <div className="bg-slate-950 text-slate-100 rounded-[2.5rem] p-6 sm:p-9 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.8)] border border-slate-800/80 relative overflow-hidden animate-fade-in backdrop-blur-2xl">
@@ -3464,14 +3464,14 @@ export default function AdminUsers() {
                     Những tài khoản hoặc địa chỉ IP nằm trong danh sách này sẽ hoàn toàn KHÔNG BỊ BAN dưới mọi hình thức. Tường lửa WAF sẽ tự động bỏ qua kiểm tra cho họ.
                   </p>
                 </div>
-                
+
                 <div className="relative z-10 space-y-6 flex-1 w-full">
                   <div className="bg-slate-900/90 p-6 rounded-3xl border border-slate-800/80 shadow-inner w-full">
                     <label className="label text-xs font-black uppercase tracking-wider text-emerald-300 pb-2">
                       🛡️ Cấp Kim Bài Miễn Tử Mới:
                     </label>
                     <div className="flex flex-col sm:flex-row gap-3">
-                      <select 
+                      <select
                         value={whitelistType}
                         onChange={(e) => setWhitelistType(e.target.value)}
                         className="select select-bordered rounded-2xl font-bold text-sm bg-slate-950 text-white border-slate-800 focus:border-emerald-500 h-12 shadow-sm"
@@ -3674,7 +3674,7 @@ export default function AdminUsers() {
                                 </span>
                               </div>
                               <p className="text-xs leading-relaxed mb-3 text-slate-300 font-medium">
-                                <strong className={isOnline ? "text-teal-400 font-black uppercase text-[11px]" : "text-rose-400 font-black uppercase text-[11px]"}>Nguyên nhân: </strong> 
+                                <strong className={isOnline ? "text-teal-400 font-black uppercase text-[11px]" : "text-rose-400 font-black uppercase text-[11px]"}>Nguyên nhân: </strong>
                                 {item.errorHelp}
                               </p>
                               <div className="text-xs font-bold text-amber-200 bg-amber-950/60 p-3 rounded-xl border border-amber-500/40 leading-relaxed flex items-start gap-2 shadow-sm">
@@ -3691,8 +3691,8 @@ export default function AdminUsers() {
                             <span className="flex items-center gap-2 text-slate-400">
                               <span>⏱️ RTT Latency:</span>
                               <span className={`px-2 py-1 rounded-lg border ${
-                                item.ping < 300 
-                                  ? "bg-emerald-950 text-emerald-400 border-emerald-500/40 font-black" 
+                                item.ping < 300
+                                  ? "bg-emerald-950 text-emerald-400 border-emerald-500/40 font-black"
                                   : "bg-amber-950 text-amber-300 border-amber-500/40 font-black"
                               }`}>
                                 {item.ping} ms
@@ -3714,7 +3714,7 @@ export default function AdminUsers() {
               <div className="relative z-10 mt-8 bg-gradient-to-r from-emerald-950/90 via-teal-950/90 to-slate-900 border border-emerald-500/40 rounded-2xl p-4 text-xs text-slate-300 flex items-center gap-3.5 font-medium shadow-lg">
                 <span className="text-2xl shrink-0">🛡️</span>
                 <span className="leading-relaxed">
-                  <strong className="text-emerald-300 font-black uppercase text-[11px] tracking-wider block mb-0.5">Huy Locket API Guard Note:</strong> 
+                  <strong className="text-emerald-300 font-black uppercase text-[11px] tracking-wider block mb-0.5">Quyền Locket API Guard Note:</strong>
                   Các dịch vụ có nhãn <code className="bg-emerald-950 px-2 py-0.5 rounded-lg text-emerald-300 font-mono font-bold border border-emerald-500/40 shadow-sm">CORS Guard</code> hoặc trả về HTTP Status (&lt; 500) đều đồng nghĩa máy chủ đầu xa đang mở cổng kết nối và phản hồi các tiến trình Locket một cách hoàn toàn bình thường theo đúng chuẩn bảo mật trình duyệt.
                 </span>
               </div>
@@ -3741,7 +3741,7 @@ export default function AdminUsers() {
             <p className="text-sm font-medium text-base-content/70">{selectedUser.email || selectedUser.username || "Không có email/username"}</p>
             <p className="text-xs text-base-content/40 mb-6 font-mono">UID: {selectedUser.uid}</p>
 
-            {selectedUser.role === "super_admin" || selectedUser.email?.toLowerCase() === "buiduchuy2010qn@gmail.com" ? (
+            {selectedUser.role === "super_admin" ? (
               <div className="alert alert-info bg-primary/15 border-2 border-primary/40 text-primary mb-6 text-sm rounded-2xl font-semibold shadow-inner flex items-center gap-3">
                 <Shield size={24} className="shrink-0 animate-pulse text-primary" />
                 <span>👑 <strong>Quyền lực Tối thượng Cố định (Immutable Super Admin)</strong>: Tài khoản này được bảo vệ ở cấp độ cao nhất. Không bất kỳ ai (kể cả chính tài khoản này) có thể tự hạ vai trò, khóa truy cập hay thu hồi phiên làm việc.</span>
@@ -4035,7 +4035,7 @@ export default function AdminUsers() {
                 </div>
               ) : (
                 <div className="alert alert-error/20 border border-error/30 rounded-2xl py-3 text-xs font-semibold text-error flex items-center gap-2">
-                  <span>⚠️ Tài khoản này chưa gắn Email chuẩn. Yêu cầu liên hệ trực tiếp Admin Huy để cập nhật email trước khi reset.</span>
+                  <span>⚠️ Tài khoản này chưa gắn email chuẩn. Hãy liên hệ quản trị viên Quyền Locket để cập nhật email trước khi reset.</span>
                 </div>
               )}
             </div>
@@ -4060,7 +4060,7 @@ export default function AdminUsers() {
 
             <div className="py-4 space-y-4 text-sm">
               <div className="text-xs bg-emerald-50/90 text-emerald-900 p-4 rounded-2xl border border-emerald-200 leading-relaxed font-semibold">
-                🛡️ <strong>Bảo vệ Quản Trị Viên:</strong> Tính năng này ĐỘC QUYỀN cho Admin Huy Locket. Khi bật 2FA, sau khi nhập mã PIN bạn sẽ cần nhập mã OTP 6 số trên ứng dụng <strong>Google Authenticator</strong> hoặc <strong>Authy</strong> thì mới mở được trang quản trị.
+                🛡️ <strong>Bảo vệ Quản Trị Viên:</strong> Tính năng này ĐỘC QUYỀN cho Admin Quyền Locket. Khi bật 2FA, sau khi nhập mã PIN bạn sẽ cần nhập mã OTP 6 số trên ứng dụng <strong>Google Authenticator</strong> hoặc <strong>Authy</strong> thì mới mở được trang quản trị.
               </div>
 
               {setup2FAError && (

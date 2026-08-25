@@ -12,7 +12,7 @@
     "restore_streak_desc": "请在首页发布一张照片或视频以恢复连续打卡！",
     "restore_streak_mode": "连续打卡恢复模式",
     "continue_streak_prompt": "请今天发布一条动态以保持连续打卡！",
-    "activate_calendar_prompt": "请发布一张照片或视频以激活你的 Huy Locket 日历 💛",
+    "activate_calendar_prompt": "请发布一张照片或视频以激活你的 Quyền Locket 日历 💛",
     "loading": "加载中...",
     "hide_comments": "隐藏评论",
     "view_comments": "查看评论",
@@ -180,8 +180,8 @@
     "flash_not_supported": "当前相机不支持闪光灯",
     "flash_enable_failed": "无法在当前相机启用闪光灯",
     "welcome": {
-      "title": "欢迎使用 Huy Locket！",
-      "desc": "一款让你比以往更轻松地上传照片和视频到 Locket 的 Web 应用，同时提供 Huy Locket 独有的丰富功能。",
+      "title": "欢迎使用 Quyền Locket！",
+      "desc": "一款让你比以往更轻松地上传照片和视频到 Locket 的 Web 应用，同时提供 Quyền Locket 独有的丰富功能。",
       "tip_personal_project": "这是一个持续开发中的个人项目。",
       "tip_contribution": "你的每一份支持都会帮助系统不断完善。",
       "tip_membership": "欢迎开通会员，以支持项目并解锁更多功能。",
@@ -191,8 +191,8 @@
       "post_tip_formats": "支持 JPG、PNG、WEBP 图片",
       "post_tip_camera": "支持直接使用相机拍照",
       "post_tip_crop": "支持将照片和视频裁剪为正方形",
-      "features_title": "Huy Locket 高级功能",
-      "features_desc": "探索隐藏和高级功能，让 Huy Locket 的使用体验更强大、更快速、更智能。",
+      "features_title": "Quyền Locket 高级功能",
+      "features_desc": "探索隐藏和高级功能，让 Quyền Locket 的使用体验更强大、更快速、更智能。",
       "features_tip_hidden": "隐藏与实验性功能（Beta）",
       "features_tip_invite": "即时邀请",
       "features_tip_search": "超高速好友搜索与筛选",
@@ -200,13 +200,13 @@
       "features_tip_anonymous": "匿名浏览",
       "features_tip_groups": "向自定义好友群组发布",
       "features_tip_private": "仅自己可见的私密发布",
-      "community_title": "加入 Huy Locket 社区",
-      "community_desc": "与数千名 Huy Locket 用户交流，获取技术支持、最新功能更新，并分享使用心得！",
+      "community_title": "加入 Quyền Locket 社区",
+      "community_desc": "与数千名 Quyền Locket 用户交流，获取技术支持、最新功能更新，并分享使用心得！",
       "community_join_tip": "加入社区，第一时间获取更新并享受更快的支持。",
-      "notif_title": "开启 Huy Locket 通知",
-      "notif_desc": "及时接收 Huy Locket 的新功能、故障通知和重要更新。",
+      "notif_title": "开启 Quyền Locket 通知",
+      "notif_desc": "及时接收 Quyền Locket 的新功能、故障通知和重要更新。",
       "notif_enabled": "通知已开启！🎉",
-      "notif_enabled_desc": "今后你将收到来自 Huy Locket 的最新通知。",
+      "notif_enabled_desc": "今后你将收到来自 Quyền Locket 的最新通知。",
       "notif_blocked": "⚠️ 你已屏蔽通知",
       "notif_blocked_desc": "请前往浏览器设置 → 网站权限 → 通知，重新开启通知权限。",
       "notif_allow": "允许接收通知",
@@ -217,7 +217,7 @@
       "notif_blocked_alert": "你已屏蔽通知，请前往浏览器设置重新开启。",
       "notif_unsupported_alert": "当前浏览器不支持通知。",
       "notif_enabled_alert": "通知已开启！",
-      "notif_enabled_alert_desc": "你将收到来自 Huy Locket 的最新更新。"
+      "notif_enabled_alert_desc": "你将收到来自 Quyền Locket 的最新更新。"
     }
   }
 }

@@ -46,7 +46,7 @@ function isUploadAllowed(planData, sizeMb, limitMb = 50) {
  * Only downscales when source is larger — never invents detail.
  */
 function getResolution({ planData, normal = 1920, member = 1920 }) {
-  // Huy Locket free-for-all — do not downgrade free users to soft 1440
+  // Quyền Locket free-for-all — do not downgrade free users to soft 1440
   const hi = Math.max(Number(normal) || 1920, Number(member) || 1920, 1920);
   // planData reserved for future caps; keep signature stable
   void planData;

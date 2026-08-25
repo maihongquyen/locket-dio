@@ -427,7 +427,7 @@ const FindFriend = ({ refreshFriendsData }) => {
         <p className="mt-1 text-xs text-base-content/50">
           {slotPushState?.enabled
             ? "Canh Slot 24/7 đang bật — có slot sẽ báo ra điện thoại/màn hình khóa."
-            : "Mở Đang canh để bật thông báo 24/7 khi không mở Huy Locket."}
+            : "Mở Đang canh để bật thông báo 24/7 khi không mở Quyền Locket."}
         </p>
       )}
 

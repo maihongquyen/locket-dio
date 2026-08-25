@@ -35,7 +35,7 @@ const ThemeSelector = () => {
               {
                 id: INTERFACE_DEFAULT,
                 label: "Mặc định",
-                description: "Bố cục Huy Locket hiện tại",
+                description: "Bố cục Quyền Locket hiện tại",
               },
               {
                 id: INTERFACE_IOS,

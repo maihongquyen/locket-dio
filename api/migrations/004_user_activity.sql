@@ -1,4 +1,4 @@
--- Persistent Huy Locket website-user registry, login history and presence.
+-- Persistent Quyền Locket website-user registry, login history and presence.
 -- Idempotent so the Railway API can safely verify/apply it at startup.
 
 CREATE TABLE IF NOT EXISTS web_users (

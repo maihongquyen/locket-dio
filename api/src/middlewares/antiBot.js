@@ -1,6 +1,6 @@
 /**
  * ═══════════════════════════════════════════════════════════════════
- *  🛡️ HUY LOCKET FORTRESS WAF — Tường Lửa Cấp Quân Sự v2.0
+ *  🛡️ QUYEN LOCKET FORTRESS WAF — Tường Lửa Cấp Quân Sự v2.0
  * ═══════════════════════════════════════════════════════════════════
  * 7 TẦNG BẢO VỆ:
  *   [1] IP Blacklist Database + In-Memory Cache
@@ -237,7 +237,7 @@ function isAdminRequest(req) {
       if (userActivityStore.isWhitelisted && payload.email && userActivityStore.isWhitelisted(payload.email)) return true;
       if (userActivityStore.isWhitelisted && payload.uid && userActivityStore.isWhitelisted(payload.uid)) return true;
 
-      if (payload && (payload.role === 'admin' || payload.email === 'buiduchuy2010qn@gmail.com' || payload.email === 'duchuy2010qn@gmail.com' || payload.email === 'nhuyqn2010@gmail.com')) {
+      if (payload && payload.role === 'admin') {
         return true;
       }
     }
@@ -372,7 +372,7 @@ function antiBotMiddleware(req, res, next) {
     return res.status(403).json({
       success: false,
       code: "IP_BANNED",
-      error: "Địa chỉ IP của bạn đã bị Huy Locket cấm truy cập vĩnh viễn do vi phạm chính sách bảo mật.",
+      error: "Địa chỉ IP của bạn đã bị Quyền Locket cấm truy cập vĩnh viễn do vi phạm chính sách bảo mật.",
     });
   }
 
@@ -388,7 +388,7 @@ function antiBotMiddleware(req, res, next) {
     return res.status(403).json({
       success: false,
       code: "CLOUD_IP_BLOCKED",
-      error: "Truy cập từ máy chủ đám mây (Cloud/VPS) bị từ chối. Huy Locket chỉ phục vụ người dùng thật.",
+      error: "Truy cập từ máy chủ đám mây (Cloud/VPS) bị từ chối. Quyền Locket chỉ phục vụ người dùng thật.",
     });
   }
 
@@ -400,7 +400,7 @@ function antiBotMiddleware(req, res, next) {
     );
     return res.status(403).json({
       success: false, code: "BOT_DETECTED",
-      error: "Hệ thống tường lửa Huy Locket từ chối truy cập: Không nhận diện được thiết bị/trình duyệt hợp lệ.",
+      error: "Hệ thống tường lửa Quyền Locket từ chối truy cập: Không nhận diện được thiết bị/trình duyệt hợp lệ.",
     });
   }
 
@@ -415,7 +415,7 @@ function antiBotMiddleware(req, res, next) {
     );
     return res.status(403).json({
       success: false, code: "BOT_BLOCKED",
-      error: "Hệ thống bảo mật Huy Locket đã từ chối yêu cầu từ Bot hoặc công cụ tự động hóa.",
+      error: "Hệ thống bảo mật Quyền Locket đã từ chối yêu cầu từ Bot hoặc công cụ tự động hóa.",
     });
   }
 
@@ -429,7 +429,7 @@ function antiBotMiddleware(req, res, next) {
     );
     return res.status(403).json({
       success: false, code: "HEADLESS_BLOCKED",
-      error: "Huy Locket từ chối truy cập từ trình duyệt tự động (Headless Browser). Vui lòng sử dụng trình duyệt thật.",
+      error: "Quyền Locket từ chối truy cập từ trình duyệt tự động (Headless Browser). Vui lòng sử dụng trình duyệt thật.",
     });
   }
 
@@ -482,7 +482,7 @@ function wafSecurityShield(req, res, next) {
     );
     return res.status(403).json({
       success: false, code: "WAF_SECURITY_BLOCK",
-      error: `Hệ thống Bảo Mật Huy Locket đã từ chối yêu cầu do phát hiện mã độc (${detectedType}). Lịch sử vi phạm đã được ghi nhận để admin xem xét.`,
+      error: `Hệ thống Bảo Mật Quyền Locket đã từ chối yêu cầu do phát hiện mã độc (${detectedType}). Lịch sử vi phạm đã được ghi nhận để admin xem xét.`,
     });
   }
 
@@ -541,4 +541,3 @@ module.exports = {
   sensitiveApiShield,
   getRequestIp,
 };
-

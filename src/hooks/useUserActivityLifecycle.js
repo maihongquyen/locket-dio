@@ -14,7 +14,7 @@ const PATH_NAME_MAP = {
   "/admin-users": "Truy cập Bảng Điều Khiển Quản Trị Viên (Admin)",
   "/admin-google-drive": "Truy cập Bảng Quản lý Google Drive Backup",
   "/pricing": "Xem Trang Gói Thành Viên & Ủng Hộ",
-  "/about": "Xem Trang Giới Thiệu Huy Locket",
+  "/about": "Xem Trang Giới Thiệu Quyền Locket",
   "/timeline": "Xem Dòng Thời Gian Kỷ Niệm (Timeline)",
   "/white-page": "Truy cập Màn Hình Ghi Sáng (White Page)",
 };

@@ -4,7 +4,7 @@ import React from "react";
 // import CameraCapture from "../pages/UILocket";
 const FriendManager = React.lazy(() => import("@/pages/Auth/FriendManager"));
 const DiaryPage = React.lazy(() => import("@/pages/Auth/DiaryPage"));
-const AboutHuyLocket = React.lazy(() => import("../pages/Public/About"));
+const AboutQuyenLocket = React.lazy(() => import("../pages/Public/About"));
 const RestoreStreak = React.lazy(() => import("@/pages/Auth/RestoreStreak"));
 const NewsPage = React.lazy(() => import("@/pages/Public/NewsPage"));
 const NewsDetailPage = React.lazy(() => import("@/pages/Public/NewsDetailPage"));
@@ -39,9 +39,9 @@ const APP_NAME = CONFIG.app.fullName;
 
 export const authRoutes = [
   { path: "/home", component: AuthHome, title: `Trang chủ | ${APP_NAME}` },
-  { path: "/about", component: AboutHuyLocket, title: `Về Website Huy Locket | ${APP_NAME}` },
-  { path: "/about-dio", component: AboutMe, title: `Về Huy | ${APP_NAME}` },
-  { path: "/about-huy", component: AboutMe, title: `Về Huy | ${APP_NAME}` },
+  { path: "/about", component: AboutQuyenLocket, title: `Về Website Quyền Locket | ${APP_NAME}` },
+  { path: "/about-dio", component: AboutMe, title: `Về Quyền | ${APP_NAME}` },
+  { path: "/about-quyen", component: AboutMe, title: `Về Quyền | ${APP_NAME}` },
   { path: "/timeline", component: Timeline, title: `Dòng Thời Gian | ${APP_NAME}` },
   { path: "/sponsors", component: DonatePage, title: `Ủng hộ dự án | ${APP_NAME}` },
 
@@ -77,5 +77,5 @@ export const authRoutes = [
 
   { path: "/terms", component: TermsPage, title: `Điều khoản sử dụng | ${APP_NAME}` },
 
-  { path: "/happy-birthday", component: BirthdayPage, title: `Chúc mừng sinh nhật Huy | ${APP_NAME}` },
+  { path: "/happy-birthday", component: BirthdayPage, title: `Chúc mừng sinh nhật Quyền | ${APP_NAME}` },
 ];

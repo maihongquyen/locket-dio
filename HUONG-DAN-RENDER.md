@@ -1,4 +1,4 @@
-# Cách chạy Huy Locket trên Render (login được)
+# Cách chạy Quyền Locket trên Render (login được)
 
 ## Vì sao Static Site login fail?
 
@@ -10,9 +10,9 @@
 
 ### Bước 1 — Tạo Web Service mới
 
-1. Vào https://dashboard.render.com  
-2. **New +** → **Web Service**  
-3. Connect GitHub repo: `buiduchuy2010qn-prog/locket-dio`  
+1. Vào https://dashboard.render.com
+2. **New +** → **Web Service**
+3. Connect GitHub repo: `maihongquyen/locket-dio`
 4. Branch: `main`
 
 ### Bước 2 — Cấu hình
@@ -39,7 +39,7 @@ Mở:
 https://TÊN-SERVICE.onrender.com/dio-api/
 ```
 
-**Đúng:** `{"message":"🚀 Server is running!"}`  
+**Đúng:** `{"message":"🚀 Server is running!"}`
 
 **Sai:** trang HTML / 404 → đang nhầm Static Site.
 
@@ -53,14 +53,14 @@ https://TÊN-SERVICE.onrender.com/login
 
 ### Bước 5 — Dọn Static cũ
 
-- Vào service **locket-dio** (Static) → Settings → **Delete**  
+- Vào service **locket-dio** (Static) → Settings → **Delete**
   (tránh nhầm URL `locket-dio-ly9t.onrender.com`)
 
 Hoặc giữ Static nhưng **chỉ dùng URL Web Service mới**.
 
 ## Free tier
 
-- App **ngủ** khi không ai vào ~15 phút.  
+- App **ngủ** khi không ai vào ~15 phút.
 - Lần mở đầu có thể **chờ 30–60 giây** (cold start).
 
 ## Local (máy bạn)

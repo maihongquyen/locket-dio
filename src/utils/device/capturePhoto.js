@@ -1,5 +1,5 @@
 /**
- * Highest-quality still capture for Huy Locket.
+ * Highest-quality still capture for Quyền Locket.
  *
  * Priority:
  *  - Android: capture the live <video> frame first so the saved square uses the
